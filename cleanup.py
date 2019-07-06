@@ -10,7 +10,8 @@ try:
 		line = line.strip()
 		if not ('.hidden/scikit-learn' in line):
 			lines.append(line)
-			print(line)
+		else:
+			print('deleting:', line)
 	f.close()
 	f = open(easy_install_file,'w')
 	for line in lines:

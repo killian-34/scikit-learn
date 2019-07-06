@@ -476,10 +476,10 @@ cdef class BestSplitter(BaseDenseSplitter):
                             # if we need the real improvement or can work with the proxy.
                             # probably smartest to work with the full value at first.
 
-                            current_proxy_improvement = self.criterion.proxy_impurity_improvement()
-                            # current_proxy_improvement = self.criterion.impurity_improvement(impurity)
-                            # current_counterfactual_value = self.compute_counterfactual_value()
-                            # current_proxy_improvement = current_proxy_improvement * current_counterfactual_value 
+                            # current_proxy_improvement = self.criterion.proxy_impurity_improvement()
+                            current_proxy_improvement = self.criterion.impurity_improvement(impurity)
+                            current_counterfactual_value = self.compute_counterfactual_value()
+                            current_proxy_improvement = current_proxy_improvement * current_counterfactual_value 
 
                             if current_proxy_improvement > best_proxy_improvement:
                                 best_proxy_improvement = current_proxy_improvement
