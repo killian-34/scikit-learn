@@ -4,7 +4,7 @@
 Kernel ridge regression
 ===========================
 
-.. currentmodule:: sklearn.kernel_ridge
+.. currentmodule:: sklearn_causal.kernel_ridge
 
 Kernel ridge regression (KRR) [M2012]_ combines :ref:`ridge_regression`
 (linear least squares with l2-norm regularization) with the kernel trick. It

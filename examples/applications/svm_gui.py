@@ -32,8 +32,8 @@ import sys
 import numpy as np
 import tkinter as Tk
 
-from sklearn import svm
-from sklearn.datasets import dump_svmlight_file
+from sklearn_causal import svm
+from sklearn_causal.datasets import dump_svmlight_file
 
 y_min, y_max = -50, 50
 x_min, x_max = -50, 50

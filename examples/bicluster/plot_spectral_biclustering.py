@@ -23,10 +23,10 @@ print(__doc__)
 import numpy as np
 from matplotlib import pyplot as plt
 
-from sklearn.datasets import make_checkerboard
-from sklearn.datasets import samples_generator as sg
-from sklearn.cluster.bicluster import SpectralBiclustering
-from sklearn.metrics import consensus_score
+from sklearn_causal.datasets import make_checkerboard
+from sklearn_causal.datasets import samples_generator as sg
+from sklearn_causal.cluster.bicluster import SpectralBiclustering
+from sklearn_causal.metrics import consensus_score
 
 n_clusters = (4, 3)
 data, rows, columns = make_checkerboard(

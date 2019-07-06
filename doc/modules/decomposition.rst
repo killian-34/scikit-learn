@@ -5,7 +5,7 @@
 Decomposing signals in components (matrix factorization problems)
 =================================================================
 
-.. currentmodule:: sklearn.decomposition
+.. currentmodule:: sklearn_causal.decomposition
 
 
 .. _PCA:
@@ -518,7 +518,7 @@ iterating only once over a mini-batch. This can be used for online learning
 when the data is not readily available from the start, or for when the data
 does not fit into the memory.
 
-.. currentmodule:: sklearn.cluster
+.. currentmodule:: sklearn_causal.cluster
 
 .. image:: ../auto_examples/cluster/images/sphx_glr_plot_dict_face_patches_001.png
     :target: ../auto_examples/cluster/plot_dict_face_patches.html
@@ -535,7 +535,7 @@ does not fit into the memory.
 
     Example: :ref:`sphx_glr_auto_examples_cluster_plot_dict_face_patches.py`
 
-.. currentmodule:: sklearn.decomposition
+.. currentmodule:: sklearn_causal.decomposition
 
 .. _FA:
 
@@ -813,7 +813,7 @@ stored components::
 
     >>> import numpy as np
     >>> X = np.array([[1, 1], [2, 1], [3, 1.2], [4, 1], [5, 0.8], [6, 1]])
-    >>> from sklearn.decomposition import NMF
+    >>> from sklearn_causal.decomposition import NMF
     >>> model = NMF(n_components=2, init='random', random_state=0)
     >>> W = model.fit_transform(X)
     >>> H = model.components_

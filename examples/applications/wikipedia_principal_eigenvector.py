@@ -44,7 +44,7 @@ from scipy import sparse
 
 from joblib import Memory
 
-from sklearn.decomposition import randomized_svd
+from sklearn_causal.decomposition import randomized_svd
 from urllib.request import urlopen
 
 

@@ -4,7 +4,7 @@
 Stochastic Gradient Descent
 ===========================
 
-.. currentmodule:: sklearn.linear_model
+.. currentmodule:: sklearn_causal.linear_model
 
 **Stochastic Gradient Descent (SGD)** is a simple yet very efficient
 approach to discriminative learning of linear classifiers under
@@ -56,7 +56,7 @@ of size [n_samples, n_features] holding the training samples, and an
 array Y of size [n_samples] holding the target values (class labels)
 for the training samples::
 
-    >>> from sklearn.linear_model import SGDClassifier
+    >>> from sklearn_causal.linear_model import SGDClassifier
     >>> X = [[0., 0.], [1., 1.]]
     >>> y = [0, 1]
     >>> clf = SGDClassifier(loss="hinge", penalty="l2", max_iter=5)
@@ -259,7 +259,7 @@ Tips on Practical Use
     must be applied to the test vector to obtain meaningful
     results. This can be easily done using :class:`StandardScaler`::
 
-      from sklearn.preprocessing import StandardScaler
+      from sklearn_causal.preprocessing import StandardScaler
       scaler = StandardScaler()
       scaler.fit(X_train)  # Don't cheat - fit only on training data
       X_train = scaler.transform(X_train)

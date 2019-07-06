@@ -25,13 +25,13 @@ bucketed = defaultdict(list)
 
 for entry in re.split('\n(?=- )', text.strip()):
     modules = re.findall(r':(?:func|meth|mod|class):'
-                         r'`(?:[^<`]*<|~)?(?:sklearn.)?([a-z]\w+)',
+                         r'`(?:[^<`]*<|~)?(?:sklearn_causal.)?([a-z]\w+)',
                          entry)
     modules = set(modules)
     if len(modules) > 1:
         key = 'Multiple modules'
     elif modules:
-        key = ':mod:`sklearn.%s`' % next(iter(modules))
+        key = ':mod:`sklearn_causal.%s`' % next(iter(modules))
     else:
         key = 'Miscellaneous'
     bucketed[key].append(entry)

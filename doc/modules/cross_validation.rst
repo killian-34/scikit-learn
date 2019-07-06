@@ -5,7 +5,7 @@
 Cross-validation: evaluating estimator performance
 ===================================================
 
-.. currentmodule:: sklearn.model_selection
+.. currentmodule:: sklearn_causal.model_selection
 
 Learning the parameters of a prediction function and testing it on the
 same data is a methodological mistake: a model that would just repeat
@@ -34,9 +34,9 @@ can be quickly computed with the :func:`train_test_split` helper function.
 Let's load the iris data set to fit a linear support vector machine on it::
 
   >>> import numpy as np
-  >>> from sklearn.model_selection import train_test_split
-  >>> from sklearn import datasets
-  >>> from sklearn import svm
+  >>> from sklearn_causal.model_selection import train_test_split
+  >>> from sklearn_causal import datasets
+  >>> from sklearn_causal import svm
 
   >>> iris = datasets.load_iris()
   >>> iris.data.shape, iris.target.shape
@@ -115,7 +115,7 @@ kernel support vector machine on the iris dataset by splitting the data, fitting
 a model and computing the score 5 consecutive times (with different splits each
 time)::
 
-  >>> from sklearn.model_selection import cross_val_score
+  >>> from sklearn_causal.model_selection import cross_val_score
   >>> clf = svm.SVC(kernel='linear', C=1)
   >>> scores = cross_val_score(clf, iris.data, iris.target, cv=5)
   >>> scores
@@ -131,7 +131,7 @@ By default, the score computed at each CV iteration is the ``score``
 method of the estimator. It is possible to change this by using the
 scoring parameter::
 
-  >>> from sklearn import metrics
+  >>> from sklearn_causal import metrics
   >>> scores = cross_val_score(
   ...     clf, iris.data, iris.target, cv=5, scoring='f1_macro')
   >>> scores
@@ -144,12 +144,12 @@ classes hence the accuracy and the F1-score are almost equal.
 When the ``cv`` argument is an integer, :func:`cross_val_score` uses the
 :class:`KFold` or :class:`StratifiedKFold` strategies by default, the latter
 being used if the estimator derives from :class:`ClassifierMixin
-<sklearn.base.ClassifierMixin>`.
+<sklearn_causal.base.ClassifierMixin>`.
 
 It is also possible to use other cross validation strategies by passing a cross
 validation iterator instead, for instance::
 
-  >>> from sklearn.model_selection import ShuffleSplit
+  >>> from sklearn_causal.model_selection import ShuffleSplit
   >>> n_samples = iris.data.shape[0]
   >>> cv = ShuffleSplit(n_splits=5, test_size=0.3, random_state=0)
   >>> cross_val_score(clf, iris.data, iris.target, cv=cv)
@@ -177,7 +177,7 @@ indices, for example::
     and similar :ref:`data transformations <data-transforms>` similarly should
     be learnt from a training set and applied to held-out data for prediction::
 
-      >>> from sklearn import preprocessing
+      >>> from sklearn_causal import preprocessing
       >>> X_train, X_test, y_train, y_test = train_test_split(
       ...     iris.data, iris.target, test_size=0.4, random_state=0)
       >>> scaler = preprocessing.StandardScaler().fit(X_train)
@@ -187,10 +187,10 @@ indices, for example::
       >>> clf.score(X_test_transformed, y_test)
       0.9333...
 
-    A :class:`Pipeline <sklearn.pipeline.Pipeline>` makes it easier to compose
+    A :class:`Pipeline <sklearn_causal.pipeline.Pipeline>` makes it easier to compose
     estimators, providing this behavior under cross-validation::
 
-      >>> from sklearn.pipeline import make_pipeline
+      >>> from sklearn_causal.pipeline import make_pipeline
       >>> clf = make_pipeline(preprocessing.StandardScaler(), svm.SVC(C=1))
       >>> cross_val_score(clf, iris.data, iris.target, cv=cv)
       array([0.977..., 0.933..., 0.955..., 0.933..., 0.977...])
@@ -229,8 +229,8 @@ You may also retain the estimator fitted on each training set by setting
 The multiple metrics can be specified either as a list, tuple or set of
 predefined scorer names::
 
-    >>> from sklearn.model_selection import cross_validate
-    >>> from sklearn.metrics import recall_score
+    >>> from sklearn_causal.model_selection import cross_validate
+    >>> from sklearn_causal.metrics import recall_score
     >>> scoring = ['precision_macro', 'recall_macro']
     >>> clf = svm.SVC(kernel='linear', C=1, random_state=0)
     >>> scores = cross_validate(clf, iris.data, iris.target, scoring=scoring)
@@ -241,7 +241,7 @@ predefined scorer names::
 
 Or as a dict mapping scorer name to a predefined or custom scoring function::
 
-    >>> from sklearn.metrics.scorer import make_scorer
+    >>> from sklearn_causal.metrics.scorer import make_scorer
     >>> scoring = {'prec_macro': 'precision_macro',
     ...            'rec_macro': make_scorer(recall_score, average='macro')}
     >>> scores = cross_validate(clf, iris.data, iris.target, scoring=scoring,
@@ -341,7 +341,7 @@ learned using :math:`k - 1` folds, and the fold left out is used for test.
 Example of 2-fold cross-validation on a dataset with 4 samples::
 
   >>> import numpy as np
-  >>> from sklearn.model_selection import KFold
+  >>> from sklearn_causal.model_selection import KFold
 
   >>> X = ["a", "b", "c", "d"]
   >>> kf = KFold(n_splits=2)
@@ -377,7 +377,7 @@ each repetition.
 Example of 2-fold K-Fold repeated 2 times::
 
   >>> import numpy as np
-  >>> from sklearn.model_selection import RepeatedKFold
+  >>> from sklearn_causal.model_selection import RepeatedKFold
   >>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4]])
   >>> random_state = 12883823
   >>> rkf = RepeatedKFold(n_splits=2, n_repeats=2, random_state=random_state)
@@ -404,7 +404,7 @@ training sets and :math:`n` different tests set. This cross-validation
 procedure does not waste much data as only one sample is removed from the
 training set::
 
-  >>> from sklearn.model_selection import LeaveOneOut
+  >>> from sklearn_causal.model_selection import LeaveOneOut
 
   >>> X = [1, 2, 3, 4]
   >>> loo = LeaveOneOut()
@@ -463,7 +463,7 @@ overlap for :math:`p > 1`.
 
 Example of Leave-2-Out on a dataset with 4 samples::
 
-  >>> from sklearn.model_selection import LeavePOut
+  >>> from sklearn_causal.model_selection import LeavePOut
 
   >>> X = np.ones(4)
   >>> lpo = LeavePOut(p=2)
@@ -494,7 +494,7 @@ generator.
 
 Here is a usage example::
 
-  >>> from sklearn.model_selection import ShuffleSplit
+  >>> from sklearn_causal.model_selection import ShuffleSplit
   >>> X = np.arange(10)
   >>> ss = ShuffleSplit(n_splits=5, test_size=0.25, random_state=0)
   >>> for train_index, test_index in ss.split(X):
@@ -537,7 +537,7 @@ target class as the complete set.
 Example of stratified 3-fold cross-validation on a dataset with 10 samples from
 two slightly unbalanced classes::
 
-  >>> from sklearn.model_selection import StratifiedKFold
+  >>> from sklearn_causal.model_selection import StratifiedKFold
 
   >>> X = np.ones(10)
   >>> y = [0, 0, 0, 0, 1, 1, 1, 1, 1, 1]
@@ -608,7 +608,7 @@ to detect this kind of overfitting situations.
 
 Imagine you have three subjects, each with an associated number from 1 to 3::
 
-  >>> from sklearn.model_selection import GroupKFold
+  >>> from sklearn_causal.model_selection import GroupKFold
 
   >>> X = [0.1, 0.2, 2.2, 2.4, 2.3, 4.55, 5.8, 8.8, 9, 10]
   >>> y = ["a", "b", "b", "b", "c", "c", "c", "d", "d", "d"]
@@ -647,7 +647,7 @@ For example, in the cases of multiple experiments, :class:`LeaveOneGroupOut`
 can be used to create a cross-validation based on the different experiments:
 we create a training set using the samples of all the experiments except one::
 
-  >>> from sklearn.model_selection import LeaveOneGroupOut
+  >>> from sklearn_causal.model_selection import LeaveOneGroupOut
 
   >>> X = [1, 5, 10, 50, 60, 70, 80]
   >>> y = [0, 1, 1, 2, 2, 2, 2]
@@ -671,7 +671,7 @@ samples related to :math:`P` groups for each training/test set.
 
 Example of Leave-2-Group Out::
 
-  >>> from sklearn.model_selection import LeavePGroupsOut
+  >>> from sklearn_causal.model_selection import LeavePGroupsOut
 
   >>> X = np.arange(6)
   >>> y = [1, 1, 1, 2, 2, 2]
@@ -693,7 +693,7 @@ out for each split.
 
 Here is a usage example::
 
-  >>> from sklearn.model_selection import GroupShuffleSplit
+  >>> from sklearn_causal.model_selection import GroupShuffleSplit
 
   >>> X = [0.1, 0.2, 2.2, 2.4, 2.3, 4.55, 5.8, 0.001]
   >>> y = ["a", "b", "b", "b", "c", "c", "c", "a"]
@@ -765,7 +765,7 @@ that are observed at fixed time intervals.
 
 Example of 3-split time series cross-validation on a dataset with 6 samples::
 
-  >>> from sklearn.model_selection import TimeSeriesSplit
+  >>> from sklearn_causal.model_selection import TimeSeriesSplit
 
   >>> X = np.array([[1, 2], [3, 4], [1, 2], [3, 4], [1, 2], [3, 4]])
   >>> y = np.array([1, 2, 3, 4, 5, 6])

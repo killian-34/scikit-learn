@@ -3,38 +3,38 @@
 Imputing missing values with variants of IterativeImputer
 =========================================================
 
-The :class:`sklearn.impute.IterativeImputer` class is very flexible - it can be
+The :class:`sklearn_causal.impute.IterativeImputer` class is very flexible - it can be
 used with a variety of estimators to do round-robin regression, treating every
 variable as an output in turn.
 
 In this example we compare some estimators for the purpose of missing feature
-imputation with :class:`sklearn.impute.IterativeImputer`:
+imputation with :class:`sklearn_causal.impute.IterativeImputer`:
 
-* :class:`~sklearn.linear_model.BayesianRidge`: regularized linear regression
-* :class:`~sklearn.tree.DecisionTreeRegressor`: non-linear regression
-* :class:`~sklearn.ensemble.ExtraTreesRegressor`: similar to missForest in R
-* :class:`~sklearn.neighbors.KNeighborsRegressor`: comparable to other KNN
+* :class:`~sklearn_causal.linear_model.BayesianRidge`: regularized linear regression
+* :class:`~sklearn_causal.tree.DecisionTreeRegressor`: non-linear regression
+* :class:`~sklearn_causal.ensemble.ExtraTreesRegressor`: similar to missForest in R
+* :class:`~sklearn_causal.neighbors.KNeighborsRegressor`: comparable to other KNN
   imputation approaches
 
 Of particular interest is the ability of
-:class:`sklearn.impute.IterativeImputer` to mimic the behavior of missForest, a
+:class:`sklearn_causal.impute.IterativeImputer` to mimic the behavior of missForest, a
 popular imputation package for R. In this example, we have chosen to use
-:class:`sklearn.ensemble.ExtraTreesRegressor` instead of
-:class:`sklearn.ensemble.RandomForestRegressor` (as in missForest) due to its
+:class:`sklearn_causal.ensemble.ExtraTreesRegressor` instead of
+:class:`sklearn_causal.ensemble.RandomForestRegressor` (as in missForest) due to its
 increased speed.
 
-Note that :class:`sklearn.neighbors.KNeighborsRegressor` is different from KNN
+Note that :class:`sklearn_causal.neighbors.KNeighborsRegressor` is different from KNN
 imputation, which learns from samples with missing values by using a distance
 metric that accounts for missing values, rather than imputing them.
 
 The goal is to compare different estimators to see which one is best for the
-:class:`sklearn.impute.IterativeImputer` when using a
-:class:`sklearn.linear_model.BayesianRidge` estimator on the California housing
+:class:`sklearn_causal.impute.IterativeImputer` when using a
+:class:`sklearn_causal.linear_model.BayesianRidge` estimator on the California housing
 dataset with a single value randomly removed from each row.
 
 For this particular pattern of missing values we see that
-:class:`sklearn.ensemble.ExtraTreesRegressor` and
-:class:`sklearn.linear_model.BayesianRidge` give the best results.
+:class:`sklearn_causal.ensemble.ExtraTreesRegressor` and
+:class:`sklearn_causal.linear_model.BayesianRidge` give the best results.
 """
 print(__doc__)
 
@@ -43,16 +43,16 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # To use this experimental feature, we need to explicitly ask for it:
-from sklearn.experimental import enable_iterative_imputer  # noqa
-from sklearn.datasets import fetch_california_housing
-from sklearn.impute import SimpleImputer
-from sklearn.impute import IterativeImputer
-from sklearn.linear_model import BayesianRidge
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.ensemble import ExtraTreesRegressor
-from sklearn.neighbors import KNeighborsRegressor
-from sklearn.pipeline import make_pipeline
-from sklearn.model_selection import cross_val_score
+from sklearn_causal.experimental import enable_iterative_imputer  # noqa
+from sklearn_causal.datasets import fetch_california_housing
+from sklearn_causal.impute import SimpleImputer
+from sklearn_causal.impute import IterativeImputer
+from sklearn_causal.linear_model import BayesianRidge
+from sklearn_causal.tree import DecisionTreeRegressor
+from sklearn_causal.ensemble import ExtraTreesRegressor
+from sklearn_causal.neighbors import KNeighborsRegressor
+from sklearn_causal.pipeline import make_pipeline
+from sklearn_causal.model_selection import cross_val_score
 
 N_SPLITS = 5
 

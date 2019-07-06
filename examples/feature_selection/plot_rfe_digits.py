@@ -13,9 +13,9 @@ a digit classification task.
 """
 print(__doc__)
 
-from sklearn.svm import SVC
-from sklearn.datasets import load_digits
-from sklearn.feature_selection import RFE
+from sklearn_causal.svm import SVC
+from sklearn_causal.datasets import load_digits
+from sklearn_causal.feature_selection import RFE
 import matplotlib.pyplot as plt
 
 # Load the digits dataset

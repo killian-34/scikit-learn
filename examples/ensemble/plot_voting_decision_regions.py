@@ -25,11 +25,11 @@ from itertools import product
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn import datasets
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.svm import SVC
-from sklearn.ensemble import VotingClassifier
+from sklearn_causal import datasets
+from sklearn_causal.tree import DecisionTreeClassifier
+from sklearn_causal.neighbors import KNeighborsClassifier
+from sklearn_causal.svm import SVC
+from sklearn_causal.ensemble import VotingClassifier
 
 # Loading some example data
 iris = datasets.load_iris()

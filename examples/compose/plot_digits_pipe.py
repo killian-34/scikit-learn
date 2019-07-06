@@ -24,11 +24,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-from sklearn import datasets
-from sklearn.decomposition import PCA
-from sklearn.linear_model import SGDClassifier
-from sklearn.pipeline import Pipeline
-from sklearn.model_selection import GridSearchCV
+from sklearn_causal import datasets
+from sklearn_causal.decomposition import PCA
+from sklearn_causal.linear_model import SGDClassifier
+from sklearn_causal.pipeline import Pipeline
+from sklearn_causal.model_selection import GridSearchCV
 
 
 # Define a pipeline to search for the best combination of PCA truncation

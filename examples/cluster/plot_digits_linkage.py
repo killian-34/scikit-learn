@@ -28,7 +28,7 @@ import numpy as np
 from scipy import ndimage
 from matplotlib import pyplot as plt
 
-from sklearn import manifold, datasets
+from sklearn_causal import manifold, datasets
 
 digits = datasets.load_digits(n_class=10)
 X = digits.data
@@ -79,7 +79,7 @@ print("Computing embedding")
 X_red = manifold.SpectralEmbedding(n_components=2).fit_transform(X)
 print("Done.")
 
-from sklearn.cluster import AgglomerativeClustering
+from sklearn_causal.cluster import AgglomerativeClustering
 
 for linkage in ('ward', 'average', 'complete', 'single'):
     clustering = AgglomerativeClustering(linkage=linkage, n_clusters=10)

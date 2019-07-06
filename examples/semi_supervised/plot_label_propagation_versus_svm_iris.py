@@ -17,9 +17,9 @@ print(__doc__)
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn import datasets
-from sklearn import svm
-from sklearn.semi_supervised import label_propagation
+from sklearn_causal import datasets
+from sklearn_causal import svm
+from sklearn_causal.semi_supervised import label_propagation
 
 rng = np.random.RandomState(0)
 

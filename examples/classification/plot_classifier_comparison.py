@@ -31,18 +31,18 @@ print(__doc__)
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.datasets import make_moons, make_circles, make_classification
-from sklearn.neural_network import MLPClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.svm import SVC
-from sklearn.gaussian_process import GaussianProcessClassifier
-from sklearn.gaussian_process.kernels import RBF
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
-from sklearn.naive_bayes import GaussianNB
-from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
+from sklearn_causal.model_selection import train_test_split
+from sklearn_causal.preprocessing import StandardScaler
+from sklearn_causal.datasets import make_moons, make_circles, make_classification
+from sklearn_causal.neural_network import MLPClassifier
+from sklearn_causal.neighbors import KNeighborsClassifier
+from sklearn_causal.svm import SVC
+from sklearn_causal.gaussian_process import GaussianProcessClassifier
+from sklearn_causal.gaussian_process.kernels import RBF
+from sklearn_causal.tree import DecisionTreeClassifier
+from sklearn_causal.ensemble import RandomForestClassifier, AdaBoostClassifier
+from sklearn_causal.naive_bayes import GaussianNB
+from sklearn_causal.discriminant_analysis import QuadraticDiscriminantAnalysis
 
 h = .02  # step size in the mesh
 

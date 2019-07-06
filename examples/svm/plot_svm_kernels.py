@@ -20,7 +20,7 @@ print(__doc__)
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn import svm
+from sklearn_causal import svm
 
 
 # Our dataset and targets

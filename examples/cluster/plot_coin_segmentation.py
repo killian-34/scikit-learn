@@ -32,8 +32,8 @@ import skimage
 from skimage.data import coins
 from skimage.transform import rescale
 
-from sklearn.feature_extraction import image
-from sklearn.cluster import spectral_clustering
+from sklearn_causal.feature_extraction import image
+from sklearn_causal.cluster import spectral_clustering
 
 # these were introduced in skimage-0.14
 if LooseVersion(skimage.__version__) >= '0.14':

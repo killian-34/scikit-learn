@@ -39,8 +39,8 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from matplotlib.ticker import NullFormatter
 
-from sklearn import manifold
-from sklearn.utils import check_random_state
+from sklearn_causal import manifold
+from sklearn_causal.utils import check_random_state
 
 # Next line to silence pyflakes.
 Axes3D

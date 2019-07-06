@@ -31,14 +31,14 @@ meaningful despite the large reduction in dimension.
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn import datasets
-from sklearn.model_selection import train_test_split
-from sklearn.decomposition import PCA
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
-from sklearn.neighbors import (KNeighborsClassifier,
+from sklearn_causal import datasets
+from sklearn_causal.model_selection import train_test_split
+from sklearn_causal.decomposition import PCA
+from sklearn_causal.discriminant_analysis import LinearDiscriminantAnalysis
+from sklearn_causal.neighbors import (KNeighborsClassifier,
                                NeighborhoodComponentsAnalysis)
-from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import StandardScaler
+from sklearn_causal.pipeline import make_pipeline
+from sklearn_causal.preprocessing import StandardScaler
 
 print(__doc__)
 

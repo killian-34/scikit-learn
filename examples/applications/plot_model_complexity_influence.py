@@ -26,13 +26,13 @@ from mpl_toolkits.axes_grid1.parasite_axes import host_subplot
 from mpl_toolkits.axisartist.axislines import Axes
 from scipy.sparse.csr import csr_matrix
 
-from sklearn import datasets
-from sklearn.utils import shuffle
-from sklearn.metrics import mean_squared_error
-from sklearn.svm.classes import NuSVR
-from sklearn.ensemble.gradient_boosting import GradientBoostingRegressor
-from sklearn.linear_model.stochastic_gradient import SGDClassifier
-from sklearn.metrics import hamming_loss
+from sklearn_causal import datasets
+from sklearn_causal.utils import shuffle
+from sklearn_causal.metrics import mean_squared_error
+from sklearn_causal.svm.classes import NuSVR
+from sklearn_causal.ensemble.gradient_boosting import GradientBoostingRegressor
+from sklearn_causal.linear_model.stochastic_gradient import SGDClassifier
+from sklearn_causal.metrics import hamming_loss
 
 # #############################################################################
 # Routines

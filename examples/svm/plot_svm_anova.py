@@ -12,12 +12,12 @@ print(__doc__)
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.datasets import load_iris
-from sklearn.feature_selection import SelectPercentile, chi2
-from sklearn.model_selection import cross_val_score
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler
-from sklearn.svm import SVC
+from sklearn_causal.datasets import load_iris
+from sklearn_causal.feature_selection import SelectPercentile, chi2
+from sklearn_causal.model_selection import cross_val_score
+from sklearn_causal.pipeline import Pipeline
+from sklearn_causal.preprocessing import StandardScaler
+from sklearn_causal.svm import SVC
 
 
 # #############################################################################

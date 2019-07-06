@@ -17,8 +17,8 @@ from itertools import cycle
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn.linear_model import lasso_path, enet_path
-from sklearn import datasets
+from sklearn_causal.linear_model import lasso_path, enet_path
+from sklearn_causal import datasets
 
 diabetes = datasets.load_diabetes()
 X = diabetes.data

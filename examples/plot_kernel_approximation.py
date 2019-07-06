@@ -6,7 +6,7 @@ Explicit feature map approximation for RBF kernels
 An example illustrating the approximation of the feature map
 of an RBF kernel.
 
-.. currentmodule:: sklearn.kernel_approximation
+.. currentmodule:: sklearn_causal.kernel_approximation
 
 It shows how to use :class:`RBFSampler` and :class:`Nystroem` to
 approximate the feature map of an RBF kernel for classification with an SVM on
@@ -24,7 +24,7 @@ Sampling more dimensions clearly leads to better classification results, but
 comes at a greater cost. This means there is a tradeoff between runtime and
 accuracy, given by the parameter n_components. Note that solving the Linear
 SVM and also the approximate kernel SVM could be greatly accelerated by using
-stochastic gradient descent via :class:`sklearn.linear_model.SGDClassifier`.
+stochastic gradient descent via :class:`sklearn_causal.linear_model.SGDClassifier`.
 This is not easily possible for the case of the kernelized SVM.
 
 The second plot visualized the decision surfaces of the RBF kernel SVM and
@@ -53,10 +53,10 @@ import numpy as np
 from time import time
 
 # Import datasets, classifiers and performance metrics
-from sklearn import datasets, svm, pipeline
-from sklearn.kernel_approximation import (RBFSampler,
+from sklearn_causal import datasets, svm, pipeline
+from sklearn_causal.kernel_approximation import (RBFSampler,
                                           Nystroem)
-from sklearn.decomposition import PCA
+from sklearn_causal.decomposition import PCA
 
 # The digits dataset
 digits = datasets.load_digits(n_class=9)

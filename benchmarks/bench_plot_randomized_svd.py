@@ -74,12 +74,12 @@ from time import time
 from collections import defaultdict
 import os.path
 
-from sklearn.utils import gen_batches
-from sklearn.utils.validation import check_random_state
-from sklearn.utils.extmath import randomized_svd
-from sklearn.datasets.samples_generator import (make_low_rank_matrix,
+from sklearn_causal.utils import gen_batches
+from sklearn_causal.utils.validation import check_random_state
+from sklearn_causal.utils.extmath import randomized_svd
+from sklearn_causal.datasets.samples_generator import (make_low_rank_matrix,
                                                 make_sparse_uncorrelated)
-from sklearn.datasets import (fetch_lfw_people,
+from sklearn_causal.datasets import (fetch_lfw_people,
                               fetch_openml,
                               fetch_20newsgroups_vectorized,
                               fetch_olivetti_faces,
@@ -305,11 +305,11 @@ def bench_a(X, dataset_name, power_iter, n_oversamples, n_comps):
 
     for pi in power_iter:
         for pm in ['none', 'LU', 'QR']:
-            print("n_iter = %d on sklearn - %s" % (pi, pm))
+            print("n_iter = %d on sklearn_causal - %s" % (pi, pm))
             U, s, V, time = svd_timing(X, n_comps, n_iter=pi,
                                        power_iteration_normalizer=pm,
                                        n_oversamples=n_oversamples)
-            label = "sklearn - %s" % pm
+            label = "sklearn_causal - %s" % pm
             all_time[label].append(time)
             if enable_spectral_norm:
                 A = U.dot(np.diag(s).dot(V))
@@ -393,7 +393,7 @@ def bench_c(datasets, n_comps):
         X_fro_norm = norm_diff(X, norm='fro', msg=False)
         n_comps = np.minimum(n_comps, np.min(X.shape))
 
-        label = "sklearn"
+        label = "sklearn_causal"
         print("%s %d x %d - %s" %
               (dataset_name, X.shape[0], X.shape[1], label))
         U, s, V, time = svd_timing(X, n_comps, n_iter=2, n_oversamples=10,
@@ -441,7 +441,7 @@ if __name__ == '__main__':
         X = get_data(dataset_name)
         if X is None:
             continue
-        print(" >>>>>> Benching sklearn and fbpca on %s %d x %d" %
+        print(" >>>>>> Benching sklearn_causal and fbpca on %s %d x %d" %
               (dataset_name, X.shape[0], X.shape[1]))
         bench_a(X, dataset_name, power_iter, n_oversamples=2,
                 n_comps=np.minimum(n_comps, np.min(X.shape)))
@@ -449,7 +449,7 @@ if __name__ == '__main__':
     print(" >>>>>> Benching on simulated low rank matrix with variable rank")
     bench_b(power_iter)
 
-    print(" >>>>>> Benching sklearn and fbpca default configurations")
+    print(" >>>>>> Benching sklearn_causal and fbpca default configurations")
     bench_c(datasets + big_sparse_datasets, n_comps)
 
     plt.show()

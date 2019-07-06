@@ -1,4 +1,4 @@
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 .. include:: includes/big_toc_css.rst
 .. include:: whats_new/_contributors.rst
 

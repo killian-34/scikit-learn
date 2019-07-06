@@ -28,11 +28,11 @@ from time import time
 
 import numpy as np
 
-from sklearn.cluster.bicluster import SpectralCoclustering
-from sklearn.cluster import MiniBatchKMeans
-from sklearn.datasets.twenty_newsgroups import fetch_20newsgroups
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.cluster import v_measure_score
+from sklearn_causal.cluster.bicluster import SpectralCoclustering
+from sklearn_causal.cluster import MiniBatchKMeans
+from sklearn_causal.datasets.twenty_newsgroups import fetch_20newsgroups
+from sklearn_causal.feature_extraction.text import TfidfVectorizer
+from sklearn_causal.metrics.cluster import v_measure_score
 
 print(__doc__)
 

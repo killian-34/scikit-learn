@@ -4,7 +4,7 @@
 Imputation of missing values
 ============================
 
-.. currentmodule:: sklearn.impute
+.. currentmodule:: sklearn_causal.impute
 
 For various reasons, many real world datasets contain missing values, often
 encoded as blanks, NaNs or other placeholders. Such datasets however are
@@ -43,7 +43,7 @@ encoded as ``np.nan``, using the mean value of the columns (axis 0)
 that contain the missing values::
 
     >>> import numpy as np
-    >>> from sklearn.impute import SimpleImputer
+    >>> from sklearn_causal.impute import SimpleImputer
     >>> imp = SimpleImputer(missing_values=np.nan, strategy='mean')
     >>> imp.fit([[1, 2], [np.nan, 3], [7, 6]])
     SimpleImputer()
@@ -112,8 +112,8 @@ imputation round are returned.
 ::
 
     >>> import numpy as np
-    >>> from sklearn.experimental import enable_iterative_imputer
-    >>> from sklearn.impute import IterativeImputer
+    >>> from sklearn_causal.experimental import enable_iterative_imputer
+    >>> from sklearn_causal.impute import IterativeImputer
     >>> imp = IterativeImputer(max_iter=10, random_state=0)
     >>> imp.fit([[1, 2], [3, 6], [4, 8], [np.nan, 3], [7, np.nan]])
     IterativeImputer(random_state=0)
@@ -200,7 +200,7 @@ enforces the data type to be float. The parameter ``missing_values`` allows to
 specify other placeholder such as integer. In the following example, we will
 use ``-1`` as missing values::
 
-  >>> from sklearn.impute import MissingIndicator
+  >>> from sklearn_causal.impute import MissingIndicator
   >>> X = np.array([[-1, -1, 1, 3],
   ...               [4, -1, 0, -1],
   ...               [8, -1, 1, 0]])
@@ -235,11 +235,11 @@ the :class:`FeatureUnion` or :class:`ColumnTransformer` to add the indicator
 features to the regular features. First we obtain the `iris` dataset, and add
 some missing values to it.
 
-  >>> from sklearn.datasets import load_iris
-  >>> from sklearn.impute import SimpleImputer, MissingIndicator
-  >>> from sklearn.model_selection import train_test_split
-  >>> from sklearn.pipeline import FeatureUnion, make_pipeline
-  >>> from sklearn.tree import DecisionTreeClassifier
+  >>> from sklearn_causal.datasets import load_iris
+  >>> from sklearn_causal.impute import SimpleImputer, MissingIndicator
+  >>> from sklearn_causal.model_selection import train_test_split
+  >>> from sklearn_causal.pipeline import FeatureUnion, make_pipeline
+  >>> from sklearn_causal.tree import DecisionTreeClassifier
   >>> X, y = load_iris(return_X_y=True)
   >>> mask = np.random.randint(0, 2, size=X.shape).astype(np.bool)
   >>> X[mask] = np.nan

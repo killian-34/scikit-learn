@@ -27,7 +27,7 @@ n_neighbors=20 appears to work well in general.
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
-from sklearn.neighbors import LocalOutlierFactor
+from sklearn_causal.neighbors import LocalOutlierFactor
 
 print(__doc__)
 

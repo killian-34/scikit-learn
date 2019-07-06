@@ -4,7 +4,7 @@
 Linear and Quadratic Discriminant Analysis
 ==========================================
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 Linear Discriminant Analysis
 (:class:`discriminant_analysis.LinearDiscriminantAnalysis`) and Quadratic

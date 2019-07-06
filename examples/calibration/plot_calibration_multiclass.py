@@ -31,10 +31,10 @@ import matplotlib.pyplot as plt
 
 import numpy as np
 
-from sklearn.datasets import make_blobs
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.calibration import CalibratedClassifierCV
-from sklearn.metrics import log_loss
+from sklearn_causal.datasets import make_blobs
+from sklearn_causal.ensemble import RandomForestClassifier
+from sklearn_causal.calibration import CalibratedClassifierCV
+from sklearn_causal.metrics import log_loss
 
 np.random.seed(0)
 

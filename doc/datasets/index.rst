@@ -4,9 +4,9 @@
 Dataset loading utilities
 =========================
 
-.. currentmodule:: sklearn.datasets
+.. currentmodule:: sklearn_causal.datasets
 
-The ``sklearn.datasets`` package embeds some small toy datasets
+The ``sklearn_causal.datasets`` package embeds some small toy datasets
 as introduced in the :ref:`Getting Started <loading_example_dataset>` section.
 
 This package also features helpers to fetch larger datasets commonly
@@ -81,19 +81,19 @@ These datasets are useful to quickly illustrate the behavior of the
 various algorithms implemented in scikit-learn. They are however often too
 small to be representative of real world machine learning tasks.
 
-.. include:: ../../sklearn/datasets/descr/boston_house_prices.rst
+.. include:: ../../sklearn_causal/datasets/descr/boston_house_prices.rst
 
-.. include:: ../../sklearn/datasets/descr/iris.rst
+.. include:: ../../sklearn_causal/datasets/descr/iris.rst
 
-.. include:: ../../sklearn/datasets/descr/diabetes.rst
+.. include:: ../../sklearn_causal/datasets/descr/diabetes.rst
 
-.. include:: ../../sklearn/datasets/descr/digits.rst
+.. include:: ../../sklearn_causal/datasets/descr/digits.rst
 
-.. include:: ../../sklearn/datasets/descr/linnerud.rst
+.. include:: ../../sklearn_causal/datasets/descr/linnerud.rst
 
-.. include:: ../../sklearn/datasets/descr/wine_data.rst
+.. include:: ../../sklearn_causal/datasets/descr/wine_data.rst
 
-.. include:: ../../sklearn/datasets/descr/breast_cancer.rst
+.. include:: ../../sklearn_causal/datasets/descr/breast_cancer.rst
 
 .. _real_world_datasets:
 
@@ -120,19 +120,19 @@ They can be loaded using the following functions:
    fetch_kddcup99
    fetch_california_housing
 
-.. include:: ../../sklearn/datasets/descr/olivetti_faces.rst
+.. include:: ../../sklearn_causal/datasets/descr/olivetti_faces.rst
 
-.. include:: ../../sklearn/datasets/descr/twenty_newsgroups.rst
+.. include:: ../../sklearn_causal/datasets/descr/twenty_newsgroups.rst
 
-.. include:: ../../sklearn/datasets/descr/lfw.rst
+.. include:: ../../sklearn_causal/datasets/descr/lfw.rst
 
-.. include:: ../../sklearn/datasets/descr/covtype.rst
+.. include:: ../../sklearn_causal/datasets/descr/covtype.rst
 
-.. include:: ../../sklearn/datasets/descr/rcv1.rst
+.. include:: ../../sklearn_causal/datasets/descr/rcv1.rst
 
-.. include:: ../../sklearn/datasets/descr/kddcup99.rst
+.. include:: ../../sklearn_causal/datasets/descr/kddcup99.rst
 
-.. include:: ../../sklearn/datasets/descr/california_housing.rst
+.. include:: ../../sklearn_causal/datasets/descr/california_housing.rst
 
 .. _sample_generators:
 
@@ -304,7 +304,7 @@ In this module, scipy sparse CSR matrices are used for ``X`` and numpy arrays ar
 
 You may load a dataset like as follows::
 
-  >>> from sklearn.datasets import load_svmlight_file
+  >>> from sklearn_causal.datasets import load_svmlight_file
   >>> X_train, y_train = load_svmlight_file("/path/to/train_dataset.txt")
   ...                                                         # doctest: +SKIP
 
@@ -342,13 +342,13 @@ Downloading datasets from the openml.org repository
 `openml.org <https://openml.org>`_ is a public repository for machine learning
 data and experiments, that allows everybody to upload open datasets.
 
-The ``sklearn.datasets`` package is able to download datasets
+The ``sklearn_causal.datasets`` package is able to download datasets
 from the repository using the function
-:func:`sklearn.datasets.fetch_openml`.
+:func:`sklearn_causal.datasets.fetch_openml`.
 
 For example, to download a dataset of gene expressions in mice brains::
 
-  >>> from sklearn.datasets import fetch_openml
+  >>> from sklearn_causal.datasets import fetch_openml
   >>> mice = fetch_openml(name='miceprotein', version=4)
 
 To fully specify a dataset, you need to provide a name and a version, though
@@ -515,8 +515,8 @@ refer to:
   for reading WAV files into a numpy array
 
 Categorical (or nominal) features stored as strings (common in pandas DataFrames) 
-will need converting to numerical features using :class:`sklearn.preprocessing.OneHotEncoder`
-or :class:`sklearn.preprocessing.OrdinalEncoder` or similar.
+will need converting to numerical features using :class:`sklearn_causal.preprocessing.OneHotEncoder`
+or :class:`sklearn_causal.preprocessing.OrdinalEncoder` or similar.
 See :ref:`preprocessing`.
 
 Note: if you manage your own numerical data it is recommended to use an 

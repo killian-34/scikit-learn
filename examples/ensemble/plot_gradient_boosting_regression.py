@@ -17,10 +17,10 @@ print(__doc__)
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn import ensemble
-from sklearn import datasets
-from sklearn.utils import shuffle
-from sklearn.metrics import mean_squared_error
+from sklearn_causal import ensemble
+from sklearn_causal import datasets
+from sklearn_causal.utils import shuffle
+from sklearn_causal.metrics import mean_squared_error
 
 # #############################################################################
 # Load data

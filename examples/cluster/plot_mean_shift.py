@@ -13,8 +13,8 @@ Machine Intelligence. 2002. pp. 603-619.
 print(__doc__)
 
 import numpy as np
-from sklearn.cluster import MeanShift, estimate_bandwidth
-from sklearn.datasets.samples_generator import make_blobs
+from sklearn_causal.cluster import MeanShift, estimate_bandwidth
+from sklearn_causal.datasets.samples_generator import make_blobs
 
 # #############################################################################
 # Generate sample data

@@ -50,12 +50,12 @@ from pprint import pprint
 from time import time
 import logging
 
-from sklearn.datasets import fetch_20newsgroups
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.feature_extraction.text import TfidfTransformer
-from sklearn.linear_model import SGDClassifier
-from sklearn.model_selection import GridSearchCV
-from sklearn.pipeline import Pipeline
+from sklearn_causal.datasets import fetch_20newsgroups
+from sklearn_causal.feature_extraction.text import CountVectorizer
+from sklearn_causal.feature_extraction.text import TfidfTransformer
+from sklearn_causal.linear_model import SGDClassifier
+from sklearn_causal.model_selection import GridSearchCV
+from sklearn_causal.pipeline import Pipeline
 
 print(__doc__)
 

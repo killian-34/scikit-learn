@@ -334,7 +334,7 @@ Infrastructure support
   us with a free `Rackspace Cloud <https://www.rackspace.com/cloud/>`_ account to
   automatically build the documentation and the example gallery from for the
   development version of scikit-learn using `this tool
-  <https://github.com/scikit-learn/sklearn-docbuilder>`_.
+  <https://github.com/scikit-learn/sklearn_causal-docbuilder>`_.
 
 - We would also like to thank `Shining Panda
   <http://shiningpanda.com/>`_ for free CPU time on their Continuous

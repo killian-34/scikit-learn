@@ -36,7 +36,7 @@ run_tests() {
     export SKLEARN_SKIP_NETWORK_TESTS=1
 
     if [[ "$COVERAGE" == "true" ]]; then
-        TEST_CMD="$TEST_CMD --cov sklearn"
+        TEST_CMD="$TEST_CMD --cov sklearn_causal"
     fi
 
     if [[ -n "$CHECK_WARNINGS" ]]; then
@@ -45,7 +45,7 @@ run_tests() {
 
     set -x  # print executed commands to the terminal
 
-    $TEST_CMD sklearn
+    $TEST_CMD sklearn_causal
 }
 
 run_tests

@@ -16,11 +16,11 @@ print(__doc__)
 
 import matplotlib.pyplot as plt
 
-from sklearn import datasets
-from sklearn.ensemble import GradientBoostingRegressor
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.linear_model import LinearRegression
-from sklearn.ensemble import VotingRegressor
+from sklearn_causal import datasets
+from sklearn_causal.ensemble import GradientBoostingRegressor
+from sklearn_causal.ensemble import RandomForestRegressor
+from sklearn_causal.linear_model import LinearRegression
+from sklearn_causal.ensemble import VotingRegressor
 
 # Loading some example data
 boston = datasets.load_boston()

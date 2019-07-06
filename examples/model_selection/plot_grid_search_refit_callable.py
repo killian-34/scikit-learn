@@ -23,11 +23,11 @@ print(__doc__)
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn.datasets import load_digits
-from sklearn.decomposition import PCA
-from sklearn.model_selection import GridSearchCV
-from sklearn.pipeline import Pipeline
-from sklearn.svm import LinearSVC
+from sklearn_causal.datasets import load_digits
+from sklearn_causal.decomposition import PCA
+from sklearn_causal.model_selection import GridSearchCV
+from sklearn_causal.pipeline import Pipeline
+from sklearn_causal.svm import LinearSVC
 
 
 def lower_bound(cv_results):

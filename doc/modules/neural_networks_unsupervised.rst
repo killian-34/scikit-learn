@@ -4,7 +4,7 @@
 Neural network models (unsupervised)
 ====================================
 
-.. currentmodule:: sklearn.neural_network
+.. currentmodule:: sklearn_causal.neural_network
 
 
 .. _rbm:

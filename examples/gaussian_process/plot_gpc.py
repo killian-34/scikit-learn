@@ -30,9 +30,9 @@ import numpy as np
 
 from matplotlib import pyplot as plt
 
-from sklearn.metrics.classification import accuracy_score, log_loss
-from sklearn.gaussian_process import GaussianProcessClassifier
-from sklearn.gaussian_process.kernels import RBF
+from sklearn_causal.metrics.classification import accuracy_score, log_loss
+from sklearn_causal.gaussian_process import GaussianProcessClassifier
+from sklearn_causal.gaussian_process.kernels import RBF
 
 
 # Generate data

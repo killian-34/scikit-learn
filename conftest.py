@@ -1,14 +1,14 @@
 # Even if empty this file is useful so that when running from the root folder
-# ./sklearn is added to sys.path by pytest. See
+# ./sklearn_causal is added to sys.path by pytest. See
 # https://docs.pytest.org/en/latest/pythonpath.html for more details.  For
 # example, this allows to build extensions in place and run pytest
-# doc/modules/clustering.rst and use sklearn from the local folder rather than
+# doc/modules/clustering.rst and use sklearn_causal from the local folder rather than
 # the one from site-packages.
 
 import platform
 from distutils.version import LooseVersion
 
-from sklearn import set_config
+from sklearn_causal import set_config
 import pytest
 from _pytest.doctest import DoctestItem
 
@@ -33,8 +33,8 @@ def pytest_collection_modifyitems(config, items):
             reason='FeatureHasher is not compatible with PyPy')
         for item in items:
             if item.name in (
-                    'sklearn.feature_extraction.hashing.FeatureHasher',
-                    'sklearn.feature_extraction.text.HashingVectorizer'):
+                    'sklearn_causal.feature_extraction.hashing.FeatureHasher',
+                    'sklearn_causal.feature_extraction.text.HashingVectorizer'):
                 item.add_marker(skip_marker)
 
     # Skip tests which require internet if the flag is provided

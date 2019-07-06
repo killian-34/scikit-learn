@@ -4,7 +4,7 @@
 Isotonic regression
 ===================
 
-.. currentmodule:: sklearn.isotonic
+.. currentmodule:: sklearn_causal.isotonic
 
 The class :class:`IsotonicRegression` fits a non-decreasing function to data.
 It solves the following problem:

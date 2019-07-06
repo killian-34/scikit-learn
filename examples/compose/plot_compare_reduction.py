@@ -32,12 +32,12 @@ fitting of a transformer is costly.
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.datasets import load_digits
-from sklearn.model_selection import GridSearchCV
-from sklearn.pipeline import Pipeline
-from sklearn.svm import LinearSVC
-from sklearn.decomposition import PCA, NMF
-from sklearn.feature_selection import SelectKBest, chi2
+from sklearn_causal.datasets import load_digits
+from sklearn_causal.model_selection import GridSearchCV
+from sklearn_causal.pipeline import Pipeline
+from sklearn_causal.svm import LinearSVC
+from sklearn_causal.decomposition import PCA, NMF
+from sklearn_causal.feature_selection import SelectKBest, chi2
 
 print(__doc__)
 

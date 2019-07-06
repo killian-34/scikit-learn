@@ -8,8 +8,8 @@
 *.swo
 .DS_Store
 build
-sklearn/datasets/__config__.py
-sklearn/**/*.html
+sklearn_causal/datasets/__config__.py
+sklearn_causal/**/*.html
 
 dist/
 MANIFEST
@@ -73,6 +73,6 @@ _configtest.o.d
 .mypy_cache/
 
 # files generated from a template
-sklearn/utils/seq_dataset.pyx
-sklearn/utils/seq_dataset.pxd
-sklearn/linear_model/sag_fast.pyx
+sklearn_causal/utils/seq_dataset.pyx
+sklearn_causal/utils/seq_dataset.pxd
+sklearn_causal/linear_model/sag_fast.pyx

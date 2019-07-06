@@ -28,10 +28,10 @@ print(__doc__)
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn import datasets
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import zero_one_loss
-from sklearn.ensemble import AdaBoostClassifier
+from sklearn_causal import datasets
+from sklearn_causal.tree import DecisionTreeClassifier
+from sklearn_causal.metrics import zero_one_loss
+from sklearn_causal.ensemble import AdaBoostClassifier
 
 
 n_estimators = 400

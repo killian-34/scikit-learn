@@ -151,8 +151,8 @@ feedback:
   your **Python, scikit-learn, numpy, and scipy versions**. This information
   can be found by running the following code snippet::
 
-    >>> import sklearn
-    >>> sklearn.show_versions()  # doctest: +SKIP
+    >>> import sklearn_causal
+    >>> sklearn_causal.show_versions()  # doctest: +SKIP
 
   .. note::
 
@@ -163,7 +163,7 @@ feedback:
      import sys; print("Python", sys.version)
      import numpy; print("NumPy", numpy.__version__)
      import scipy; print("SciPy", scipy.__version__)
-     import sklearn; print("Scikit-Learn", sklearn.__version__)
+     import sklearn_causal; print("Scikit-Learn", sklearn_causal.__version__)
 
 - Please ensure all **code snippets and error messages are formatted in
   appropriate code blocks**.  See `Creating and highlighting code blocks
@@ -301,17 +301,17 @@ complies with the following rules before marking a PR as ``[MRG]``. The
    with `pytest`, but it is usually not recommended since it takes a long
    time. It is often enough to only run the test related to your changes:
    for example, if you changed something in
-   `sklearn/linear_model/logistic.py`, running the following commands will
+   `sklearn_causal/linear_model/logistic.py`, running the following commands will
    usually be enough:
 
-   - `pytest sklearn/linear_model/logistic.py` to make sure the doctest
+   - `pytest sklearn_causal/linear_model/logistic.py` to make sure the doctest
      examples are correct
-   - `pytest sklearn/linear_model/tests/test_logistic.py` to run the tests
+   - `pytest sklearn_causal/linear_model/tests/test_logistic.py` to run the tests
      specific to the file
-   - `pytest sklearn/linear_model` to test the whole `linear_model` module
-   - `pytest sklearn/doc/linear_model.rst` to make sure the user guide
+   - `pytest sklearn_causal/linear_model` to test the whole `linear_model` module
+   - `pytest sklearn_causal/doc/linear_model.rst` to make sure the user guide
      examples are correct.
-   - `pytest sklearn/tests/test_common.py -k LogisticRegression` to run all our
+   - `pytest sklearn_causal/tests/test_common.py -k LogisticRegression` to run all our
      estimator checks (specifically for `LogisticRegression`, if that's the
      estimator you changed).
 
@@ -342,7 +342,7 @@ complies with the following rules before marking a PR as ``[MRG]``. The
 6. Follow the `coding-guidelines`_ (see below).
 
 7. When applicable, use the validation tools and scripts in the
-   ``sklearn.utils`` submodule.  A list of utility routines available
+   ``sklearn_causal.utils`` submodule.  A list of utility routines available
    for developers can be found in the :ref:`developers-utils` page.
 
 8. Often pull requests resolve one or more other issues (or pull requests).
@@ -382,7 +382,7 @@ You can check for common programming errors with the following tools:
   with::
 
     $ pip install pytest pytest-cov
-    $ pytest --cov sklearn path/to/tests_for_package
+    $ pytest --cov sklearn_causal path/to/tests_for_package
 
   see also :ref:`testing_coverage`
 
@@ -606,7 +606,7 @@ Finally, follow the formatting rules below to make it consistently good:
 * For unwritten formatting rules, try to follow existing good works:
 
     * For "References" in docstrings, see the Silhouette Coefficient
-      (:func:`sklearn.metrics.silhouette_score`).
+      (:func:`sklearn_causal.metrics.silhouette_score`).
 
 * When editing reStructuredText (``.rst``) files, try to keep line length under
   80 characters when possible (exceptions include links and tables).
@@ -759,9 +759,9 @@ In addition, we add the following guidelines:
 
 * Unit tests are an exception to the previous rule;
   they should use absolute imports, exactly as client code would.
-  A corollary is that, if ``sklearn.foo`` exports a class or function
-  that is implemented in ``sklearn.foo.bar.baz``,
-  the test should import it from ``sklearn.foo``.
+  A corollary is that, if ``sklearn_causal.foo`` exports a class or function
+  that is implemented in ``sklearn_causal.foo.bar.baz``,
+  the test should import it from ``sklearn_causal.foo``.
 
 * **Please don't use** ``import *`` **in any case**. It is considered harmful
   by the `official Python recommendations
@@ -783,9 +783,9 @@ A good example of code that we like can be found `here
 Input validation
 ----------------
 
-.. currentmodule:: sklearn.utils
+.. currentmodule:: sklearn_causal.utils
 
-The module :mod:`sklearn.utils` contains various functions for doing input
+The module :mod:`sklearn_causal.utils` contains various functions for doing input
 validation and conversion. Sometimes, ``np.asarray`` suffices for validation;
 do *not* use ``np.asanyarray`` or ``np.atleast_2d``, since those let NumPy's
 ``np.matrix`` through, which has a different API
@@ -806,11 +806,11 @@ If your code depends on a random number generator, do not use
 repeatability in error checking, the routine should accept a keyword
 ``random_state`` and use this to construct a
 ``numpy.random.RandomState`` object.
-See :func:`sklearn.utils.check_random_state` in :ref:`developers-utils`.
+See :func:`sklearn_causal.utils.check_random_state` in :ref:`developers-utils`.
 
 Here's a simple example of code using some of the above guidelines::
 
-    from sklearn.utils import check_array, check_random_state
+    from sklearn_causal.utils import check_array, check_random_state
 
     def choose_random_sample(X, random_state=0):
         """
@@ -879,7 +879,7 @@ If any publicly accessible method, function, attribute or parameter
 is renamed, we still support the old one for two releases and issue
 a deprecation warning when it is called/passed/accessed.
 E.g., if the function ``zero_one`` is renamed to ``zero_one_loss``,
-we add the decorator ``deprecated`` (from ``sklearn.utils``)
+we add the decorator ``deprecated`` (from ``sklearn_causal.utils``)
 to ``zero_one`` and call ``zero_one_loss`` from that function::
 
     from ..utils import deprecated
@@ -998,7 +998,7 @@ cases. The warning should be caught in all other tests
 in the examples.
 
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 Python versions supported
 -------------------------
@@ -1140,7 +1140,7 @@ data-independent parameters (overriding previous parameter values passed
 to ``__init__``).
 
 All estimators in the main scikit-learn codebase should inherit from
-``sklearn.base.BaseEstimator``.
+``sklearn_causal.base.BaseEstimator``.
 
 Instantiation
 ^^^^^^^^^^^^^
@@ -1289,8 +1289,8 @@ the scikit-learn API outlined above. You can check whether your estimator
 adheres to the scikit-learn interface and standards by running
 :func:`utils.estimator_checks.check_estimator` on the class::
 
-  >>> from sklearn.utils.estimator_checks import check_estimator
-  >>> from sklearn.svm import LinearSVC
+  >>> from sklearn_causal.utils.estimator_checks import check_estimator
+  >>> from sklearn_causal.svm import LinearSVC
   >>> check_estimator(LinearSVC)  # passes
 
 The main motivation to make a class compatible to the scikit-learn estimator
@@ -1324,16 +1324,16 @@ the correct interface more easily.
     However, if a dependency on scikit-learn is acceptable in your code,
     you can prevent a lot of boilerplate code
     by deriving a class from ``BaseEstimator``
-    and optionally the mixin classes in ``sklearn.base``.
+    and optionally the mixin classes in ``sklearn_causal.base``.
     For example, below is a custom classifier, with more examples included
     in the scikit-learn-contrib
     `project template <https://github.com/scikit-learn-contrib/project-template/blob/master/skltemplate/_template.py>`__.
 
       >>> import numpy as np
-      >>> from sklearn.base import BaseEstimator, ClassifierMixin
-      >>> from sklearn.utils.validation import check_X_y, check_array, check_is_fitted
-      >>> from sklearn.utils.multiclass import unique_labels
-      >>> from sklearn.metrics import euclidean_distances
+      >>> from sklearn_causal.base import BaseEstimator, ClassifierMixin
+      >>> from sklearn_causal.utils.validation import check_X_y, check_array, check_is_fitted
+      >>> from sklearn_causal.utils.multiclass import unique_labels
+      >>> from sklearn_causal.metrics import euclidean_distances
       >>> class TemplateClassifier(BaseEstimator, ClassifierMixin):
       ...
       ...     def __init__(self, demo_param='demo'):
@@ -1383,7 +1383,7 @@ the ``set_params`` function is necessary as it is used to set parameters during
 grid searches.
 
 The easiest way to implement these functions, and to get a sensible
-``__repr__`` method, is to inherit from ``sklearn.base.BaseEstimator``. If you
+``__repr__`` method, is to inherit from ``sklearn_causal.base.BaseEstimator``. If you
 do not want to make your code dependent on scikit-learn, the easiest way to
 implement the interface is::
 
@@ -1482,11 +1482,11 @@ this can be achieved with::
         return self.classes_[np.argmax(D, axis=1)]
 
 In linear models, coefficients are stored in an array called ``coef_``, and the
-independent term is stored in ``intercept_``.  ``sklearn.linear_model.base``
+independent term is stored in ``intercept_``.  ``sklearn_causal.linear_model.base``
 contains a few base classes and mixins that implement common linear model
 patterns.
 
-The :mod:`sklearn.utils.multiclass` module contains useful functions
+The :mod:`sklearn_causal.utils.multiclass` module contains useful functions
 for working with multiclass and multilabel problems.
 
 .. _estimator_tags:
@@ -1501,7 +1501,7 @@ Scikit-learn introduced estimator tags in version 0.21.  These are annotations
 of estimators that allow programmatic inspection of their capabilities, such as
 sparse matrix support, supported output types and supported methods.  The
 estimator tags are a dictionary returned by the method ``_get_tags()``.  These
-tags are used by the common tests and the :func:`sklearn.utils.estimator_checks.check_estimator` function to
+tags are used by the common tests and the :func:`sklearn_causal.utils.estimator_checks.check_estimator` function to
 decide what tests to run and what input data is appropriate. Tags can depend on
 estimator parameters or even system architecture and can in general only be
 determined at runtime.
@@ -1545,7 +1545,7 @@ poor_score
     currently for regression is an R2 of 0.5 on a subset of the boston housing
     dataset, and for classification an accuracy of 0.83 on
     ``make_blobs(n_samples=300, random_state=0)``. These datasets and values
-    are based on current estimators in sklearn and might be replaced by
+    are based on current estimators in sklearn_causal and might be replaced by
     something more systematic.
 
 multioutput_only
@@ -1609,16 +1609,16 @@ make this task easier and faster (in no particular order).
   is performed, especially at the beginning of the :term:`fit` methods.
   Sometimes, only a very small portion of the code is doing the actual job.
   For example looking at the ``fit()`` method of
-  :class:`sklearn.linear_model.LinearRegression`, what you're looking for
+  :class:`sklearn_causal.linear_model.LinearRegression`, what you're looking for
   might just be the call the ``scipy.linalg.lstsq``, but it is buried into
   multiple lines of input checking and the handling of different kinds of
   parameters.
 - Due to the use of `Inheritance
   <https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)>`_,
   some methods may be implemented in parent classes. All estimators inherit
-  at least from :class:`BaseEstimator <sklearn.base.BaseEstimator>`, and
+  at least from :class:`BaseEstimator <sklearn_causal.base.BaseEstimator>`, and
   from a ``Mixin`` class (e.g. :class:`ClassifierMixin
-  <sklearn.base.ClassifierMixin>`) that enables default behaviour depending
+  <sklearn_causal.base.ClassifierMixin>`) that enables default behaviour depending
   on the nature of the estimator (classifier, regressor, transformer, etc.).
 - Sometimes, reading the tests for a given function will give you an idea of
   what its intended purpose is. You can use ``git grep`` (see below) to find

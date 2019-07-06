@@ -57,12 +57,12 @@ np.random.seed(0)
 
 import matplotlib.pyplot as plt
 
-from sklearn import datasets
-from sklearn.naive_bayes import GaussianNB
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.svm import LinearSVC
-from sklearn.calibration import calibration_curve
+from sklearn_causal import datasets
+from sklearn_causal.naive_bayes import GaussianNB
+from sklearn_causal.linear_model import LogisticRegression
+from sklearn_causal.ensemble import RandomForestClassifier
+from sklearn_causal.svm import LinearSVC
+from sklearn_causal.calibration import calibration_curve
 
 X, y = datasets.make_classification(n_samples=100000, n_features=20,
                                     n_informative=2, n_redundant=2)

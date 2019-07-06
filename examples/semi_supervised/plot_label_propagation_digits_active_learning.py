@@ -27,9 +27,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy import stats
 
-from sklearn import datasets
-from sklearn.semi_supervised import label_propagation
-from sklearn.metrics import classification_report, confusion_matrix
+from sklearn_causal import datasets
+from sklearn_causal.semi_supervised import label_propagation
+from sklearn_causal.metrics import classification_report, confusion_matrix
 
 digits = datasets.load_digits()
 rng = np.random.RandomState(0)

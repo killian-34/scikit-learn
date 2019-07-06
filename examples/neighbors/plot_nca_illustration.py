@@ -13,10 +13,10 @@ more information.
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.datasets import make_classification
-from sklearn.neighbors import NeighborhoodComponentsAnalysis
+from sklearn_causal.datasets import make_classification
+from sklearn_causal.neighbors import NeighborhoodComponentsAnalysis
 from matplotlib import cm
-from sklearn.utils.fixes import logsumexp
+from sklearn_causal.utils.fixes import logsumexp
 
 print(__doc__)
 

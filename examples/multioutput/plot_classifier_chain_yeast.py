@@ -37,12 +37,12 @@ with randomly ordered chains).
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.datasets import fetch_openml
-from sklearn.multioutput import ClassifierChain
-from sklearn.model_selection import train_test_split
-from sklearn.multiclass import OneVsRestClassifier
-from sklearn.metrics import jaccard_score
-from sklearn.linear_model import LogisticRegression
+from sklearn_causal.datasets import fetch_openml
+from sklearn_causal.multioutput import ClassifierChain
+from sklearn_causal.model_selection import train_test_split
+from sklearn_causal.multiclass import OneVsRestClassifier
+from sklearn_causal.metrics import jaccard_score
+from sklearn_causal.linear_model import LogisticRegression
 
 print(__doc__)
 

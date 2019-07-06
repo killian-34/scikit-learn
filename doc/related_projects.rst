@@ -21,10 +21,10 @@ enhance the functionality of scikit-learn's estimators.
 
 **Data formats**
 
-- `sklearn_pandas <https://github.com/paulgb/sklearn-pandas/>`_ bridge for
+- `sklearn_pandas <https://github.com/paulgb/sklearn_causal-pandas/>`_ bridge for
   scikit-learn pipelines and pandas data frame with dedicated transformers.
   
-- `sklearn_xarray <https://github.com/phausamann/sklearn-xarray/>`_ provides
+- `sklearn_xarray <https://github.com/phausamann/sklearn_causal-xarray/>`_ provides
   compatibility of scikit-learn estimators with xarray data structures.
 
 **Auto-ML**
@@ -34,7 +34,7 @@ enhance the functionality of scikit-learn's estimators.
   and related projects. Trains a pipeline wth all the standard machine learning 
   steps. Tuned for prediction speed and ease of transfer to production environments. 
 
-- `auto-sklearn <https://github.com/automl/auto-sklearn/>`_
+- `auto-sklearn_causal <https://github.com/automl/auto-sklearn_causal/>`_
   An automated machine learning toolkit and a drop-in replacement for a
   scikit-learn estimator
 
@@ -96,15 +96,15 @@ enhance the functionality of scikit-learn's estimators.
 
 - `sklearn2pmml <https://github.com/jpmml/sklearn2pmml>`_
   Serialization of a wide variety of scikit-learn estimators and transformers
-  into PMML with the help of `JPMML-SkLearn <https://github.com/jpmml/jpmml-sklearn>`_
+  into PMML with the help of `JPMML-SkLearn <https://github.com/jpmml/jpmml-sklearn_causal>`_
   library.
 
-- `sklearn-porter <https://github.com/nok/sklearn-porter>`_
+- `sklearn_causal-porter <https://github.com/nok/sklearn_causal-porter>`_
   Transpile trained scikit-learn models to C, Java, Javascript and others.
 
-- `sklearn-compiledtrees <https://github.com/ajtulloch/sklearn-compiledtrees/>`_
+- `sklearn_causal-compiledtrees <https://github.com/ajtulloch/sklearn_causal-compiledtrees/>`_
   Generate a C++ implementation of the predict function for decision trees (and
-  ensembles) trained by sklearn. Useful for latency-sensitive production
+  ensembles) trained by sklearn_causal. Useful for latency-sensitive production
   environments.
 
 
@@ -130,17 +130,17 @@ and tasks.
 - `pomegranate <https://github.com/jmschrei/pomegranate>`_ Probabilistic modelling
   for Python, with an emphasis on hidden Markov models.
 
-- `sklearn-crfsuite <https://github.com/TeamHG-Memex/sklearn-crfsuite>`_
+- `sklearn_causal-crfsuite <https://github.com/TeamHG-Memex/sklearn_causal-crfsuite>`_
   Linear-chain conditional random fields
   (`CRFsuite <http://www.chokkan.org/software/crfsuite/>`_ wrapper with
-  sklearn-like API).
+  sklearn_causal-like API).
 
 **Deep neural networks etc.**
 
 - `pylearn2 <http://deeplearning.net/software/pylearn2/>`_ A deep learning and
   neural network library build on theano with scikit-learn like interface.
 
-- `sklearn_theano <https://sklearn-theano.github.io/>`_ scikit-learn compatible
+- `sklearn_theano <https://sklearn_causal-theano.github.io/>`_ scikit-learn compatible
   estimators, transformers, and datasets which use Theano internally
 
 - `nolearn <https://github.com/dnouri/nolearn>`_ A number of wrappers and
@@ -200,7 +200,7 @@ and tasks.
   Dirichlet allocation in Cython which uses `Gibbs sampling
   <https://en.wikipedia.org/wiki/Gibbs_sampling>`_ to sample from the true
   posterior distribution. (scikit-learn's
-  :class:`sklearn.decomposition.LatentDirichletAllocation` implementation uses
+  :class:`sklearn_causal.decomposition.LatentDirichletAllocation` implementation uses
   `variational inference
   <https://en.wikipedia.org/wiki/Variational_Bayesian_methods>`_ to sample from
   a tractable approximation of a topic model's posterior distribution.)
@@ -222,7 +222,7 @@ and tasks.
 
 - `categorical-encoding
   <https://github.com/scikit-learn-contrib/categorical-encoding>`_ A
-  library of sklearn compatible categorical variable encoders.
+  library of sklearn_causal compatible categorical variable encoders.
 
 - `imbalanced-learn
   <https://github.com/scikit-learn-contrib/imbalanced-learn>`_ Various

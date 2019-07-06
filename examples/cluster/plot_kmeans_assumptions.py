@@ -17,8 +17,8 @@ print(__doc__)
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn.cluster import KMeans
-from sklearn.datasets import make_blobs
+from sklearn_causal.cluster import KMeans
+from sklearn_causal.datasets import make_blobs
 
 plt.figure(figsize=(12, 12))
 

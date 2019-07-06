@@ -5,7 +5,7 @@ Column Transformer with Mixed Types
 
 This example illustrates how to apply different preprocessing and
 feature extraction pipelines to different subsets of features,
-using :class:`sklearn.compose.ColumnTransformer`.
+using :class:`sklearn_causal.compose.ColumnTransformer`.
 This is particularly handy for the case of datasets that contain
 heterogeneous data types, since we may want to scale the
 numeric features and one-hot encode the categorical ones.
@@ -16,7 +16,7 @@ encoded after imputing missing values with a new category
 (``'missing'``).
 
 Finally, the preprocessing pipeline is integrated in a
-full prediction pipeline using :class:`sklearn.pipeline.Pipeline`,
+full prediction pipeline using :class:`sklearn_causal.pipeline.Pipeline`,
 together with a simple classification model.
 """
 
@@ -27,18 +27,18 @@ together with a simple classification model.
 import pandas as pd
 import numpy as np
 
-from sklearn.compose import ColumnTransformer
-from sklearn.pipeline import Pipeline
-from sklearn.impute import SimpleImputer
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
-from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn_causal.compose import ColumnTransformer
+from sklearn_causal.pipeline import Pipeline
+from sklearn_causal.impute import SimpleImputer
+from sklearn_causal.preprocessing import StandardScaler, OneHotEncoder
+from sklearn_causal.linear_model import LogisticRegression
+from sklearn_causal.model_selection import train_test_split, GridSearchCV
 
 np.random.seed(0)
 
 # Read data from Titanic dataset.
 titanic_url = ('https://raw.githubusercontent.com/amueller/'
-               'scipy-2017-sklearn/091d371/notebooks/datasets/titanic3.csv')
+               'scipy-2017-sklearn_causal/091d371/notebooks/datasets/titanic3.csv')
 data = pd.read_csv(titanic_url)
 
 # We will train our classifier with the following features:
@@ -88,7 +88,7 @@ print("model score: %.3f" % clf.score(X_test, y_test))
 # hyperparameters as part of the ``Pipeline``.
 # We will search for both the imputer strategy of the numeric preprocessing
 # and the regularization parameter of the logistic regression using
-# :class:`sklearn.model_selection.GridSearchCV`.
+# :class:`sklearn_causal.model_selection.GridSearchCV`.
 
 
 param_grid = {

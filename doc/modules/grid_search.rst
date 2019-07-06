@@ -1,6 +1,6 @@
 
 
-.. currentmodule:: sklearn.model_selection
+.. currentmodule:: sklearn_causal.model_selection
 
 .. _grid_search:
 
@@ -24,7 +24,7 @@ for a given estimator, use::
 
 A search consists of:
 
-- an estimator (regressor or classifier such as ``sklearn.svm.SVC()``);
+- an estimator (regressor or classifier such as ``sklearn_causal.svm.SVC()``);
 - a parameter space;
 - a method for searching or sampling candidates;
 - a cross-validation scheme; and
@@ -66,7 +66,7 @@ The :class:`GridSearchCV` instance implements the usual estimator API: when
 "fitting" it on a dataset all the possible combinations of parameter values are
 evaluated and the best combination is retained.
 
-.. currentmodule:: sklearn.model_selection
+.. currentmodule:: sklearn_causal.model_selection
 
 .. topic:: Examples:
 
@@ -132,7 +132,7 @@ consecutive calls.
         do not allow specifying a random state. Instead, they use the global
         numpy random state, that can be seeded via ``np.random.seed`` or set
         using ``np.random.set_state``. However, beginning scikit-learn 0.18,
-        the :mod:`sklearn.model_selection` module sets the random state provided
+        the :mod:`sklearn_causal.model_selection` module sets the random state provided
         by the user if scipy >= 0.16 is also available.
 
 For continuous parameters, such as ``C`` above, it is important to specify
@@ -162,8 +162,8 @@ Specifying an objective metric
 
 By default, parameter search uses the ``score`` function of the estimator
 to evaluate a parameter setting. These are the
-:func:`sklearn.metrics.accuracy_score` for classification and
-:func:`sklearn.metrics.r2_score` for regression.  For some applications,
+:func:`sklearn_causal.metrics.accuracy_score` for classification and
+:func:`sklearn_causal.metrics.r2_score` for regression.  For some applications,
 other scoring functions are better suited (for example in unbalanced
 classification, the accuracy score is often uninformative). An alternative
 scoring function can be specified via the ``scoring`` parameter to
@@ -251,7 +251,7 @@ compute the **regularization path** of the estimator.
 
 Here is the list of such models:
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/

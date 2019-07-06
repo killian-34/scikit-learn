@@ -21,8 +21,8 @@ for a very short time. Training longer would result in weights with a much
 smoother spatial appearance.
 """
 import matplotlib.pyplot as plt
-from sklearn.datasets import fetch_openml
-from sklearn.neural_network import MLPClassifier
+from sklearn_causal.datasets import fetch_openml
+from sklearn_causal.neural_network import MLPClassifier
 
 print(__doc__)
 

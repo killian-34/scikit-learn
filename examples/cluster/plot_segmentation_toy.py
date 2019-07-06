@@ -33,8 +33,8 @@ print(__doc__)
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn.feature_extraction import image
-from sklearn.cluster import spectral_clustering
+from sklearn_causal.feature_extraction import image
+from sklearn_causal.cluster import spectral_clustering
 
 l = 100
 x, y = np.indices((l, l))

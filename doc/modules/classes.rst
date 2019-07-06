@@ -11,16 +11,16 @@ uses.
 For reference on concepts repeated across the API, see :ref:`glossary`.
 
 
-:mod:`sklearn.base`: Base classes and utility functions
+:mod:`sklearn_causal.base`: Base classes and utility functions
 =======================================================
 
-.. automodule:: sklearn.base
+.. automodule:: sklearn_causal.base
     :no-members:
     :no-inherited-members:
 
 Base classes
 ------------
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -36,7 +36,7 @@ Base classes
 
 Functions
 ---------
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -52,16 +52,16 @@ Functions
 
 .. _calibration_ref:
 
-:mod:`sklearn.calibration`: Probability Calibration
+:mod:`sklearn_causal.calibration`: Probability Calibration
 ===================================================
 
-.. automodule:: sklearn.calibration
+.. automodule:: sklearn_causal.calibration
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`calibration` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -78,10 +78,10 @@ Functions
 
 .. _cluster_ref:
 
-:mod:`sklearn.cluster`: Clustering
+:mod:`sklearn_causal.cluster`: Clustering
 ==================================
 
-.. automodule:: sklearn.cluster
+.. automodule:: sklearn_causal.cluster
    :no-members:
    :no-inherited-members:
 
@@ -89,7 +89,7 @@ Functions
 
 Classes
 -------
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -125,10 +125,10 @@ Functions
 
 .. _bicluster_ref:
 
-:mod:`sklearn.cluster.bicluster`: Biclustering
+:mod:`sklearn_causal.cluster.bicluster`: Biclustering
 ==============================================
 
-.. automodule:: sklearn.cluster.bicluster
+.. automodule:: sklearn_causal.cluster.bicluster
    :no-members:
    :no-inherited-members:
 
@@ -136,7 +136,7 @@ Functions
 
 Classes
 -------
-.. currentmodule:: sklearn.cluster.bicluster
+.. currentmodule:: sklearn_causal.cluster.bicluster
 
 .. autosummary::
    :toctree: generated/
@@ -147,17 +147,17 @@ Classes
 
 .. _compose_ref:
 
-:mod:`sklearn.compose`: Composite Estimators
+:mod:`sklearn_causal.compose`: Composite Estimators
 ============================================
 
-.. automodule:: sklearn.compose
+.. automodule:: sklearn_causal.compose
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`combining_estimators` section for further
 details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
     :toctree: generated
@@ -174,16 +174,16 @@ details.
 
 .. _covariance_ref:
 
-:mod:`sklearn.covariance`: Covariance Estimators
+:mod:`sklearn_causal.covariance`: Covariance Estimators
 ================================================
 
-.. automodule:: sklearn.covariance
+.. automodule:: sklearn_causal.covariance
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`covariance` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -210,16 +210,16 @@ details.
 
 .. _cross_decomposition_ref:
 
-:mod:`sklearn.cross_decomposition`: Cross decomposition
+:mod:`sklearn_causal.cross_decomposition`: Cross decomposition
 =======================================================
 
-.. automodule:: sklearn.cross_decomposition
+.. automodule:: sklearn_causal.cross_decomposition
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`cross_decomposition` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -232,10 +232,10 @@ details.
 
 .. _datasets_ref:
 
-:mod:`sklearn.datasets`: Datasets
+:mod:`sklearn_causal.datasets`: Datasets
 =================================
 
-.. automodule:: sklearn.datasets
+.. automodule:: sklearn_causal.datasets
    :no-members:
    :no-inherited-members:
 
@@ -244,7 +244,7 @@ details.
 Loaders
 -------
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -280,7 +280,7 @@ Loaders
 Samples generator
 -----------------
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -310,16 +310,16 @@ Samples generator
 
 .. _decomposition_ref:
 
-:mod:`sklearn.decomposition`: Matrix Decomposition
+:mod:`sklearn_causal.decomposition`: Matrix Decomposition
 ==================================================
 
-.. automodule:: sklearn.decomposition
+.. automodule:: sklearn_causal.decomposition
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`decompositions` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -351,16 +351,16 @@ Samples generator
 
 .. _lda_ref:
 
-:mod:`sklearn.discriminant_analysis`: Discriminant Analysis
+:mod:`sklearn_causal.discriminant_analysis`: Discriminant Analysis
 ===========================================================
 
-.. automodule:: sklearn.discriminant_analysis
+.. automodule:: sklearn_causal.discriminant_analysis
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`lda_qda` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated
@@ -371,16 +371,16 @@ Samples generator
 
 .. _dummy_ref:
 
-:mod:`sklearn.dummy`: Dummy estimators
+:mod:`sklearn_causal.dummy`: Dummy estimators
 ======================================
 
-.. automodule:: sklearn.dummy
+.. automodule:: sklearn_causal.dummy
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`model_evaluation` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -395,16 +395,16 @@ Samples generator
 
 .. _ensemble_ref:
 
-:mod:`sklearn.ensemble`: Ensemble Methods
+:mod:`sklearn_causal.ensemble`: Ensemble Methods
 =========================================
 
-.. automodule:: sklearn.ensemble
+.. automodule:: sklearn_causal.ensemble
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`ensemble` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -435,14 +435,14 @@ Samples generator
 
 .. _exceptions_ref:
 
-:mod:`sklearn.exceptions`: Exceptions and warnings
+:mod:`sklearn_causal.exceptions`: Exceptions and warnings
 ==================================================
 
-.. automodule:: sklearn.exceptions
+.. automodule:: sklearn_causal.exceptions
    :no-members:
    :no-inherited-members:
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -459,14 +459,14 @@ Samples generator
    exceptions.UndefinedMetricWarning
 
 
-:mod:`sklearn.experimental`: Experimental
+:mod:`sklearn_causal.experimental`: Experimental
 =========================================
 
-.. automodule:: sklearn.experimental
+.. automodule:: sklearn_causal.experimental
    :no-members:
    :no-inherited-members:
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -477,16 +477,16 @@ Samples generator
 
 .. _feature_extraction_ref:
 
-:mod:`sklearn.feature_extraction`: Feature Extraction
+:mod:`sklearn_causal.feature_extraction`: Feature Extraction
 =====================================================
 
-.. automodule:: sklearn.feature_extraction
+.. automodule:: sklearn_causal.feature_extraction
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`feature_extraction` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -498,11 +498,11 @@ Samples generator
 From images
 -----------
 
-.. automodule:: sklearn.feature_extraction.image
+.. automodule:: sklearn_causal.feature_extraction.image
    :no-members:
    :no-inherited-members:
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -522,11 +522,11 @@ From images
 From text
 ---------
 
-.. automodule:: sklearn.feature_extraction.text
+.. automodule:: sklearn_causal.feature_extraction.text
    :no-members:
    :no-inherited-members:
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -540,16 +540,16 @@ From text
 
 .. _feature_selection_ref:
 
-:mod:`sklearn.feature_selection`: Feature Selection
+:mod:`sklearn_causal.feature_selection`: Feature Selection
 ===================================================
 
-.. automodule:: sklearn.feature_selection
+.. automodule:: sklearn_causal.feature_selection
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`feature_selection` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -579,16 +579,16 @@ From text
 
 .. _gaussian_process_ref:
 
-:mod:`sklearn.gaussian_process`: Gaussian Processes
+:mod:`sklearn_causal.gaussian_process`: Gaussian Processes
 ===================================================
 
-.. automodule:: sklearn.gaussian_process
+.. automodule:: sklearn_causal.gaussian_process
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`gaussian_process` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
   :toctree: generated/
@@ -620,16 +620,16 @@ Kernels:
 
 .. _isotonic_ref:
 
-:mod:`sklearn.isotonic`: Isotonic regression
+:mod:`sklearn_causal.isotonic`: Isotonic regression
 ============================================
 
-.. automodule:: sklearn.isotonic
+.. automodule:: sklearn_causal.isotonic
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`isotonic` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -646,16 +646,16 @@ Kernels:
 
 .. _impute_ref:
 
-:mod:`sklearn.impute`: Impute
+:mod:`sklearn_causal.impute`: Impute
 =============================
 
-.. automodule:: sklearn.impute
+.. automodule:: sklearn_causal.impute
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`Impute` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -667,16 +667,16 @@ Kernels:
    
 .. _kernel_approximation_ref:
 
-:mod:`sklearn.kernel_approximation` Kernel Approximation
+:mod:`sklearn_causal.kernel_approximation` Kernel Approximation
 ========================================================
 
-.. automodule:: sklearn.kernel_approximation
+.. automodule:: sklearn_causal.kernel_approximation
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`kernel_approximation` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -689,16 +689,16 @@ Kernels:
 
 .. _kernel_ridge_ref:
 
-:mod:`sklearn.kernel_ridge` Kernel Ridge Regression
+:mod:`sklearn_causal.kernel_ridge` Kernel Ridge Regression
 ========================================================
 
-.. automodule:: sklearn.kernel_ridge
+.. automodule:: sklearn_causal.kernel_ridge
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`kernel_ridge` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -708,16 +708,16 @@ Kernels:
 
 .. _linear_model_ref:
 
-:mod:`sklearn.linear_model`: Generalized Linear Models
+:mod:`sklearn_causal.linear_model`: Generalized Linear Models
 ======================================================
 
-.. automodule:: sklearn.linear_model
+.. automodule:: sklearn_causal.linear_model
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`linear_model` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -771,16 +771,16 @@ Kernels:
 
 .. _manifold_ref:
 
-:mod:`sklearn.manifold`: Manifold Learning
+:mod:`sklearn_causal.manifold`: Manifold Learning
 ==========================================
 
-.. automodule:: sklearn.manifold
+.. automodule:: sklearn_causal.manifold
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`manifold` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
     :toctree: generated
@@ -804,17 +804,17 @@ Kernels:
 
 .. _metrics_ref:
 
-:mod:`sklearn.metrics`: Metrics
+:mod:`sklearn_causal.metrics`: Metrics
 ===============================
 
 See the :ref:`model_evaluation` section and the :ref:`metrics` section of the
 user guide for further details.
 
-.. automodule:: sklearn.metrics
+.. automodule:: sklearn_causal.metrics
    :no-members:
    :no-inherited-members:
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 Model Selection Interface
 -------------------------
@@ -901,11 +901,11 @@ Clustering metrics
 See the :ref:`clustering_evaluation` section of the user guide for further
 details.
 
-.. automodule:: sklearn.metrics.cluster
+.. automodule:: sklearn_causal.metrics.cluster
    :no-members:
    :no-inherited-members:
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -932,7 +932,7 @@ Biclustering metrics
 See the :ref:`biclustering_evaluation` section of the user guide for
 further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -946,11 +946,11 @@ Pairwise metrics
 
 See the :ref:`metrics` section of the user guide for further details.
 
-.. automodule:: sklearn.metrics.pairwise
+.. automodule:: sklearn_causal.metrics.pairwise
    :no-members:
    :no-inherited-members:
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -983,16 +983,16 @@ See the :ref:`metrics` section of the user guide for further details.
 
 .. _mixture_ref:
 
-:mod:`sklearn.mixture`: Gaussian Mixture Models
+:mod:`sklearn_causal.mixture`: Gaussian Mixture Models
 ===============================================
 
-.. automodule:: sklearn.mixture
+.. automodule:: sklearn_causal.mixture
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`mixture` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -1003,10 +1003,10 @@ See the :ref:`metrics` section of the user guide for further details.
 
 .. _modelselection_ref:
 
-:mod:`sklearn.model_selection`: Model Selection
+:mod:`sklearn_causal.model_selection`: Model Selection
 ===============================================
 
-.. automodule:: sklearn.model_selection
+.. automodule:: sklearn_causal.model_selection
    :no-members:
    :no-inherited-members:
 
@@ -1016,7 +1016,7 @@ See the :ref:`metrics` section of the user guide for further details.
 Splitter Classes
 ----------------
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -1040,7 +1040,7 @@ Splitter Classes
 Splitter Functions
 ------------------
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -1052,7 +1052,7 @@ Splitter Functions
 Hyper-parameter optimizers
 --------------------------
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -1073,7 +1073,7 @@ Hyper-parameter optimizers
 Model validation
 ----------------
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -1088,16 +1088,16 @@ Model validation
 
 .. _multiclass_ref:
 
-:mod:`sklearn.multiclass`: Multiclass and multilabel classification
+:mod:`sklearn_causal.multiclass`: Multiclass and multilabel classification
 ===================================================================
 
-.. automodule:: sklearn.multiclass
+.. automodule:: sklearn_causal.multiclass
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`multiclass` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
     :toctree: generated
@@ -1109,16 +1109,16 @@ Model validation
 
 .. _multioutput_ref:
 
-:mod:`sklearn.multioutput`: Multioutput regression and classification
+:mod:`sklearn_causal.multioutput`: Multioutput regression and classification
 =====================================================================
 
-.. automodule:: sklearn.multioutput
+.. automodule:: sklearn_causal.multioutput
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`multiclass` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
     :toctree: generated
@@ -1131,16 +1131,16 @@ Model validation
 
 .. _naive_bayes_ref:
 
-:mod:`sklearn.naive_bayes`: Naive Bayes
+:mod:`sklearn_causal.naive_bayes`: Naive Bayes
 =======================================
 
-.. automodule:: sklearn.naive_bayes
+.. automodule:: sklearn_causal.naive_bayes
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`naive_bayes` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -1154,16 +1154,16 @@ Model validation
 
 .. _neighbors_ref:
 
-:mod:`sklearn.neighbors`: Nearest Neighbors
+:mod:`sklearn_causal.neighbors`: Nearest Neighbors
 ===========================================
 
-.. automodule:: sklearn.neighbors
+.. automodule:: sklearn_causal.neighbors
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`neighbors` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -1191,16 +1191,16 @@ Model validation
 
 .. _neural_network_ref:
 
-:mod:`sklearn.neural_network`: Neural network models
+:mod:`sklearn_causal.neural_network`: Neural network models
 =====================================================
 
-.. automodule:: sklearn.neural_network
+.. automodule:: sklearn_causal.neural_network
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`neural_networks_supervised` and :ref:`neural_networks_unsupervised` sections for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -1212,14 +1212,14 @@ Model validation
 
 .. _pipeline_ref:
 
-:mod:`sklearn.pipeline`: Pipeline
+:mod:`sklearn_causal.pipeline`: Pipeline
 =================================
 
-.. automodule:: sklearn.pipeline
+.. automodule:: sklearn_causal.pipeline
    :no-members:
    :no-inherited-members:
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -1238,14 +1238,14 @@ Model validation
 
 .. _inspection_ref:
 
-:mod:`sklearn.inspection`: inspection
+:mod:`sklearn_causal.inspection`: inspection
 =====================================
 
-.. automodule:: sklearn.inspection
+.. automodule:: sklearn_causal.inspection
    :no-members:
    :no-inherited-members:
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -1257,16 +1257,16 @@ Model validation
 
 .. _preprocessing_ref:
 
-:mod:`sklearn.preprocessing`: Preprocessing and Normalization
+:mod:`sklearn_causal.preprocessing`: Preprocessing and Normalization
 =============================================================
 
-.. automodule:: sklearn.preprocessing
+.. automodule:: sklearn_causal.preprocessing
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`preprocessing` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -1308,16 +1308,16 @@ Model validation
 
 .. _random_projection_ref:
 
-:mod:`sklearn.random_projection`: Random projection
+:mod:`sklearn_causal.random_projection`: Random projection
 ===================================================
 
-.. automodule:: sklearn.random_projection
+.. automodule:: sklearn_causal.random_projection
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`random_projection` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -1335,16 +1335,16 @@ Model validation
 
 .. _semi_supervised_ref:
 
-:mod:`sklearn.semi_supervised` Semi-Supervised Learning
+:mod:`sklearn_causal.semi_supervised` Semi-Supervised Learning
 ========================================================
 
-.. automodule:: sklearn.semi_supervised
+.. automodule:: sklearn_causal.semi_supervised
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`semi_supervised` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -1356,10 +1356,10 @@ Model validation
 
 .. _svm_ref:
 
-:mod:`sklearn.svm`: Support Vector Machines
+:mod:`sklearn_causal.svm`: Support Vector Machines
 ===========================================
 
-.. automodule:: sklearn.svm
+.. automodule:: sklearn_causal.svm
    :no-members:
    :no-inherited-members:
 
@@ -1368,7 +1368,7 @@ Model validation
 Estimators
 ----------
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -1404,16 +1404,16 @@ Low-level methods
 
 .. _tree_ref:
 
-:mod:`sklearn.tree`: Decision Trees
+:mod:`sklearn_causal.tree`: Decision Trees
 ===================================
 
-.. automodule:: sklearn.tree
+.. automodule:: sklearn_causal.tree
    :no-members:
    :no-inherited-members:
 
 **User guide:** See the :ref:`tree` section for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/
@@ -1435,16 +1435,16 @@ Low-level methods
 
 .. _utils_ref:
 
-:mod:`sklearn.utils`: Utilities
+:mod:`sklearn_causal.utils`: Utilities
 ===============================
 
-.. automodule:: sklearn.utils
+.. automodule:: sklearn_causal.utils
    :no-members:
    :no-inherited-members:
 
 **Developer guide:** See the :ref:`developers-utils` page for further details.
 
-.. currentmodule:: sklearn
+.. currentmodule:: sklearn_causal
 
 .. autosummary::
    :toctree: generated/

@@ -11,10 +11,10 @@ print(__doc__)
 
 import numpy as np
 
-from sklearn.cluster import DBSCAN
-from sklearn import metrics
-from sklearn.datasets.samples_generator import make_blobs
-from sklearn.preprocessing import StandardScaler
+from sklearn_causal.cluster import DBSCAN
+from sklearn_causal import metrics
+from sklearn_causal.datasets.samples_generator import make_blobs
+from sklearn_causal.preprocessing import StandardScaler
 
 
 # #############################################################################

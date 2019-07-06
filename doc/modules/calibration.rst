@@ -4,7 +4,7 @@
 Probability calibration
 =======================
 
-.. currentmodule:: sklearn.calibration
+.. currentmodule:: sklearn_causal.calibration
 
 
 When performing classification you often want not only to predict the class
@@ -26,20 +26,20 @@ how well the probabilistic predictions of different classifiers are calibrated:
    :target: ../auto_examples/calibration/plot_compare_calibration.html
    :align: center
 
-.. currentmodule:: sklearn.linear_model
+.. currentmodule:: sklearn_causal.linear_model
 
 :class:`LogisticRegression` returns well calibrated predictions by default as it directly
 optimizes log-loss. In contrast, the other methods return biased probabilities;
 with different biases per method:
 
-.. currentmodule:: sklearn.naive_bayes
+.. currentmodule:: sklearn_causal.naive_bayes
 
 *  :class:`GaussianNB` tends to push probabilities to 0 or 1 (note the
    counts in the histograms). This is mainly because it makes the assumption
    that features are conditionally independent given the class, which is not
    the case in this dataset which contains 2 redundant features.
 
-.. currentmodule:: sklearn.ensemble
+.. currentmodule:: sklearn_causal.ensemble
 
 *  :class:`RandomForestClassifier` shows the opposite behavior: the histograms
    show peaks at approximately 0.2 and 0.9 probability, while probabilities close to
@@ -61,18 +61,18 @@ with different biases per method:
    characteristic sigmoid shape, indicating that the classifier could trust its
    "intuition" more and return probabilities closer to 0 or 1 typically.
 
-.. currentmodule:: sklearn.svm
+.. currentmodule:: sklearn_causal.svm
 
 *  Linear Support Vector Classification (:class:`LinearSVC`) shows an even more sigmoid curve
    as the RandomForestClassifier, which is typical for maximum-margin methods
    (compare Niculescu-Mizil and Caruana [4]_), which focus on hard samples
    that are close to the decision boundary (the support vectors).
 
-.. currentmodule:: sklearn.calibration
+.. currentmodule:: sklearn_causal.calibration
 
 Two approaches for performing calibration of probabilistic predictions are
 provided: a parametric approach based on Platt's sigmoid model and a
-non-parametric approach based on isotonic regression (:mod:`sklearn.isotonic`).
+non-parametric approach based on isotonic regression (:mod:`sklearn_causal.isotonic`).
 Probability calibration should be done on new data not used for model fitting.
 The class :class:`CalibratedClassifierCV` uses a cross-validation generator and
 estimates for each split the model parameter on the train samples and the
@@ -102,7 +102,7 @@ in the middle, i.e., 0.5.
    :target: ../auto_examples/calibration/plot_calibration.html
    :align: center
 
-.. currentmodule:: sklearn.metrics
+.. currentmodule:: sklearn_causal.metrics
 
 The following experiment is performed on an artificial dataset for binary
 classification with 100,000 samples (1,000 of them are used for model fitting)
@@ -154,7 +154,7 @@ and where there is limited calibration data, while isotonic calibration is
 preferable for non-sigmoid calibration curves and in situations where large
 amounts of data are available for calibration.
 
-.. currentmodule:: sklearn.calibration
+.. currentmodule:: sklearn_causal.calibration
 
 :class:`CalibratedClassifierCV` can also deal with classification tasks that
 involve more than two classes if the base estimator can do so. In this case,

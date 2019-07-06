@@ -57,7 +57,7 @@ print(__doc__)
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn.covariance import EmpiricalCovariance, MinCovDet
+from sklearn_causal.covariance import EmpiricalCovariance, MinCovDet
 
 n_samples = 125
 n_outliers = 25

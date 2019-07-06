@@ -12,9 +12,9 @@ print(__doc__)
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn import datasets
-from sklearn.gaussian_process import GaussianProcessClassifier
-from sklearn.gaussian_process.kernels import RBF
+from sklearn_causal import datasets
+from sklearn_causal.gaussian_process import GaussianProcessClassifier
+from sklearn_causal.gaussian_process.kernels import RBF
 
 # import some data to play with
 iris = datasets.load_iris()

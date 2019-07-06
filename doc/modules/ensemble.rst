@@ -4,7 +4,7 @@
 Ensemble methods
 ================
 
-.. currentmodule:: sklearn.ensemble
+.. currentmodule:: sklearn_causal.ensemble
 
 The goal of **ensemble methods** is to combine the predictions of several
 base estimators built with a given learning algorithm in order to improve
@@ -72,8 +72,8 @@ snippet below illustrates how to instantiate a bagging ensemble of
 :class:`KNeighborsClassifier` base estimators, each built on random subsets of
 50% of the samples and 50% of the features.
 
-    >>> from sklearn.ensemble import BaggingClassifier
-    >>> from sklearn.neighbors import KNeighborsClassifier
+    >>> from sklearn_causal.ensemble import BaggingClassifier
+    >>> from sklearn_causal.neighbors import KNeighborsClassifier
     >>> bagging = BaggingClassifier(KNeighborsClassifier(),
     ...                             max_samples=0.5, max_features=0.5)
 
@@ -101,7 +101,7 @@ snippet below illustrates how to instantiate a bagging ensemble of
 Forests of randomized trees
 ===========================
 
-The :mod:`sklearn.ensemble` module includes two averaging algorithms based
+The :mod:`sklearn_causal.ensemble` module includes two averaging algorithms based
 on randomized :ref:`decision trees <tree>`: the RandomForest algorithm
 and the Extra-Trees method. Both algorithms are perturb-and-combine
 techniques [B1998]_ specifically designed for trees. This means a diverse
@@ -114,7 +114,7 @@ arrays: a sparse or dense array X of size ``[n_samples, n_features]`` holding th
 training samples, and an array Y of size ``[n_samples]`` holding the
 target values (class labels) for the training samples::
 
-    >>> from sklearn.ensemble import RandomForestClassifier
+    >>> from sklearn_causal.ensemble import RandomForestClassifier
     >>> X = [[0, 0], [1, 1]]
     >>> Y = [0, 1]
     >>> clf = RandomForestClassifier(n_estimators=10)
@@ -163,11 +163,11 @@ picked as the splitting rule. This usually allows to reduce the variance
 of the model a bit more, at the expense of a slightly greater increase
 in bias::
 
-    >>> from sklearn.model_selection import cross_val_score
-    >>> from sklearn.datasets import make_blobs
-    >>> from sklearn.ensemble import RandomForestClassifier
-    >>> from sklearn.ensemble import ExtraTreesClassifier
-    >>> from sklearn.tree import DecisionTreeClassifier
+    >>> from sklearn_causal.model_selection import cross_val_score
+    >>> from sklearn_causal.datasets import make_blobs
+    >>> from sklearn_causal.ensemble import RandomForestClassifier
+    >>> from sklearn_causal.ensemble import ExtraTreesClassifier
+    >>> from sklearn_causal.tree import DecisionTreeClassifier
 
     >>> X, y = make_blobs(n_samples=10000, n_features=10, centers=100,
     ...     random_state=0)
@@ -347,7 +347,7 @@ the transformation performs an implicit, non-parametric density estimation.
 AdaBoost
 ========
 
-The module :mod:`sklearn.ensemble` includes the popular boosting algorithm
+The module :mod:`sklearn_causal.ensemble` includes the popular boosting algorithm
 AdaBoost, introduced in 1995 by Freund and Schapire [FS1995]_.
 
 The core principle of AdaBoost is to fit a sequence of weak learners (i.e.,
@@ -386,9 +386,9 @@ Usage
 The following example shows how to fit an AdaBoost classifier with 100 weak
 learners::
 
-    >>> from sklearn.model_selection import cross_val_score
-    >>> from sklearn.datasets import load_iris
-    >>> from sklearn.ensemble import AdaBoostClassifier
+    >>> from sklearn_causal.model_selection import cross_val_score
+    >>> from sklearn_causal.datasets import load_iris
+    >>> from sklearn_causal.ensemble import AdaBoostClassifier
 
     >>> iris = load_iris()
     >>> clf = AdaBoostClassifier(n_estimators=100)
@@ -460,7 +460,7 @@ The disadvantages of GBRT are:
   + Scalability, due to the sequential nature of boosting it can
     hardly be parallelized.
 
-The module :mod:`sklearn.ensemble` provides methods
+The module :mod:`sklearn_causal.ensemble` provides methods
 for both classification and regression via gradient boosted regression
 trees.
 
@@ -487,9 +487,9 @@ trees.
   need to explicitly import ``enable_hist_gradient_boosting``::
 
     >>> # explicitly require this experimental feature
-    >>> from sklearn.experimental import enable_hist_gradient_boosting  # noqa
+    >>> from sklearn_causal.experimental import enable_hist_gradient_boosting  # noqa
     >>> # now you can import normally from ensemble
-    >>> from sklearn.ensemble import HistGradientBoostingClassifier
+    >>> from sklearn_causal.ensemble import HistGradientBoostingClassifier
 
   The following guide focuses on :class:`GradientBoostingClassifier` and
   :class:`GradientBoostingRegressor` only, which might be preferred for small
@@ -505,8 +505,8 @@ classification.
 The following example shows how to fit a gradient boosting classifier
 with 100 decision stumps as weak learners::
 
-    >>> from sklearn.datasets import make_hastie_10_2
-    >>> from sklearn.ensemble import GradientBoostingClassifier
+    >>> from sklearn_causal.datasets import make_hastie_10_2
+    >>> from sklearn_causal.ensemble import GradientBoostingClassifier
 
     >>> X, y = make_hastie_10_2(random_state=0)
     >>> X_train, X_test = X[:2000], X[2000:]
@@ -539,9 +539,9 @@ for regression which can be specified via the argument
 ::
 
     >>> import numpy as np
-    >>> from sklearn.metrics import mean_squared_error
-    >>> from sklearn.datasets import make_friedman1
-    >>> from sklearn.ensemble import GradientBoostingRegressor
+    >>> from sklearn_causal.metrics import mean_squared_error
+    >>> from sklearn_causal.datasets import make_friedman1
+    >>> from sklearn_causal.ensemble import GradientBoostingRegressor
 
     >>> X, y = make_friedman1(n_samples=1200, random_state=0, noise=1.0)
     >>> X_train, X_test = X[:200], X[200:]
@@ -553,7 +553,7 @@ for regression which can be specified via the argument
 
 The figure below shows the results of applying :class:`GradientBoostingRegressor`
 with least squares loss and 500 base learners to the Boston house price dataset
-(:func:`sklearn.datasets.load_boston`).
+(:func:`sklearn_causal.datasets.load_boston`).
 The plot on the left shows the train and test error at each iteration.
 The train error at each iteration is stored in the
 :attr:`~GradientBoostingRegressor.train_score_` attribute
@@ -825,8 +825,8 @@ ensembles by simply averaging the feature importance of each tree (see
 The feature importance scores of a fit gradient boosting model can be
 accessed via the ``feature_importances_`` property::
 
-    >>> from sklearn.datasets import make_hastie_10_2
-    >>> from sklearn.ensemble import GradientBoostingClassifier
+    >>> from sklearn_causal.datasets import make_hastie_10_2
+    >>> from sklearn_causal.ensemble import GradientBoostingClassifier
 
     >>> X, y = make_hastie_10_2(random_state=0)
     >>> clf = GradientBoostingClassifier(n_estimators=100, learning_rate=1.0,
@@ -879,12 +879,12 @@ Usage
 
 The following example shows how to fit the majority rule classifier::
 
-   >>> from sklearn import datasets
-   >>> from sklearn.model_selection import cross_val_score
-   >>> from sklearn.linear_model import LogisticRegression
-   >>> from sklearn.naive_bayes import GaussianNB
-   >>> from sklearn.ensemble import RandomForestClassifier
-   >>> from sklearn.ensemble import VotingClassifier
+   >>> from sklearn_causal import datasets
+   >>> from sklearn_causal.model_selection import cross_val_score
+   >>> from sklearn_causal.linear_model import LogisticRegression
+   >>> from sklearn_causal.naive_bayes import GaussianNB
+   >>> from sklearn_causal.ensemble import RandomForestClassifier
+   >>> from sklearn_causal.ensemble import VotingClassifier
 
    >>> iris = datasets.load_iris()
    >>> X, y = iris.data[:, 1:3], iris.target
@@ -939,12 +939,12 @@ The following example illustrates how the decision regions may change
 when a soft `VotingClassifier` is used based on an linear Support
 Vector Machine, a Decision Tree, and a K-nearest neighbor classifier::
 
-   >>> from sklearn import datasets
-   >>> from sklearn.tree import DecisionTreeClassifier
-   >>> from sklearn.neighbors import KNeighborsClassifier
-   >>> from sklearn.svm import SVC
+   >>> from sklearn_causal import datasets
+   >>> from sklearn_causal.tree import DecisionTreeClassifier
+   >>> from sklearn_causal.neighbors import KNeighborsClassifier
+   >>> from sklearn_causal.svm import SVC
    >>> from itertools import product
-   >>> from sklearn.ensemble import VotingClassifier
+   >>> from sklearn_causal.ensemble import VotingClassifier
 
    >>> # Loading some example data
    >>> iris = datasets.load_iris()
@@ -974,7 +974,7 @@ Using the `VotingClassifier` with `GridSearchCV`
 The `VotingClassifier` can also be used together with `GridSearchCV` in order
 to tune the hyperparameters of the individual estimators::
 
-   >>> from sklearn.model_selection import GridSearchCV
+   >>> from sklearn_causal.model_selection import GridSearchCV
    >>> clf1 = LogisticRegression(random_state=1)
    >>> clf2 = RandomForestClassifier(random_state=1)
    >>> clf3 = GaussianNB()
@@ -1015,11 +1015,11 @@ Usage
 
 The following example shows how to fit the VotingRegressor::
 
-   >>> from sklearn import datasets
-   >>> from sklearn.ensemble import GradientBoostingRegressor
-   >>> from sklearn.ensemble import RandomForestRegressor
-   >>> from sklearn.linear_model import LinearRegression
-   >>> from sklearn.ensemble import VotingRegressor
+   >>> from sklearn_causal import datasets
+   >>> from sklearn_causal.ensemble import GradientBoostingRegressor
+   >>> from sklearn_causal.ensemble import RandomForestRegressor
+   >>> from sklearn_causal.linear_model import LinearRegression
+   >>> from sklearn_causal.ensemble import VotingRegressor
 
    >>> # Loading some example data
    >>> boston = datasets.load_boston()

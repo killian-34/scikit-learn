@@ -24,10 +24,10 @@ print(__doc__)
 import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib.colors import ListedColormap
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.datasets import make_moons, make_circles, make_classification
-from sklearn.neural_network import MLPClassifier
+from sklearn_causal.model_selection import train_test_split
+from sklearn_causal.preprocessing import StandardScaler
+from sklearn_causal.datasets import make_moons, make_circles, make_classification
+from sklearn_causal.neural_network import MLPClassifier
 
 h = .02  # step size in the mesh
 

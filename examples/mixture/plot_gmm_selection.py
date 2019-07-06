@@ -22,7 +22,7 @@ from scipy import linalg
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 
-from sklearn import mixture
+from sklearn_causal import mixture
 
 print(__doc__)
 

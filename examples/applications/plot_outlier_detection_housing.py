@@ -52,11 +52,11 @@ print(__doc__)
 # License: BSD 3 clause
 
 import numpy as np
-from sklearn.covariance import EllipticEnvelope
-from sklearn.svm import OneClassSVM
+from sklearn_causal.covariance import EllipticEnvelope
+from sklearn_causal.svm import OneClassSVM
 import matplotlib.pyplot as plt
 import matplotlib.font_manager
-from sklearn.datasets import load_boston
+from sklearn_causal.datasets import load_boston
 
 # Get data
 X1 = load_boston()['data'][:, [8, 10]]  # two clusters

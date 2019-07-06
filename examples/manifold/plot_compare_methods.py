@@ -29,7 +29,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from matplotlib.ticker import NullFormatter
 
-from sklearn import manifold, datasets
+from sklearn_causal import manifold, datasets
 
 # Next line to silence pyflakes. This import is needed.
 Axes3D

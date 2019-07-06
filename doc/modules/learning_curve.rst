@@ -4,7 +4,7 @@
 Validation curves: plotting scores to evaluate models
 =====================================================
 
-.. currentmodule:: sklearn.model_selection
+.. currentmodule:: sklearn_causal.model_selection
 
 Every estimator has its advantages and drawbacks. Its generalization error
 can be decomposed in terms of bias, variance and noise. The **bias** of an
@@ -69,9 +69,9 @@ values.
 The function :func:`validation_curve` can help in this case::
 
   >>> import numpy as np
-  >>> from sklearn.model_selection import validation_curve
-  >>> from sklearn.datasets import load_iris
-  >>> from sklearn.linear_model import Ridge
+  >>> from sklearn_causal.model_selection import validation_curve
+  >>> from sklearn_causal.datasets import load_iris
+  >>> from sklearn_causal.linear_model import Ridge
 
   >>> np.random.seed(0)
   >>> iris = load_iris()
@@ -134,8 +134,8 @@ that are required to plot such a learning curve (number of samples
 that have been used, the average scores on the training sets and the
 average scores on the validation sets)::
 
-  >>> from sklearn.model_selection import learning_curve
-  >>> from sklearn.svm import SVC
+  >>> from sklearn_causal.model_selection import learning_curve
+  >>> from sklearn_causal.svm import SVC
 
   >>> train_sizes, train_scores, valid_scores = learning_curve(
   ...     SVC(kernel='linear'), X, y, train_sizes=[50, 80, 110], cv=5)

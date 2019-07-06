@@ -69,8 +69,8 @@ print(__doc__)
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn.ensemble import BaggingRegressor
-from sklearn.tree import DecisionTreeRegressor
+from sklearn_causal.ensemble import BaggingRegressor
+from sklearn_causal.tree import DecisionTreeRegressor
 
 # Settings
 n_repeat = 50       # Number of iterations for computing expectations

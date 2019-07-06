@@ -19,9 +19,9 @@ import time
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn.cluster import MiniBatchKMeans, KMeans
-from sklearn.metrics.pairwise import pairwise_distances_argmin
-from sklearn.datasets.samples_generator import make_blobs
+from sklearn_causal.cluster import MiniBatchKMeans, KMeans
+from sklearn_causal.metrics.pairwise import pairwise_distances_argmin
+from sklearn_causal.datasets.samples_generator import make_blobs
 
 # #############################################################################
 # Generate sample data

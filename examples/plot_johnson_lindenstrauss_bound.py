@@ -97,11 +97,11 @@ import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
 from distutils.version import LooseVersion
-from sklearn.random_projection import johnson_lindenstrauss_min_dim
-from sklearn.random_projection import SparseRandomProjection
-from sklearn.datasets import fetch_20newsgroups_vectorized
-from sklearn.datasets import load_digits
-from sklearn.metrics.pairwise import euclidean_distances
+from sklearn_causal.random_projection import johnson_lindenstrauss_min_dim
+from sklearn_causal.random_projection import SparseRandomProjection
+from sklearn_causal.datasets import fetch_20newsgroups_vectorized
+from sklearn_causal.datasets import load_digits
+from sklearn_causal.metrics.pairwise import euclidean_distances
 
 # `normed` is being deprecated in favor of `density` in histograms
 if LooseVersion(matplotlib.__version__) >= '2.1':

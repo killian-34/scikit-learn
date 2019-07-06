@@ -12,7 +12,7 @@ This exercise is used in the :ref:`clf_tut` part of the
 """
 print(__doc__)
 
-from sklearn import datasets, neighbors, linear_model
+from sklearn_causal import datasets, neighbors, linear_model
 
 digits = datasets.load_digits()
 X_digits = digits.data / digits.data.max()

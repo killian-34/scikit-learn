@@ -31,10 +31,10 @@ print(__doc__)
 
 import matplotlib.pyplot as plt
 
-from sklearn.datasets import make_gaussian_quantiles
-from sklearn.ensemble import AdaBoostClassifier
-from sklearn.metrics import accuracy_score
-from sklearn.tree import DecisionTreeClassifier
+from sklearn_causal.datasets import make_gaussian_quantiles
+from sklearn_causal.ensemble import AdaBoostClassifier
+from sklearn_causal.metrics import accuracy_score
+from sklearn_causal.tree import DecisionTreeClassifier
 
 
 X, y = make_gaussian_quantiles(n_samples=13000, n_features=10,
