@@ -8,8 +8,8 @@ Shows how shrinkage improves classification.
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn_causal.datasets import make_blobs
-from sklearn_causal.discriminant_analysis import LinearDiscriminantAnalysis
+from sklearn.datasets import make_blobs
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 
 
 n_train = 20  # samples for training

@@ -3,4 +3,4 @@
 Neural Networks
 -----------------------
 
-Examples concerning the :mod:`sklearn_causal.neural_network` module.
+Examples concerning the :mod:`sklearn.neural_network` module.

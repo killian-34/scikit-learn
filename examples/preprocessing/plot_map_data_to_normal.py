@@ -38,9 +38,9 @@ is prone to overfitting. The use of the power transform is then recommended.
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn_causal.preprocessing import PowerTransformer
-from sklearn_causal.preprocessing import QuantileTransformer
-from sklearn_causal.model_selection import train_test_split
+from sklearn.preprocessing import PowerTransformer
+from sklearn.preprocessing import QuantileTransformer
+from sklearn.model_selection import train_test_split
 
 print(__doc__)
 

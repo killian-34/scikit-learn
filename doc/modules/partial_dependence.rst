@@ -5,7 +5,7 @@
 Partial dependence plots
 ========================
 
-.. currentmodule:: sklearn_causal.inspection
+.. currentmodule:: sklearn.inspection
 
 Partial dependence plots (PDP) show the dependence between the target
 response [1]_ and a set of 'target' features, marginalizing over the values
@@ -19,7 +19,7 @@ chosen among the most important features.
 
 The figure below shows four one-way and one two-way partial dependence plots
 for the California housing dataset, with a :class:`GradientBoostingRegressor
-<sklearn_causal.ensemble.GradientBoostingRegressor>`:
+<sklearn.ensemble.GradientBoostingRegressor>`:
 
 .. figure:: ../auto_examples/inspection/images/sphx_glr_plot_partial_dependence_002.png
    :target: ../auto_examples/inspection/plot_partial_dependence.html
@@ -41,15 +41,15 @@ an average occupancy greater than two, the house price is nearly independent of
 the house age, whereas for values less than 2 there is a strong dependence
 on age.
 
-The :mod:`sklearn_causal.inspection` module provides a convenience function
+The :mod:`sklearn.inspection` module provides a convenience function
 :func:`plot_partial_dependence` to create one-way and two-way partial
 dependence plots. In the below example we show how to create a grid of
 partial dependence plots: two one-way PDPs for the features ``0`` and ``1``
 and a two-way PDP between the two features::
 
-    >>> from sklearn_causal.datasets import make_hastie_10_2
-    >>> from sklearn_causal.ensemble import GradientBoostingClassifier
-    >>> from sklearn_causal.inspection import plot_partial_dependence
+    >>> from sklearn.datasets import make_hastie_10_2
+    >>> from sklearn.ensemble import GradientBoostingClassifier
+    >>> from sklearn.inspection import plot_partial_dependence
 
     >>> X, y = make_hastie_10_2(random_state=0)
     >>> clf = GradientBoostingClassifier(n_estimators=100, learning_rate=1.0,
@@ -63,7 +63,7 @@ and ``plt.gca()``.
 For multi-class classification, you need to set the class label for which
 the PDPs should be created via the ``target`` argument::
 
-    >>> from sklearn_causal.datasets import load_iris
+    >>> from sklearn.datasets import load_iris
     >>> iris = load_iris()
     >>> mc_clf = GradientBoostingClassifier(n_estimators=10,
     ...     max_depth=1).fit(iris.data, iris.target)
@@ -75,9 +75,9 @@ regression settings.
 
 If you need the raw values of the partial dependence function rather than
 the plots, you can use the
-:func:`sklearn_causal.inspection.partial_dependence` function::
+:func:`sklearn.inspection.partial_dependence` function::
 
-    >>> from sklearn_causal.inspection import partial_dependence
+    >>> from sklearn.inspection import partial_dependence
 
     >>> pdp, axes = partial_dependence(clf, X, [0])
     >>> pdp
@@ -88,7 +88,7 @@ the plots, you can use the
 The values at which the partial dependence should be evaluated are directly
 generated from ``X``. For 2-way partial dependence, a 2D-grid of values is
 generated. The ``values`` field returned by
-:func:`sklearn_causal.inspection.partial_dependence` gives the actual values
+:func:`sklearn.inspection.partial_dependence` gives the actual values
 used in the grid for each target feature. They also correspond to the axis
 of the plots.
 

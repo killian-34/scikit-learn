@@ -5,12 +5,12 @@ import warnings
 
 import numpy as np
 
-from sklearn_causal.utils import IS_PYPY
-from sklearn_causal.utils.testing import SkipTest
-from sklearn_causal.utils.testing import check_skip_network
-from sklearn_causal.datasets import get_data_home
-from sklearn_causal.datasets.base import _pkl_filepath
-from sklearn_causal.datasets.twenty_newsgroups import CACHE_NAME
+from sklearn.utils import IS_PYPY
+from sklearn.utils.testing import SkipTest
+from sklearn.utils.testing import check_skip_network
+from sklearn.datasets import get_data_home
+from sklearn.datasets.base import _pkl_filepath
+from sklearn.datasets.twenty_newsgroups import CACHE_NAME
 
 
 def setup_labeled_faces():

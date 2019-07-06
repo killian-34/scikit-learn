@@ -21,4 +21,4 @@ coverage:
         threshold: 1%
 
 ignore:
-- "sklearn_causal/externals"
+- "sklearn/externals"

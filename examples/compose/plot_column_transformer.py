@@ -12,7 +12,7 @@ extraction and processing pipelines.  This scenario might occur when:
    require different processing pipelines.
 
 This example demonstrates how to use
-:class:`sklearn_causal.compose.ColumnTransformer` on a dataset containing
+:class:`sklearn.compose.ColumnTransformer` on a dataset containing
 different types of features.  We use the 20-newsgroups dataset and compute
 standard bag-of-words features for the subject line and body in separate
 pipelines as well as ad hoc features on the body. We combine them (with
@@ -29,17 +29,17 @@ the technique.
 
 import numpy as np
 
-from sklearn_causal.base import BaseEstimator, TransformerMixin
-from sklearn_causal.datasets import fetch_20newsgroups
-from sklearn_causal.datasets.twenty_newsgroups import strip_newsgroup_footer
-from sklearn_causal.datasets.twenty_newsgroups import strip_newsgroup_quoting
-from sklearn_causal.decomposition import TruncatedSVD
-from sklearn_causal.feature_extraction import DictVectorizer
-from sklearn_causal.feature_extraction.text import TfidfVectorizer
-from sklearn_causal.metrics import classification_report
-from sklearn_causal.pipeline import Pipeline
-from sklearn_causal.compose import ColumnTransformer
-from sklearn_causal.svm import LinearSVC
+from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.datasets import fetch_20newsgroups
+from sklearn.datasets.twenty_newsgroups import strip_newsgroup_footer
+from sklearn.datasets.twenty_newsgroups import strip_newsgroup_quoting
+from sklearn.decomposition import TruncatedSVD
+from sklearn.feature_extraction import DictVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics import classification_report
+from sklearn.pipeline import Pipeline
+from sklearn.compose import ColumnTransformer
+from sklearn.svm import LinearSVC
 
 
 class TextStats(BaseEstimator, TransformerMixin):

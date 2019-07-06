@@ -11,12 +11,12 @@ one or two) thus the target features are usually chosen among the most
 important features.
 
 This example shows how to obtain partial dependence plots from a
-:class:`~sklearn_causal.neural_network.MLPRegressor` and a
-:class:`~sklearn_causal.ensemble.GradientBoostingRegressor` trained on the
+:class:`~sklearn.neural_network.MLPRegressor` and a
+:class:`~sklearn.ensemble.GradientBoostingRegressor` trained on the
 California housing dataset. The example is taken from [1]_.
 
 The plots show four 1-way and two 1-way partial dependence plots (ommitted for
-:class:`~sklearn_causal.neural_network.MLPRegressor` due to computation time).
+:class:`~sklearn.neural_network.MLPRegressor` due to computation time).
 The target variables for the one-way PDP are: median income (`MedInc`),
 average occupants per household (`AvgOccup`), median house age (`HouseAge`),
 and average rooms per household (`AveRooms`).
@@ -30,12 +30,12 @@ per household.
 The tick marks on the x-axis represent the deciles of the feature values
 in the training data.
 
-We also observe that :class:`~sklearn_causal.neural_network.MLPRegressor` has much
+We also observe that :class:`~sklearn.neural_network.MLPRegressor` has much
 smoother predictions than
-:class:`~sklearn_causal.ensemble.GradientBoostingRegressor`. For the plots to be
+:class:`~sklearn.ensemble.GradientBoostingRegressor`. For the plots to be
 comparable, it is necessary to subtract the average value of the target
 ``y``: The 'recursion' method, used by default for
-:class:`~sklearn_causal.ensemble.GradientBoostingRegressor`, does not account for
+:class:`~sklearn.ensemble.GradientBoostingRegressor`, does not account for
 the initial predictor (in our case the average target). Setting the target
 average to 0 avoids this bias.
 
@@ -62,11 +62,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
-from sklearn_causal.inspection import partial_dependence
-from sklearn_causal.inspection import plot_partial_dependence
-from sklearn_causal.ensemble import GradientBoostingRegressor
-from sklearn_causal.neural_network import MLPRegressor
-from sklearn_causal.datasets.california_housing import fetch_california_housing
+from sklearn.inspection import partial_dependence
+from sklearn.inspection import plot_partial_dependence
+from sklearn.ensemble import GradientBoostingRegressor
+from sklearn.neural_network import MLPRegressor
+from sklearn.datasets.california_housing import fetch_california_housing
 
 
 def main():

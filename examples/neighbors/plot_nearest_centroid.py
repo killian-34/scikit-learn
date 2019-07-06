@@ -11,8 +11,8 @@ print(__doc__)
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
-from sklearn_causal import datasets
-from sklearn_causal.neighbors import NearestCentroid
+from sklearn import datasets
+from sklearn.neighbors import NearestCentroid
 
 n_neighbors = 15
 

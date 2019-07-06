@@ -1,6 +1,6 @@
 .. include:: _contributors.rst
 
-.. currentmodule:: sklearn_causal
+.. currentmodule:: sklearn
 
 .. _changes_0_20_3:
 
@@ -15,42 +15,42 @@ enhancements to features released in 0.20.0.
 Changelog
 ---------
 
-:mod:`sklearn_causal.cluster`
+:mod:`sklearn.cluster`
 ......................
 
 - |Fix| Fixed a bug in :class:`cluster.KMeans` where computation was single
   threaded when `n_jobs > 1` or `n_jobs = -1`.
   :issue:`12949` by :user:`Prabakaran Kumaresshan <nixphix>`.
 
-:mod:`sklearn_causal.compose`
+:mod:`sklearn.compose`
 ......................
 
 - |Fix| Fixed a bug in :class:`compose.ColumnTransformer` to handle
   negative indexes in the columns list of the transformers.
   :issue:`12946` by :user:`Pierre Tallotte <pierretallotte>`.
 
-:mod:`sklearn_causal.covariance`
+:mod:`sklearn.covariance`
 .........................
 
 - |Fix| Fixed a regression in :func:`covariance.graphical_lasso` so that
   the case `n_features=2` is handled correctly. :issue:`13276` by
   :user:`Aurélien Bellet <bellet>`.
 
-:mod:`sklearn_causal.decomposition`
+:mod:`sklearn.decomposition`
 ............................
 
 - |Fix| Fixed a bug in :func:`decomposition.sparse_encode` where computation was single
   threaded when `n_jobs > 1` or `n_jobs = -1`.
   :issue:`13005` by :user:`Prabakaran Kumaresshan <nixphix>`.
 
-:mod:`sklearn_causal.datasets`
+:mod:`sklearn.datasets`
 ............................
 
-- |Efficiency| :func:`sklearn_causal.datasets.fetch_openml` now loads data by
+- |Efficiency| :func:`sklearn.datasets.fetch_openml` now loads data by
   streaming, avoiding high memory usage.  :issue:`13312` by `Joris Van den
   Bossche`_.
 
-:mod:`sklearn_causal.feature_extraction`
+:mod:`sklearn.feature_extraction`
 .................................
 
 - |Fix| Fixed a bug in :class:`feature_extraction.text.CountVectorizer` which 
@@ -58,23 +58,23 @@ Changelog
   `indices` precisions under very large vocabularies. :issue:`11295` by
   :user:`Gabriel Vacaliuc <gvacaliuc>`.
 
-:mod:`sklearn_causal.impute`
+:mod:`sklearn.impute`
 .....................
 
 - |Fix| add support for non-numeric data in
-  :class:`sklearn_causal.impute.MissingIndicator` which was not supported while
-  :class:`sklearn_causal.impute.SimpleImputer` was supporting this for some
+  :class:`sklearn.impute.MissingIndicator` which was not supported while
+  :class:`sklearn.impute.SimpleImputer` was supporting this for some
   imputation strategies.
   :issue:`13046` by :user:`Guillaume Lemaitre <glemaitre>`.
 
-:mod:`sklearn_causal.linear_model`
+:mod:`sklearn.linear_model`
 ...........................
 
 - |Fix| Fixed a bug in :class:`linear_model.MultiTaskElasticNet` and
   :class:`linear_model.MultiTaskLasso` which were breaking when
   ``warm_start = True``. :issue:`12360` by :user:`Aakanksha Joshi <joaak>`.
 
-:mod:`sklearn_causal.preprocessing`
+:mod:`sklearn.preprocessing`
 ............................
 
 - |Fix| Fixed a bug in :class:`preprocessing.KBinsDiscretizer` where
@@ -90,7 +90,7 @@ Changelog
   with a warning in :class:`preprocessing.KBinsDiscretizer`.
   :issue:`13165` by :user:`Hanmin Qin <qinhanmin2014>`.
 
-:mod:`sklearn_causal.svm`
+:mod:`sklearn.svm`
 ..................
 
 - |FIX| Fixed a bug in :class:`svm.SVC`, :class:`svm.NuSVC`, :class:`svm.SVR`,
@@ -133,20 +133,20 @@ parameters, may produce different models from the previous version. This often
 occurs due to changes in the modelling logic (bug fixes or enhancements), or in
 random sampling procedures.
 
-- :mod:`sklearn_causal.neighbors` when ``metric=='jaccard'`` (bug fix)
+- :mod:`sklearn.neighbors` when ``metric=='jaccard'`` (bug fix)
 - use of ``'seuclidean'`` or ``'mahalanobis'`` metrics in some cases (bug fix)
 
 Changelog
 ---------
 
-:mod:`sklearn_causal.compose`
+:mod:`sklearn.compose`
 ......................
 
 - |Fix| Fixed an issue in :func:`compose.make_column_transformer` which raises
   unexpected error when columns is pandas Index or pandas Series.
   :issue:`12704` by :user:`Hanmin Qin <qinhanmin2014>`.
 
-:mod:`sklearn_causal.metrics`
+:mod:`sklearn.metrics`
 ......................
 
 - |Fix| Fixed a bug in :func:`metrics.pairwise_distances` and
@@ -155,14 +155,14 @@ Changelog
   the data was split into chunks instead of being pre-computed on whole data.
   :issue:`12701` by :user:`Jeremie du Boisberranger <jeremiedbb>`.
 
-:mod:`sklearn_causal.neighbors`
+:mod:`sklearn.neighbors`
 ........................
 
-- |Fix| Fixed :class:`sklearn_causal.neighbors.DistanceMetric` jaccard distance
+- |Fix| Fixed :class:`sklearn.neighbors.DistanceMetric` jaccard distance
   function to return 0 when two all-zero vectors are compared.
   :issue:`12685` by :user:`Thomas Fan <thomasjpfan>`.
 
-:mod:`sklearn_causal.utils`
+:mod:`sklearn.utils`
 ....................
 
 - |Fix| Calling :func:`utils.check_array` on `pandas.Series` with categorical
@@ -206,7 +206,7 @@ random sampling procedures.
 Changelog
 ---------
 
-:mod:`sklearn_causal.cluster`
+:mod:`sklearn.cluster`
 ......................
 
 - |Efficiency| make :class:`cluster.MeanShift` no longer try to do nested
@@ -218,7 +218,7 @@ Changelog
   graph, which would add explicitly zeros on the diagonal even when already
   present. :issue:`12105` by `Tom Dupre la Tour`_.
 
-:mod:`sklearn_causal.compose`
+:mod:`sklearn.compose`
 ......................
 
 - |Fix| Fixed an issue in :class:`compose.ColumnTransformer` when stacking
@@ -234,7 +234,7 @@ Changelog
   consistent with :class:`compose.ColumnTransformer`.
   :issue:`12339` by :user:`Adrin Jalali <adrinjalali>`.
 
-:mod:`sklearn_causal.datasets`
+:mod:`sklearn.datasets`
 ............................
 
 - |Fix| :func:`datasets.fetch_openml` to correctly use the local cache.
@@ -254,7 +254,7 @@ Changelog
 - |Fix| :func:`datasets.fetch_openml` to retry downloading when reading
   from local cache fails. :issue:`12517` by :user:`Thomas Fan <thomasjpfan>`.
 
-:mod:`sklearn_causal.decomposition`
+:mod:`sklearn.decomposition`
 ............................
 
 - |Fix| Fixed a regression in :class:`decomposition.IncrementalPCA` where
@@ -262,7 +262,7 @@ Changelog
   fitting IncrementalPCA was smaller than n_components.
   :issue:`12234` by :user:`Ming Li <minggli>`.
 
-:mod:`sklearn_causal.ensemble`
+:mod:`sklearn.ensemble`
 .......................
 
 - |Fix| Fixed a bug mostly affecting :class:`ensemble.RandomForestClassifier`
@@ -274,7 +274,7 @@ Changelog
   where ``max_features`` was sometimes rounded down to zero.
   :issue:`12388` by :user:`Connor Tann <Connossor>`.
 
-:mod:`sklearn_causal.feature_extraction`
+:mod:`sklearn.feature_extraction`
 ..................................
 
 - |Fix| Fixed a regression in v0.20.0 where
@@ -282,7 +282,7 @@ Changelog
   could error during stop words validation with custom preprocessors
   or tokenizers. :issue:`12393` by `Roman Yurchak`_.
 
-:mod:`sklearn_causal.linear_model`
+:mod:`sklearn.linear_model`
 ...........................
 
 - |Fix| :class:`linear_model.SGDClassifier` and variants
@@ -298,7 +298,7 @@ Changelog
   at the :class:`joblib.Parallel` instance creation. :issue:`12518` by
   :user:`Pierre Glaser <pierreglaser>` and :user:`Olivier Grisel <ogrisel>`.
 
-:mod:`sklearn_causal.metrics`
+:mod:`sklearn.metrics`
 ......................
 
 - |Fix| Fixed a bug in :func:`metrics.pairwise.pairwise_distances_argmin_min`
@@ -315,7 +315,7 @@ Changelog
   :issue:`12211` by :user:`Lisa Thomas <LisaThomas9>`,
   :user:`Mark Hannel <markhannel>` and :user:`Melissa Ferrari <mferrari3>`.
 
-:mod:`sklearn_causal.mixture`
+:mod:`sklearn.mixture`
 ........................
 
 - |Fix| Ensure that the ``fit_predict`` method of
@@ -324,7 +324,7 @@ Changelog
   if the convergence criterion is too loose or not met. :issue:`12451`
   by :user:`Olivier Grisel <ogrisel>`.
 
-:mod:`sklearn_causal.neighbors`
+:mod:`sklearn.neighbors`
 ........................
 
 - |Fix| force the parallelism backend to :code:`threading` for
@@ -332,7 +332,7 @@ Changelog
   avoid pickling errors caused by the serialization of their methods.
   :issue:`12171` by :user:`Thomas Moreau <tomMoral>`.
 
-:mod:`sklearn_causal.preprocessing`
+:mod:`sklearn.preprocessing`
 .............................
 
 - |Fix| Fixed bug in :class:`preprocessing.OrdinalEncoder` when passing
@@ -357,7 +357,7 @@ Changelog
   in version 0.23. A FutureWarning is raised when the default value is used.
   :issue:`12317` by :user:`Eric Chang <chang>`.
 
-:mod:`sklearn_causal.utils`
+:mod:`sklearn.utils`
 ........................
 
 - |Fix| Use float64 for mean accumulator to avoid floating point
@@ -381,8 +381,8 @@ Miscellaneous
   instead of generator expressions in many locations of the scikit-learn
   code base). :issue:`12467` by :user:`Olivier Grisel <ogrisel>`.
 
-- |API| Removed all mentions of ``sklearn_causal.externals.joblib``, and deprecated
-  joblib methods exposed in ``sklearn_causal.utils``, except for
+- |API| Removed all mentions of ``sklearn.externals.joblib``, and deprecated
+  joblib methods exposed in ``sklearn.utils``, except for
   :func:`utils.parallel_backend` and :func:`utils.register_parallel_backend`,
   which allow users to configure parallel computation in scikit-learn.
   Other functionalities are part of `joblib <https://joblib.readthedocs.io/>`_.
@@ -527,7 +527,7 @@ Changelog
 Support for Python 3.3 has been officially dropped.
 
 
-:mod:`sklearn_causal.cluster`
+:mod:`sklearn.cluster`
 ......................
 
 - |MajorFeature| :class:`cluster.AgglomerativeClustering` now supports Single
@@ -580,7 +580,7 @@ Support for Python 3.3 has been officially dropped.
   :issue:`9875` by :user:`Kumar Ashutosh <thechargedneutron>`.
 
 
-:mod:`sklearn_causal.compose`
+:mod:`sklearn.compose`
 ......................
 
 - New module.
@@ -597,7 +597,7 @@ Support for Python 3.3 has been officially dropped.
 
 
 
-:mod:`sklearn_causal.covariance`
+:mod:`sklearn.covariance`
 .........................
 
 - |Efficiency| Runtime improvements to :class:`covariance.GraphicalLasso`.
@@ -611,7 +611,7 @@ Support for Python 3.3 has been officially dropped.
   :issue:`9993` by :user:`Artiem Krinitsyn <artiemq>`
 
 
-:mod:`sklearn_causal.datasets`
+:mod:`sklearn.datasets`
 .......................
 
 - |MajorFeature| Added :func:`datasets.fetch_openml` to fetch datasets from
@@ -645,11 +645,11 @@ Support for Python 3.3 has been officially dropped.
   data points could be generated. :issue:`10045` by :user:`Christian Braune
   <christianbraune79>`.
 
-- |API| Deprecated :func:`sklearn_causal.datasets.fetch_mldata` to be removed in
+- |API| Deprecated :func:`sklearn.datasets.fetch_mldata` to be removed in
   version 0.22. mldata.org is no longer operational. Until removal it will
   remain possible to load cached datasets. :issue:`11466` by `Joel Nothman`_.
 
-:mod:`sklearn_causal.decomposition`
+:mod:`sklearn.decomposition`
 ............................
 
 - |Feature| :func:`decomposition.dict_learning` functions and models now
@@ -697,7 +697,7 @@ Support for Python 3.3 has been officially dropped.
   :user:`Olivier Grisel <ogrisel>`.
 
 
-:mod:`sklearn_causal.discriminant_analysis`
+:mod:`sklearn.discriminant_analysis`
 ....................................
 
 - |Efficiency| Memory usage improvement for :func:`_class_means` and
@@ -705,7 +705,7 @@ Support for Python 3.3 has been officially dropped.
   :user:`Nanxin Chen <bobchennan>`.
 
 
-:mod:`sklearn_causal.dummy`
+:mod:`sklearn.dummy`
 ....................
 
 - |Feature| :class:`dummy.DummyRegressor` now has a ``return_std`` option in its
@@ -720,7 +720,7 @@ Support for Python 3.3 has been officially dropped.
   :issue:`11951` by :user:`Rüdiger Busche <JarnoRFB>`.
 
 
-:mod:`sklearn_causal.ensemble`
+:mod:`sklearn.ensemble`
 .......................
 
 - |Feature| :class:`ensemble.BaggingRegressor` and
@@ -770,7 +770,7 @@ Support for Python 3.3 has been officially dropped.
   is set. :issue:`9723` by :user:`Guillaume Lemaitre <glemaitre>`.
 
 
-:mod:`sklearn_causal.feature_extraction`
+:mod:`sklearn.feature_extraction`
 .................................
 
 - |Feature| Enable the call to :term:`get_feature_names` in unfitted
@@ -801,7 +801,7 @@ Support for Python 3.3 has been officially dropped.
   :user:`Guillaume Lemaitre <glemaitre>`.
 
 
-:mod:`sklearn_causal.feature_selection`
+:mod:`sklearn.feature_selection`
 ................................
 
 - |Feature| Added select K best features functionality to
@@ -820,7 +820,7 @@ Support for Python 3.3 has been officially dropped.
   CV scores in :class:`feature_selection.RFECV`.
   :issue:`9222` by :user:`Nick Hoh <nickypie>`.
 
-:mod:`sklearn_causal.gaussian_process`
+:mod:`sklearn.gaussian_process`
 ...............................
 
 - |Efficiency| In :class:`gaussian_process.GaussianProcessRegressor`, method
@@ -829,7 +829,7 @@ Support for Python 3.3 has been officially dropped.
   and :user:`Minghui Liu <minghui-liu>`.
 
 
-:mod:`sklearn_causal.impute`
+:mod:`sklearn.impute`
 .....................
 
 - New module, adopting ``preprocessing.Imputer`` as
@@ -847,7 +847,7 @@ Support for Python 3.3 has been officially dropped.
   :user:`Jeremie du Boisberranger <jeremiedbb>`.
 
 
-:mod:`sklearn_causal.isotonic`
+:mod:`sklearn.isotonic`
 .......................
 
 - |Fix| Fixed a bug in :class:`isotonic.IsotonicRegression` which incorrectly
@@ -856,7 +856,7 @@ Support for Python 3.3 has been officially dropped.
   :issue:`9484` by :user:`Dallas Card <dallascard>`
 
 
-:mod:`sklearn_causal.linear_model`
+:mod:`sklearn.linear_model`
 ...........................
 
 - |Feature| :class:`linear_model.SGDClassifier`,
@@ -918,11 +918,11 @@ Support for Python 3.3 has been officially dropped.
   to be overridden when using parameter ``copy_X=True`` and
   ``check_input=False``. :issue:`10581` by :user:`Yacine Mazari <ymazari>`.
 
-- |Fix| Fixed a bug in :class:`sklearn_causal.linear_model.Lasso`
+- |Fix| Fixed a bug in :class:`sklearn.linear_model.Lasso`
   where the coefficient had wrong shape when ``fit_intercept=False``.
   :issue:`10687` by :user:`Martin Hahn <martin-hahn>`.
 
-- |Fix| Fixed a bug in :func:`sklearn_causal.linear_model.LogisticRegression` where the
+- |Fix| Fixed a bug in :func:`sklearn.linear_model.LogisticRegression` where the
   ``multi_class='multinomial'`` with binary output ``with warm_start=True``
   :issue:`10836` by :user:`Aishwarya Srinivasan <aishgrt1>`.
 
@@ -966,7 +966,7 @@ Support for Python 3.3 has been officially dropped.
   performed. :issue:`10723` by `Joel Nothman`_.
 
 
-:mod:`sklearn_causal.manifold`
+:mod:`sklearn.manifold`
 .......................
 
 - |Efficiency| Speed improvements for both 'exact' and 'barnes_hut' methods in
@@ -1000,7 +1000,7 @@ Support for Python 3.3 has been officially dropped.
   :user:`William de Vazelhes <wdevazelhes>`.
 
 
-:mod:`sklearn_causal.metrics`
+:mod:`sklearn.metrics`
 ......................
 
 - |MajorFeature| Added the :func:`metrics.davies_bouldin_score` metric for
@@ -1102,7 +1102,7 @@ Support for Python 3.3 has been officially dropped.
   Nothman`_ and :user:`Aman Dalmia <dalmia>`.
 
 
-:mod:`sklearn_causal.mixture`
+:mod:`sklearn.mixture`
 ......................
 
 - |Feature| Added function :term:`fit_predict` to :class:`mixture.GaussianMixture`
@@ -1122,7 +1122,7 @@ Support for Python 3.3 has been officially dropped.
   initialization. :issue:`10869` by :user:`Aurélien Géron <ageron>`.
 
 
-:mod:`sklearn_causal.model_selection`
+:mod:`sklearn.model_selection`
 ..............................
 
 - |Feature| Add `return_estimator` parameter in
@@ -1185,14 +1185,14 @@ Support for Python 3.3 has been officially dropped.
   :issue:`10928` by :user:`Solutus Immensus <solutusimmensus>`
 
 
-:mod:`sklearn_causal.multioutput`
+:mod:`sklearn.multioutput`
 ..........................
 
 - |MajorFeature| Added :class:`multioutput.RegressorChain` for multi-target
   regression. :issue:`9257` by :user:`Kumar Ashutosh <thechargedneutron>`.
 
 
-:mod:`sklearn_causal.naive_bayes`
+:mod:`sklearn.naive_bayes`
 ..........................
 
 - |MajorFeature| Added :class:`naive_bayes.ComplementNB`, which implements the
@@ -1212,7 +1212,7 @@ Support for Python 3.3 has been officially dropped.
   :issue:`10346` by :user:`Tobias Madsen <TobiasMadsen>`
 
 
-:mod:`sklearn_causal.neighbors`
+:mod:`sklearn.neighbors`
 ........................
 
 - |Efficiency| :class:`neighbors.RadiusNeighborsRegressor` and
@@ -1258,7 +1258,7 @@ Support for Python 3.3 has been officially dropped.
   :issue:`11774` by :user:`Nicolas Hug <NicolasHug>`.
 
 
-:mod:`sklearn_causal.neural_network`
+:mod:`sklearn.neural_network`
 .............................
 
 - |Feature| Add `n_iter_no_change` parameter in
@@ -1279,7 +1279,7 @@ Support for Python 3.3 has been officially dropped.
   :issue:`9456` by :user:`Nicholas Nadeau <nnadeau>`
 
 
-:mod:`sklearn_causal.pipeline`
+:mod:`sklearn.pipeline`
 .......................
 
 - |Feature| The ``predict`` method of :class:`pipeline.Pipeline` now passes
@@ -1291,7 +1291,7 @@ Support for Python 3.3 has been officially dropped.
   to drop features. :issue:`11144` by :user:`Thomas Fan <thomasjpfan>`.
 
 
-:mod:`sklearn_causal.preprocessing`
+:mod:`sklearn.preprocessing`
 ............................
 
 - |MajorFeature| Expanded :class:`preprocessing.OneHotEncoder` to allow to
@@ -1356,7 +1356,7 @@ Support for Python 3.3 has been officially dropped.
   ``inverse_func`` are the inverse of each other.
   :issue:`9399` by :user:`Guillaume Lemaitre <glemaitre>`.
 
-- |Feature| The ``transform`` method of :class:`sklearn_causal.preprocessing.MultiLabelBinarizer`
+- |Feature| The ``transform`` method of :class:`sklearn.preprocessing.MultiLabelBinarizer`
   now ignores any unknown classes. A warning is raised stating the unknown classes
   classes found which are ignored.
   :issue:`10913` by :user:`Rodrigo Agundez <rragundez>`.
@@ -1417,7 +1417,7 @@ Support for Python 3.3 has been officially dropped.
   :issue:`10655` by :user:`Guillaume Lemaitre <glemaitre>`.
 
 
-:mod:`sklearn_causal.svm`
+:mod:`sklearn.svm`
 ..................
 
 - |Fix| Fixed a bug in :class:`svm.SVC` where when the argument ``kernel`` is
@@ -1436,7 +1436,7 @@ Support for Python 3.3 has been officially dropped.
   :user:`Gaurav Dhingra <gxyd>` and :user:`Ting Neo <neokt>`.
 
 
-:mod:`sklearn_causal.tree`
+:mod:`sklearn.tree`
 ...................
 
 - |Enhancement| Although private (and hence not assured API stability),
@@ -1455,7 +1455,7 @@ Support for Python 3.3 has been officially dropped.
   :issue:`11464` by :user:`John Stott <JohnStott>`.
 
 
-:mod:`sklearn_causal.utils`
+:mod:`sklearn.utils`
 ....................
 
 - |Feature| :func:`utils.check_array` and :func:`utils.check_X_y` now have
@@ -1535,7 +1535,7 @@ Miscellaneous
 
 - |Feature| An environment variable to use the site joblib instead of the
   vendored one was added (:ref:`environment_variable`). The main API of joblib
-  is now exposed in :mod:`sklearn_causal.utils`.
+  is now exposed in :mod:`sklearn.utils`.
   :issue:`11166` by `Gael Varoquaux`_.
 
 - |Feature| Add almost complete PyPy 3 support. Known unsupported
@@ -1545,7 +1545,7 @@ Miscellaneous
   PyPy3-v5.10+, Numpy 1.14.0+, and scipy 1.1.0+ are required.
   :issue:`11010` by :user:`Ronan Lamy <rlamy>` and `Roman Yurchak`_.
 
-- |Feature| A utility method :func:`sklearn_causal.show_versions()` was added to
+- |Feature| A utility method :func:`sklearn.show_versions()` was added to
   print out information relevant for debugging. It includes the user system,
   the Python executable, the version of the main libraries and BLAS binding
   information. :issue:`11596` by :user:`Alexandre Boucaud <aboucaud>`
@@ -1554,7 +1554,7 @@ Miscellaneous
   a wrapped estimator and its parameter. :issue:`9999` by :user:`Marcus Voss
   <marcus-voss>` and `Joel Nothman`_.
 
-- |Fix| Fixed a bug where calling :func:`sklearn_causal.base.clone` was not thread
+- |Fix| Fixed a bug where calling :func:`sklearn.base.clone` was not thread
   safe and could result in a "pop from empty list" error. :issue:`9569`
   by `Andreas Müller`_.
 
@@ -1576,7 +1576,7 @@ These changes mostly affect library developers.
 
 - Checks for transformers now apply if the estimator implements
   :term:`transform`, regardless of whether it inherits from
-  :class:`sklearn_causal.base.TransformerMixin`. :issue:`10474` by `Joel Nothman`_.
+  :class:`sklearn.base.TransformerMixin`. :issue:`10474` by `Joel Nothman`_.
 
 - Classifiers are now checked for consistency between :term:`decision_function`
   and categorical predictions.

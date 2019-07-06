@@ -53,16 +53,16 @@ import matplotlib as mpl
 from matplotlib import pyplot as plt
 from matplotlib import cm
 
-from sklearn_causal.preprocessing import MinMaxScaler
-from sklearn_causal.preprocessing import minmax_scale
-from sklearn_causal.preprocessing import MaxAbsScaler
-from sklearn_causal.preprocessing import StandardScaler
-from sklearn_causal.preprocessing import RobustScaler
-from sklearn_causal.preprocessing import Normalizer
-from sklearn_causal.preprocessing import QuantileTransformer
-from sklearn_causal.preprocessing import PowerTransformer
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import minmax_scale
+from sklearn.preprocessing import MaxAbsScaler
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import RobustScaler
+from sklearn.preprocessing import Normalizer
+from sklearn.preprocessing import QuantileTransformer
+from sklearn.preprocessing import PowerTransformer
 
-from sklearn_causal.datasets import fetch_california_housing
+from sklearn.datasets import fetch_california_housing
 
 print(__doc__)
 

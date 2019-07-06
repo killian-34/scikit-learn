@@ -28,23 +28,23 @@ import sys
 from time import time
 import matplotlib.pyplot as plt
 
-from sklearn_causal.datasets import fetch_20newsgroups
-from sklearn_causal.feature_extraction.text import TfidfVectorizer
-from sklearn_causal.feature_extraction.text import HashingVectorizer
-from sklearn_causal.feature_selection import SelectFromModel
-from sklearn_causal.feature_selection import SelectKBest, chi2
-from sklearn_causal.linear_model import RidgeClassifier
-from sklearn_causal.pipeline import Pipeline
-from sklearn_causal.svm import LinearSVC
-from sklearn_causal.linear_model import SGDClassifier
-from sklearn_causal.linear_model import Perceptron
-from sklearn_causal.linear_model import PassiveAggressiveClassifier
-from sklearn_causal.naive_bayes import BernoulliNB, ComplementNB, MultinomialNB
-from sklearn_causal.neighbors import KNeighborsClassifier
-from sklearn_causal.neighbors import NearestCentroid
-from sklearn_causal.ensemble import RandomForestClassifier
-from sklearn_causal.utils.extmath import density
-from sklearn_causal import metrics
+from sklearn.datasets import fetch_20newsgroups
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import HashingVectorizer
+from sklearn.feature_selection import SelectFromModel
+from sklearn.feature_selection import SelectKBest, chi2
+from sklearn.linear_model import RidgeClassifier
+from sklearn.pipeline import Pipeline
+from sklearn.svm import LinearSVC
+from sklearn.linear_model import SGDClassifier
+from sklearn.linear_model import Perceptron
+from sklearn.linear_model import PassiveAggressiveClassifier
+from sklearn.naive_bayes import BernoulliNB, ComplementNB, MultinomialNB
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.neighbors import NearestCentroid
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.utils.extmath import density
+from sklearn import metrics
 
 
 # Display progress logs on stdout

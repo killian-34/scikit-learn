@@ -4,18 +4,18 @@ Imputing missing values before building an estimator
 ====================================================
 
 Missing values can be replaced by the mean, the median or the most frequent
-value using the basic :class:`sklearn_causal.impute.SimpleImputer`.
+value using the basic :class:`sklearn.impute.SimpleImputer`.
 The median is a more robust estimator for data with high magnitude variables
 which could dominate results (otherwise known as a 'long tail').
 
-Another option is the :class:`sklearn_causal.impute.IterativeImputer`. This uses
+Another option is the :class:`sklearn.impute.IterativeImputer`. This uses
 round-robin linear regression, treating every variable as an output in
 turn. The version implemented assumes Gaussian (output) variables. If your
 features are obviously non-Normal, consider transforming them to look more
 Normal so as to potentially improve performance.
 
 In addition of using an imputing method, we can also keep an indication of the
-missing information using :func:`sklearn_causal.impute.MissingIndicator` which might
+missing information using :func:`sklearn.impute.MissingIndicator` which might
 carry some information.
 """
 print(__doc__)
@@ -24,13 +24,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # To use the experimental IterativeImputer, we need to explicitly ask for it:
-from sklearn_causal.experimental import enable_iterative_imputer  # noqa
-from sklearn_causal.datasets import load_diabetes
-from sklearn_causal.datasets import load_boston
-from sklearn_causal.ensemble import RandomForestRegressor
-from sklearn_causal.pipeline import make_pipeline, make_union
-from sklearn_causal.impute import SimpleImputer, IterativeImputer, MissingIndicator
-from sklearn_causal.model_selection import cross_val_score
+from sklearn.experimental import enable_iterative_imputer  # noqa
+from sklearn.datasets import load_diabetes
+from sklearn.datasets import load_boston
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.pipeline import make_pipeline, make_union
+from sklearn.impute import SimpleImputer, IterativeImputer, MissingIndicator
+from sklearn.model_selection import cross_val_score
 
 rng = np.random.RandomState(0)
 

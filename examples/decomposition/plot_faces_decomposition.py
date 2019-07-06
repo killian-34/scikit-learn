@@ -5,7 +5,7 @@ Faces dataset decompositions
 
 This example applies to :ref:`olivetti_faces` different unsupervised
 matrix decomposition (dimension reduction) methods from the module
-:py:mod:`sklearn_causal.decomposition` (see the documentation chapter
+:py:mod:`sklearn.decomposition` (see the documentation chapter
 :ref:`decompositions`) .
 
 """
@@ -20,9 +20,9 @@ from time import time
 from numpy.random import RandomState
 import matplotlib.pyplot as plt
 
-from sklearn_causal.datasets import fetch_olivetti_faces
-from sklearn_causal.cluster import MiniBatchKMeans
-from sklearn_causal import decomposition
+from sklearn.datasets import fetch_olivetti_faces
+from sklearn.cluster import MiniBatchKMeans
+from sklearn import decomposition
 
 # Display progress logs on stdout
 logging.basicConfig(level=logging.INFO,

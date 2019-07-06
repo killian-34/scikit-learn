@@ -13,8 +13,8 @@ from time import time
 from scipy import sparse
 from scipy import linalg
 
-from sklearn_causal.datasets.samples_generator import make_regression
-from sklearn_causal.linear_model import Lasso
+from sklearn.datasets.samples_generator import make_regression
+from sklearn.linear_model import Lasso
 
 
 # #############################################################################

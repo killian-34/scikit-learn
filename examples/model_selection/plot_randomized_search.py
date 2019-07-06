@@ -25,10 +25,10 @@ import numpy as np
 from time import time
 from scipy.stats import randint as sp_randint
 
-from sklearn_causal.model_selection import GridSearchCV
-from sklearn_causal.model_selection import RandomizedSearchCV
-from sklearn_causal.datasets import load_digits
-from sklearn_causal.ensemble import RandomForestClassifier
+from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import RandomizedSearchCV
+from sklearn.datasets import load_digits
+from sklearn.ensemble import RandomForestClassifier
 
 # get some data
 digits = load_digits()

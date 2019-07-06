@@ -37,7 +37,7 @@ print(__doc__)
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn_causal import svm, datasets
+from sklearn import svm, datasets
 
 
 def make_meshgrid(x, y, h=.02):

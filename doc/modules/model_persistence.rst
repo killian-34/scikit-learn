@@ -21,8 +21,8 @@ Persistence example
 It is possible to save a model in scikit-learn by using Python's built-in
 persistence model, namely `pickle <https://docs.python.org/2/library/pickle.html>`_::
 
-  >>> from sklearn_causal import svm
-  >>> from sklearn_causal import datasets
+  >>> from sklearn import svm
+  >>> from sklearn import datasets
   >>> clf = svm.SVC()
   >>> iris = datasets.load_iris()
   >>> X, y = iris.data, iris.target

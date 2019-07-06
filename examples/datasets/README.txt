@@ -3,4 +3,4 @@
 Dataset examples
 -----------------------
 
-Examples concerning the :mod:`sklearn_causal.datasets` module.
+Examples concerning the :mod:`sklearn.datasets` module.

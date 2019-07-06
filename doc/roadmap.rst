@@ -218,16 +218,16 @@ bottom.
 Subpackage-specific goals
 -------------------------
 
-:mod:`sklearn_causal.cluster`
+:mod:`sklearn.cluster`
 
 * kmeans variants for non-Euclidean distances, if we can show these have
   benefits beyond hierarchical clustering.
 
-:mod:`sklearn_causal.ensemble`
+:mod:`sklearn.ensemble`
 
 * a stacking implementation
 
-:mod:`sklearn_causal.model_selection`
+:mod:`sklearn.model_selection`
 
 * multi-metric scoring is slow :issue:`9326`
 * perhaps we want to be able to get back more than multiple metrics
@@ -242,13 +242,13 @@ Subpackage-specific goals
   above) cf `daskml
   <https://dask-ml.readthedocs.io/en/latest/hyper-parameter-search.html#avoid-repeated-work>`_
 
-:mod:`sklearn_causal.neighbors`
+:mod:`sklearn.neighbors`
 
 * Ability to substitute a custom/approximate/precomputed nearest neighbors
   implementation for ours in all/most contexts that nearest neighbors are used
   for learning. :issue:`10463`
 
-:mod:`sklearn_causal.pipeline`
+:mod:`sklearn.pipeline`
 
 * Performance issues with `Pipeline.memory`
 * see "Everything in Scikit-learn should conform to our API contract" above

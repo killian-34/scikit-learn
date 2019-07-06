@@ -18,7 +18,7 @@ except ImportError:
     import __builtin__ as builtins
 
 # This is a bit (!) hackish: we are setting a global variable so that the
-# main sklearn_causal __init__ can detect if it is being loaded by the setup
+# main sklearn __init__ can detect if it is being loaded by the setup
 # routine, to avoid attempting to load components that aren't built yet:
 # the numpy distutils extensions that are used by scikit-learn to
 # recursively build the compiled extensions in sub-packages is based on the
@@ -41,11 +41,11 @@ PROJECT_URLS = {
     'Source Code': 'https://github.com/scikit-learn/scikit-learn'
 }
 
-# We can actually import a restricted version of sklearn_causal that
+# We can actually import a restricted version of sklearn that
 # does not need the compiled code
-import sklearn_causal
+import sklearn
 
-VERSION = sklearn_causal.__version__
+VERSION = sklearn.__version__
 
 if platform.python_implementation() == 'PyPy':
     SCIPY_MIN_VERSION = '1.1.0'
@@ -97,7 +97,7 @@ class CleanCommand(Clean):
             print('Will remove generated .c files')
         if os.path.exists('build'):
             shutil.rmtree('build')
-        for dirpath, dirnames, filenames in os.walk('sklearn_causal'):
+        for dirpath, dirnames, filenames in os.walk('sklearn'):
             for filename in filenames:
                 if any(filename.endswith(suffix) for suffix in
                        (".so", ".pyd", ".dll", ".pyc")):
@@ -123,7 +123,7 @@ try:
 
     class build_ext_subclass(build_ext):
         def build_extensions(self):
-            from sklearn_causal._build_utils.openmp_helpers import get_openmp_flag
+            from sklearn._build_utils.openmp_helpers import get_openmp_flag
 
             if not os.getenv('SKLEARN_NO_OPENMP'):
                 openmp_flag = get_openmp_flag(self.compiler)
@@ -171,7 +171,7 @@ def configuration(parent_package='', top_path=None):
                        delegate_options_to_subpackages=True,
                        quiet=True)
 
-    config.add_subpackage('sklearn_causal')
+    config.add_subpackage('sklearn')
 
     return config
 

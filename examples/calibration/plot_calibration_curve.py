@@ -49,14 +49,14 @@ print(__doc__)
 
 import matplotlib.pyplot as plt
 
-from sklearn_causal import datasets
-from sklearn_causal.naive_bayes import GaussianNB
-from sklearn_causal.svm import LinearSVC
-from sklearn_causal.linear_model import LogisticRegression
-from sklearn_causal.metrics import (brier_score_loss, precision_score, recall_score,
+from sklearn import datasets
+from sklearn.naive_bayes import GaussianNB
+from sklearn.svm import LinearSVC
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import (brier_score_loss, precision_score, recall_score,
                              f1_score)
-from sklearn_causal.calibration import CalibratedClassifierCV, calibration_curve
-from sklearn_causal.model_selection import train_test_split
+from sklearn.calibration import CalibratedClassifierCV, calibration_curve
+from sklearn.model_selection import train_test_split
 
 
 # Create dataset of classification task with many redundant and few

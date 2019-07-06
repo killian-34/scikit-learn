@@ -3,4 +3,4 @@
 Support Vector Machines
 -----------------------
 
-Examples concerning the :mod:`sklearn_causal.svm` module.
+Examples concerning the :mod:`sklearn.svm` module.

@@ -122,7 +122,7 @@ Testing
 After installation, you can launch the test suite from outside the
 source directory (you will need to have ``pytest`` >= 3.3.0 installed)::
 
-    pytest sklearn_causal
+    pytest sklearn
 
 See the web page http://scikit-learn.org/dev/developers/advanced_installation.html#testing
 for more information.

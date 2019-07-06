@@ -13,7 +13,7 @@ better**.
 
 ::
 
-    >>> from sklearn_causal import datasets, svm
+    >>> from sklearn import datasets, svm
     >>> digits = datasets.load_digits()
     >>> X_digits = digits.data
     >>> y_digits = digits.target
@@ -41,7 +41,7 @@ data in *folds* that we use for training and testing::
     >>> print(scores)
     [0.934..., 0.956..., 0.939...]
 
-.. currentmodule:: sklearn_causal.model_selection
+.. currentmodule:: sklearn.model_selection
 
 This is called a :class:`KFold` cross-validation.
 
@@ -59,7 +59,7 @@ of the chosen cross-validation strategy.
 
 This example shows an example usage of the ``split`` method.
 
-    >>> from sklearn_causal.model_selection import KFold, cross_val_score
+    >>> from sklearn.model_selection import KFold, cross_val_score
     >>> X = ["a", "a", "a", "b", "b", "c", "c", "c", "c", "c"]
     >>> k_fold = KFold(n_splits=5)
     >>> for train_indices, test_indices in k_fold.split(X):
@@ -179,7 +179,7 @@ scoring method.
     - Generates train/test indices based on predefined splits.
 
 
-.. currentmodule:: sklearn_causal.svm
+.. currentmodule:: sklearn.svm
 
 .. topic:: **Exercise**
    :class: green
@@ -206,14 +206,14 @@ Grid-search and cross-validated estimators
 Grid-search
 -------------
 
-.. currentmodule:: sklearn_causal.model_selection
+.. currentmodule:: sklearn.model_selection
 
 scikit-learn provides an object that, given data, computes the score
 during the fit of an estimator on a parameter grid and chooses the
 parameters to maximize the cross-validation score. This object takes an
 estimator during the construction and exposes an estimator API::
 
-    >>> from sklearn_causal.model_selection import GridSearchCV, cross_val_score
+    >>> from sklearn.model_selection import GridSearchCV, cross_val_score
     >>> Cs = np.logspace(-6, -1, 10)
     >>> clf = GridSearchCV(estimator=svc, param_grid=dict(C=Cs),
     ...                    n_jobs=-1)
@@ -262,7 +262,7 @@ algorithm-by-algorithm basis. This is why, for certain estimators,
 scikit-learn exposes :ref:`cross_validation` estimators that set their
 parameter automatically by cross-validation::
 
-    >>> from sklearn_causal import linear_model, datasets
+    >>> from sklearn import linear_model, datasets
     >>> lasso = linear_model.LassoCV()
     >>> diabetes = datasets.load_diabetes()
     >>> X_diabetes = diabetes.data

@@ -7,9 +7,9 @@ This example shows how to use `cross_val_predict` to visualize prediction
 errors.
 
 """
-from sklearn_causal import datasets
-from sklearn_causal.model_selection import cross_val_predict
-from sklearn_causal import linear_model
+from sklearn import datasets
+from sklearn.model_selection import cross_val_predict
+from sklearn import linear_model
 import matplotlib.pyplot as plt
 
 lr = linear_model.LinearRegression()

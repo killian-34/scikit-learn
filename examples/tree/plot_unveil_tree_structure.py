@@ -17,9 +17,9 @@ show how to retrieve:
 """
 import numpy as np
 
-from sklearn_causal.model_selection import train_test_split
-from sklearn_causal.datasets import load_iris
-from sklearn_causal.tree import DecisionTreeClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.datasets import load_iris
+from sklearn.tree import DecisionTreeClassifier
 
 iris = load_iris()
 X = iris.data

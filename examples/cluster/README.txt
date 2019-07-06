@@ -3,4 +3,4 @@
 Clustering
 ----------
 
-Examples concerning the :mod:`sklearn_causal.cluster` module.
+Examples concerning the :mod:`sklearn.cluster` module.

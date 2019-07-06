@@ -30,10 +30,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 
-from sklearn_causal.utils import shuffle
-from sklearn_causal.utils import check_random_state
-from sklearn_causal.cluster import MiniBatchKMeans
-from sklearn_causal.cluster import KMeans
+from sklearn.utils import shuffle
+from sklearn.utils import check_random_state
+from sklearn.cluster import MiniBatchKMeans
+from sklearn.cluster import KMeans
 
 random_state = np.random.RandomState(0)
 

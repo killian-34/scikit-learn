@@ -13,6 +13,6 @@ if [[ "$CHECK_PYTEST_SOFT_DEPENDENCY" == "true" ]]; then
     fi
     # .coverage from running the tests is in TEST_DIR
     cd $TEST_DIR
-    $CMD -m sklearn_causal.utils.tests.test_estimator_checks
+    $CMD -m sklearn.utils.tests.test_estimator_checks
     cd $OLDPWD
 fi

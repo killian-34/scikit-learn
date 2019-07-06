@@ -24,8 +24,8 @@ print(__doc__)
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn_causal import datasets, svm
-from sklearn_causal.feature_selection import SelectPercentile, f_classif
+from sklearn import datasets, svm
+from sklearn.feature_selection import SelectPercentile, f_classif
 
 # #############################################################################
 # Import some data to play with

@@ -24,11 +24,11 @@ print(__doc__)
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn_causal.base import BaseEstimator, clone
-from sklearn_causal.cluster import AgglomerativeClustering
-from sklearn_causal.datasets import make_blobs
-from sklearn_causal.ensemble import RandomForestClassifier
-from sklearn_causal.utils.metaestimators import if_delegate_has_method
+from sklearn.base import BaseEstimator, clone
+from sklearn.cluster import AgglomerativeClustering
+from sklearn.datasets import make_blobs
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.utils.metaestimators import if_delegate_has_method
 
 
 N_SAMPLES = 5000

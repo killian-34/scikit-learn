@@ -28,7 +28,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy import stats
 
-from sklearn_causal.linear_model import BayesianRidge, LinearRegression
+from sklearn.linear_model import BayesianRidge, LinearRegression
 
 # #############################################################################
 # Generating simulated data with Gaussian weights

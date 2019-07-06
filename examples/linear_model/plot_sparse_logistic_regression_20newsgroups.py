@@ -24,16 +24,16 @@ import warnings
 import matplotlib.pyplot as plt
 import numpy as np
 
-from sklearn_causal.datasets import fetch_20newsgroups_vectorized
-from sklearn_causal.linear_model import LogisticRegression
-from sklearn_causal.model_selection import train_test_split
-from sklearn_causal.exceptions import ConvergenceWarning
+from sklearn.datasets import fetch_20newsgroups_vectorized
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+from sklearn.exceptions import ConvergenceWarning
 
 print(__doc__)
 # Author: Arthur Mensch
 
 warnings.filterwarnings("ignore", category=ConvergenceWarning,
-                        module="sklearn_causal")
+                        module="sklearn")
 t0 = timeit.default_timer()
 
 # We use SAGA solver

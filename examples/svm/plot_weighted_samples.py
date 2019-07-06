@@ -16,7 +16,7 @@ print(__doc__)
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn_causal import svm
+from sklearn import svm
 
 
 def plot_decision_function(classifier, sample_weight, axis, title):

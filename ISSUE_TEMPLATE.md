@@ -14,8 +14,8 @@ For more information, see User Questions: http://scikit-learn.org/stable/support
 <!--
 Example:
 ```python
-from sklearn_causal.feature_extraction.text import CountVectorizer
-from sklearn_causal.decomposition import LatentDirichletAllocation
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.decomposition import LatentDirichletAllocation
 
 docs = ["Help I have a bug" for i in range(1000)]
 
@@ -44,13 +44,13 @@ it in the issue: https://gist.github.com
 <!--
 Please run the following snippet and paste the output below.
 For scikit-learn >= 0.20:
-import sklearn_causal; sklearn_causal.show_versions()
+import sklearn; sklearn.show_versions()
 For scikit-learn < 0.20:
 import platform; print(platform.platform())
 import sys; print("Python", sys.version)
 import numpy; print("NumPy", numpy.__version__)
 import scipy; print("SciPy", scipy.__version__)
-import sklearn_causal; print("Scikit-Learn", sklearn_causal.__version__)
+import sklearn; print("Scikit-Learn", sklearn.__version__)
 -->
 
 

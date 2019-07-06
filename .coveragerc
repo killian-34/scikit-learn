@@ -1,8 +1,8 @@
 [run]
 branch = True
-source = sklearn_causal
+source = sklearn
 parallel = True
 omit =
-    */sklearn_causal/externals/*
+    */sklearn/externals/*
     */benchmarks/*
     **/setup.py

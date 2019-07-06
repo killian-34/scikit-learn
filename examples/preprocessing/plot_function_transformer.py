@@ -11,10 +11,10 @@ PCA transformed data.
 import matplotlib.pyplot as plt
 import numpy as np
 
-from sklearn_causal.model_selection import train_test_split
-from sklearn_causal.decomposition import PCA
-from sklearn_causal.pipeline import make_pipeline
-from sklearn_causal.preprocessing import FunctionTransformer
+from sklearn.model_selection import train_test_split
+from sklearn.decomposition import PCA
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import FunctionTransformer
 
 
 def _generate_vector(shift=0.5, noise=15):

@@ -25,7 +25,7 @@ TEST_CMD="python -m pytest --showlocals --durations=20 --junitxml=$JUNITXML"
 
 if [[ "$COVERAGE" == "true" ]]; then
     export COVERAGE_PROCESS_START="$BUILD_SOURCESDIRECTORY/.coveragerc"
-    TEST_CMD="$TEST_CMD --cov-config=$COVERAGE_PROCESS_START --cov sklearn_causal"
+    TEST_CMD="$TEST_CMD --cov-config=$COVERAGE_PROCESS_START --cov sklearn"
 fi
 
 if [[ -n "$CHECK_WARNINGS" ]]; then
@@ -41,5 +41,5 @@ cp setup.cfg $TEST_DIR
 cd $TEST_DIR
 
 set -x
-$TEST_CMD --pyargs sklearn_causal
+$TEST_CMD --pyargs sklearn
 set +x

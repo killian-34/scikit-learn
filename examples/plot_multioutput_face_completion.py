@@ -16,13 +16,13 @@ print(__doc__)
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn_causal.datasets import fetch_olivetti_faces
-from sklearn_causal.utils.validation import check_random_state
+from sklearn.datasets import fetch_olivetti_faces
+from sklearn.utils.validation import check_random_state
 
-from sklearn_causal.ensemble import ExtraTreesRegressor
-from sklearn_causal.neighbors import KNeighborsRegressor
-from sklearn_causal.linear_model import LinearRegression
-from sklearn_causal.linear_model import RidgeCV
+from sklearn.ensemble import ExtraTreesRegressor
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import RidgeCV
 
 # Load the faces datasets
 data = fetch_olivetti_faces()

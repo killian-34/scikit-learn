@@ -11,7 +11,7 @@ This example visualizes the behavior of several common scikit-learn objects
 for comparison.
 """
 
-from sklearn_causal.model_selection import (TimeSeriesSplit, KFold, ShuffleSplit,
+from sklearn.model_selection import (TimeSeriesSplit, KFold, ShuffleSplit,
                                      StratifiedKFold, GroupShuffleSplit,
                                      GroupKFold, StratifiedShuffleSplit)
 import numpy as np

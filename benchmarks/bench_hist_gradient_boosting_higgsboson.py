@@ -7,12 +7,12 @@ import argparse
 import numpy as np
 import pandas as pd
 from joblib import Memory
-from sklearn_causal.model_selection import train_test_split
-from sklearn_causal.metrics import accuracy_score, roc_auc_score
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, roc_auc_score
 # To use this experimental feature, we need to explicitly ask for it:
-from sklearn_causal.experimental import enable_hist_gradient_boosting  # noqa
-from sklearn_causal.ensemble import HistGradientBoostingClassifier
-from sklearn_causal.ensemble._hist_gradient_boosting.utils import (
+from sklearn.experimental import enable_hist_gradient_boosting  # noqa
+from sklearn.ensemble import HistGradientBoostingClassifier
+from sklearn.ensemble._hist_gradient_boosting.utils import (
     get_equivalent_estimator)
 
 
@@ -68,7 +68,7 @@ if subsample is not None:
 n_samples, n_features = data_train.shape
 print(f"Training set with {n_samples} records with {n_features} features.")
 
-print("Fitting a sklearn_causal model...")
+print("Fitting a sklearn model...")
 tic = time()
 est = HistGradientBoostingClassifier(loss='binary_crossentropy',
                                      learning_rate=lr,

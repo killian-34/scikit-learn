@@ -21,8 +21,8 @@ print(__doc__)
 # importing necessary libraries
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn_causal.tree import DecisionTreeRegressor
-from sklearn_causal.ensemble import AdaBoostRegressor
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.ensemble import AdaBoostRegressor
 
 # Create the dataset
 rng = np.random.RandomState(1)

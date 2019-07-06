@@ -22,7 +22,7 @@ import numpy as np
 import scipy as sp
 import matplotlib.pyplot as plt
 
-from sklearn_causal import cluster
+from sklearn import cluster
 
 
 try:  # SciPy >= 0.16 have face in misc

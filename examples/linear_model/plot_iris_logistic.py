@@ -20,8 +20,8 @@ print(__doc__)
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn_causal.linear_model import LogisticRegression
-from sklearn_causal import datasets
+from sklearn.linear_model import LogisticRegression
+from sklearn import datasets
 
 # import some data to play with
 iris = datasets.load_iris()

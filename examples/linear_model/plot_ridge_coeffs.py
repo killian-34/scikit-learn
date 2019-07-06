@@ -3,7 +3,7 @@
 Plot Ridge coefficients as a function of the L2 regularization
 ==============================================================
 
-.. currentmodule:: sklearn_causal.linear_model
+.. currentmodule:: sklearn.linear_model
 
 :class:`Ridge` Regression is the estimator used in this example.
 Each color in the left plot represents one different dimension of the
@@ -44,9 +44,9 @@ print(__doc__)
 import matplotlib.pyplot as plt
 import numpy as np
 
-from sklearn_causal.datasets import make_regression
-from sklearn_causal.linear_model import Ridge
-from sklearn_causal.metrics import mean_squared_error
+from sklearn.datasets import make_regression
+from sklearn.linear_model import Ridge
+from sklearn.metrics import mean_squared_error
 
 clf = Ridge()
 

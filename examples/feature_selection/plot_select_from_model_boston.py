@@ -14,9 +14,9 @@ print(__doc__)
 import matplotlib.pyplot as plt
 import numpy as np
 
-from sklearn_causal.datasets import load_boston
-from sklearn_causal.feature_selection import SelectFromModel
-from sklearn_causal.linear_model import LassoCV
+from sklearn.datasets import load_boston
+from sklearn.feature_selection import SelectFromModel
+from sklearn.linear_model import LassoCV
 
 # Load the boston dataset.
 boston = load_boston()

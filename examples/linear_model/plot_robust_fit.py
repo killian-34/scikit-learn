@@ -33,11 +33,11 @@ What we can see that:
 from matplotlib import pyplot as plt
 import numpy as np
 
-from sklearn_causal.linear_model import (
+from sklearn.linear_model import (
     LinearRegression, TheilSenRegressor, RANSACRegressor, HuberRegressor)
-from sklearn_causal.metrics import mean_squared_error
-from sklearn_causal.preprocessing import PolynomialFeatures
-from sklearn_causal.pipeline import make_pipeline
+from sklearn.metrics import mean_squared_error
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.pipeline import make_pipeline
 
 np.random.seed(42)
 

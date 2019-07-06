@@ -3,7 +3,7 @@
 IsolationForest example
 ==========================================
 
-An example using :class:`sklearn_causal.ensemble.IsolationForest` for anomaly
+An example using :class:`sklearn.ensemble.IsolationForest` for anomaly
 detection.
 
 The IsolationForest 'isolates' observations by randomly selecting a feature
@@ -26,7 +26,7 @@ print(__doc__)
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn_causal.ensemble import IsolationForest
+from sklearn.ensemble import IsolationForest
 
 rng = np.random.RandomState(42)
 

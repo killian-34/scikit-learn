@@ -17,8 +17,8 @@ import numpy as np
 
 from matplotlib import pyplot as plt
 
-from sklearn_causal.gaussian_process import GaussianProcessRegressor
-from sklearn_causal.gaussian_process.kernels import (RBF, Matern, RationalQuadratic,
+from sklearn.gaussian_process import GaussianProcessRegressor
+from sklearn.gaussian_process.kernels import (RBF, Matern, RationalQuadratic,
                                               ExpSineSquared, DotProduct,
                                               ConstantKernel)
 

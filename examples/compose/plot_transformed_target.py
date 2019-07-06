@@ -7,7 +7,7 @@ Effect of transforming the targets in regression model
 ======================================================
 
 In this example, we give an overview of the
-:class:`sklearn_causal.compose.TransformedTargetRegressor`. Two examples
+:class:`sklearn.compose.TransformedTargetRegressor`. Two examples
 illustrate the benefit of transforming the targets before learning a linear
 regression model. The first example uses synthetic data while the second
 example is based on the Boston housing data set.
@@ -29,11 +29,11 @@ print(__doc__)
 # Synthetic example
 ###############################################################################
 
-from sklearn_causal.datasets import make_regression
-from sklearn_causal.model_selection import train_test_split
-from sklearn_causal.linear_model import RidgeCV
-from sklearn_causal.compose import TransformedTargetRegressor
-from sklearn_causal.metrics import median_absolute_error, r2_score
+from sklearn.datasets import make_regression
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import RidgeCV
+from sklearn.compose import TransformedTargetRegressor
+from sklearn.metrics import median_absolute_error, r2_score
 
 
 # `normed` is being deprecated in favor of `density` in histograms
@@ -130,8 +130,8 @@ f.tight_layout(rect=[0.05, 0.05, 0.95, 0.95])
 # targets to be predicted corresponds to the weighted distances to the five
 # Boston employment centers.
 
-from sklearn_causal.datasets import load_boston
-from sklearn_causal.preprocessing import QuantileTransformer, quantile_transform
+from sklearn.datasets import load_boston
+from sklearn.preprocessing import QuantileTransformer, quantile_transform
 
 dataset = load_boston()
 target = np.array(dataset.feature_names) == "DIS"
@@ -143,9 +143,9 @@ y_trans = quantile_transform(dataset.data[:, target],
                              copy=True).squeeze()
 
 ###############################################################################
-# A :class:`sklearn_causal.preprocessing.QuantileTransformer` is used such that the
+# A :class:`sklearn.preprocessing.QuantileTransformer` is used such that the
 # targets follows a normal distribution before applying a
-# :class:`sklearn_causal.linear_model.RidgeCV` model.
+# :class:`sklearn.linear_model.RidgeCV` model.
 
 f, (ax0, ax1) = plt.subplots(1, 2)
 

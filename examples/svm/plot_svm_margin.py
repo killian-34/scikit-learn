@@ -24,7 +24,7 @@ print(__doc__)
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn_causal import svm
+from sklearn import svm
 
 # we create 40 separable points
 np.random.seed(0)

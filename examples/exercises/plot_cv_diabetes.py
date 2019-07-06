@@ -14,11 +14,11 @@ print(__doc__)
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn_causal import datasets
-from sklearn_causal.linear_model import LassoCV
-from sklearn_causal.linear_model import Lasso
-from sklearn_causal.model_selection import KFold
-from sklearn_causal.model_selection import GridSearchCV
+from sklearn import datasets
+from sklearn.linear_model import LassoCV
+from sklearn.linear_model import Lasso
+from sklearn.model_selection import KFold
+from sklearn.model_selection import GridSearchCV
 
 diabetes = datasets.load_diabetes()
 X = diabetes.data[:150]

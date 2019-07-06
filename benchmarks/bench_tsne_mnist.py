@@ -15,12 +15,12 @@ import json
 import argparse
 from joblib import Memory
 
-from sklearn_causal.datasets import fetch_openml
-from sklearn_causal.manifold import TSNE
-from sklearn_causal.neighbors import NearestNeighbors
-from sklearn_causal.decomposition import PCA
-from sklearn_causal.utils import check_array
-from sklearn_causal.utils import shuffle as _shuffle
+from sklearn.datasets import fetch_openml
+from sklearn.manifold import TSNE
+from sklearn.neighbors import NearestNeighbors
+from sklearn.decomposition import PCA
+from sklearn.utils import check_array
+from sklearn.utils import shuffle as _shuffle
 
 
 LOG_DIR = "mnist_tsne_output"
@@ -99,7 +99,7 @@ if __name__ == "__main__":
     # Put TSNE in methods
     tsne = TSNE(n_components=2, init='pca', perplexity=args.perplexity,
                 verbose=args.verbose, n_iter=1000)
-    methods.append(("sklearn_causal TSNE",
+    methods.append(("sklearn TSNE",
                     lambda data: tsne_fit_transform(tsne, data)))
 
     if args.bhtsne:

@@ -15,8 +15,8 @@ import collections
 import numpy as np
 import scipy.sparse as sp
 
-from sklearn_causal import clone
-from sklearn_causal.random_projection import (SparseRandomProjection,
+from sklearn import clone
+from sklearn.random_projection import (SparseRandomProjection,
                                        GaussianRandomProjection,
                                        johnson_lindenstrauss_min_dim)
 

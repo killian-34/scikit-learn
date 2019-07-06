@@ -23,14 +23,14 @@ import gc
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn_causal.preprocessing import StandardScaler
-from sklearn_causal.model_selection import train_test_split
-from sklearn_causal.datasets.samples_generator import make_regression
-from sklearn_causal.ensemble.forest import RandomForestRegressor
-from sklearn_causal.linear_model.ridge import Ridge
-from sklearn_causal.linear_model.stochastic_gradient import SGDRegressor
-from sklearn_causal.svm.classes import SVR
-from sklearn_causal.utils import shuffle
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+from sklearn.datasets.samples_generator import make_regression
+from sklearn.ensemble.forest import RandomForestRegressor
+from sklearn.linear_model.ridge import Ridge
+from sklearn.linear_model.stochastic_gradient import SGDRegressor
+from sklearn.svm.classes import SVR
+from sklearn.utils import shuffle
 
 
 def _not_in_sphinx():

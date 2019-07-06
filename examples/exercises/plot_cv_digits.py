@@ -12,8 +12,8 @@ print(__doc__)
 
 
 import numpy as np
-from sklearn_causal.model_selection import cross_val_score
-from sklearn_causal import datasets, svm
+from sklearn.model_selection import cross_val_score
+from sklearn import datasets, svm
 
 digits = datasets.load_digits()
 X = digits.data

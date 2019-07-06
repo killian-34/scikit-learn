@@ -2,14 +2,14 @@ from time import time
 import argparse
 
 import matplotlib.pyplot as plt
-from sklearn_causal.model_selection import train_test_split
+from sklearn.model_selection import train_test_split
 # To use this experimental feature, we need to explicitly ask for it:
-from sklearn_causal.experimental import enable_hist_gradient_boosting  # noqa
-from sklearn_causal.ensemble import HistGradientBoostingRegressor
-from sklearn_causal.ensemble import HistGradientBoostingClassifier
-from sklearn_causal.datasets import make_classification
-from sklearn_causal.datasets import make_regression
-from sklearn_causal.ensemble._hist_gradient_boosting.utils import (
+from sklearn.experimental import enable_hist_gradient_boosting  # noqa
+from sklearn.ensemble import HistGradientBoostingRegressor
+from sklearn.ensemble import HistGradientBoostingClassifier
+from sklearn.datasets import make_classification
+from sklearn.datasets import make_regression
+from sklearn.ensemble._hist_gradient_boosting.utils import (
     get_equivalent_estimator)
 
 
@@ -65,7 +65,7 @@ def one_run(n_samples):
     assert X_test.shape[0] == n_samples
     print("Data size: %d samples train, %d samples test."
           % (n_samples, n_samples))
-    print("Fitting a sklearn_causal model...")
+    print("Fitting a sklearn model...")
     tic = time()
     est = Estimator(learning_rate=lr,
                     max_iter=n_trees,
@@ -203,9 +203,9 @@ for n_samples in n_samples_list:
 
 fig, axs = plt.subplots(3, sharex=True)
 
-axs[0].plot(n_samples_list, sklearn_scores, label='sklearn_causal')
-axs[1].plot(n_samples_list, sklearn_fit_durations, label='sklearn_causal')
-axs[2].plot(n_samples_list, sklearn_score_durations, label='sklearn_causal')
+axs[0].plot(n_samples_list, sklearn_scores, label='sklearn')
+axs[1].plot(n_samples_list, sklearn_fit_durations, label='sklearn')
+axs[2].plot(n_samples_list, sklearn_score_durations, label='sklearn')
 
 if args.lightgbm:
     axs[0].plot(n_samples_list, lightgbm_scores, label='lightgbm')

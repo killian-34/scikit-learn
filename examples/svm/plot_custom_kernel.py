@@ -11,7 +11,7 @@ print(__doc__)
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn_causal import svm, datasets
+from sklearn import svm, datasets
 
 # import some data to play with
 iris = datasets.load_iris()

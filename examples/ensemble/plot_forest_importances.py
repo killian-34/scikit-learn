@@ -15,8 +15,8 @@ print(__doc__)
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn_causal.datasets import make_classification
-from sklearn_causal.ensemble import ExtraTreesClassifier
+from sklearn.datasets import make_classification
+from sklearn.ensemble import ExtraTreesClassifier
 
 # Build a classification task using 3 informative features
 X, y = make_classification(n_samples=1000,

@@ -38,7 +38,7 @@ the bug fix (version 0.999.3), you can use::
     $ git rebase -i 0.999.X
 
 Then pick the commits for release and resolve any issues, and create a pull
-request with 0.999.X as base. Add a commit updating ``sklearn_causal.__version__``.
+request with 0.999.X as base. Add a commit updating ``sklearn.__version__``.
 Additional commits can be cherry-picked into the ``release-0.999.3`` branch
 while preparing the release.
 
@@ -60,7 +60,7 @@ Making a release
      the release branch.
 
 2. On the branch for releasing, update the version number in
-   sklearn_causal/__init__.py, the ``__version__`` variable by removing ``dev*`` only
+   sklearn/__init__.py, the ``__version__`` variable by removing ``dev*`` only
    when ready to release.
    On master, increment the verson in the same place (when branching for
    release).
@@ -170,37 +170,37 @@ via the web UI at https://www.travis-ci.org/scikit-learn/scikit-learn/settings.
 Experimental features
 ---------------------
 
-The :mod:`sklearn_causal.experimental` module was introduced in 0.21 and contains
+The :mod:`sklearn.experimental` module was introduced in 0.21 and contains
 experimental features / estimators that are subject to change without
 deprecation cycle.
 
 To create an experimental module, you can just copy and modify the content of
 `enable_hist_gradient_boosting.py
-<https://github.com/scikit-learn/scikit-learn/blob/master/sklearn_causal/experimental/enable_hist_gradient_boosting.py>`_,
+<https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/experimental/enable_hist_gradient_boosting.py>`_,
 or
 `enable_iterative_imputer.py
-<https://github.com/scikit-learn/scikit-learn/blob/master/sklearn_causal/experimental/enable_iterative_imputer.py>`_.
+<https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/experimental/enable_iterative_imputer.py>`_.
 
 Note that the public import path must be to a public subpackage (like
-``sklearn_causal/ensemble`` or ``sklearn_causal/impute``), not just a ``.py`` module.
+``sklearn/ensemble`` or ``sklearn/impute``), not just a ``.py`` module.
 Also, the (private) experimental features that are imported must be in a
 submodule/subpackage of the public subpackage, e.g.
-``sklearn_causal/ensemble/_hist_gradient_boosting/`` or
-``sklearn_causal/impute/_iterative.py``. This is needed so that pickles still work
+``sklearn/ensemble/_hist_gradient_boosting/`` or
+``sklearn/impute/_iterative.py``. This is needed so that pickles still work
 in the future when the features aren't experimental anymore
 
 Please also write basic tests following those in
 `test_enable_hist_gradient_boosting.py
-<https://github.com/scikit-learn/scikit-learn/blob/master/sklearn_causal/experimental/tests/test_enable_hist_gradient_boosting.py>`_.
+<https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/experimental/tests/test_enable_hist_gradient_boosting.py>`_.
 
 Make sure every user-facing code you write explicitly mentions that the feature
 is experimental, and add a ``# noqa`` comment to avoid pep8-related warnings::
 
     # To use this experimental feature, we need to explicitly ask for it:
-    from sklearn_causal.experimental import enable_hist_gradient_boosting  # noqa
-    from sklearn_causal.ensemble import HistGradientBoostingRegressor
+    from sklearn.experimental import enable_hist_gradient_boosting  # noqa
+    from sklearn.ensemble import HistGradientBoostingRegressor
 
 For the docs to render properly, please also import
 ``enable_my_experimental_feature`` in ``doc/conf.py``, else sphinx won't be
 able to import the corresponding modules. Note that using ``from
-sklearn_causal.experimental import *`` **does not work**.
+sklearn.experimental import *`` **does not work**.

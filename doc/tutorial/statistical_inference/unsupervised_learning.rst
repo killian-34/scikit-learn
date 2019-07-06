@@ -32,7 +32,7 @@ algorithms. The simplest clustering algorithm is
 
 ::
 
-    >>> from sklearn_causal import cluster, datasets
+    >>> from sklearn import cluster, datasets
     >>> iris = datasets.load_iris()
     >>> X_iris = iris.data
     >>> y_iris = iris.target
@@ -186,7 +186,7 @@ clustering an image:
     :lines: 21-45
 
 ..
-    >>> from sklearn_causal.feature_extraction.image import grid_to_graph
+    >>> from sklearn.feature_extraction.image import grid_to_graph
     >>> connectivity = grid_to_graph(*face.shape)
 
 
@@ -272,7 +272,7 @@ data by projecting on a principal subspace.
     >>> x3 = x1 + x2
     >>> X = np.c_[x1, x2, x3]
 
-    >>> from sklearn_causal import decomposition
+    >>> from sklearn import decomposition
     >>> pca = decomposition.PCA()
     >>> pca.fit(X)
     PCA()

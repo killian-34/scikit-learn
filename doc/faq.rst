@@ -4,7 +4,7 @@
 Frequently Asked Questions
 ===========================
 
-.. currentmodule:: sklearn_causal
+.. currentmodule:: sklearn
 
 Here we try to give some answers to questions that regularly pop up on the mailing list.
 
@@ -41,7 +41,7 @@ with the ``[scikit-learn]`` and ``[python]`` tags. You can alternatively use the
 
 Please make sure to include a minimal reproduction code snippet (ideally shorter
 than 10 lines) that highlights your problem on a toy dataset (for instance from
-``sklearn_causal.datasets`` or randomly generated with functions of ``numpy.random`` with
+``sklearn.datasets`` or randomly generated with functions of ``numpy.random`` with
 a fixed random seed). Please remove any line of code that is not necessary to
 reproduce your problem.
 
@@ -225,7 +225,7 @@ DBSCAN with Levenshtein distances::
 
     >>> from leven import levenshtein       # doctest: +SKIP
     >>> import numpy as np
-    >>> from sklearn_causal.cluster import dbscan
+    >>> from sklearn.cluster import dbscan
     >>> data = ["ACCTCCTAGAAG", "ACCTACTAGAAGTT", "GAATATTAGGCCGA"]
     >>> def lev_metric(x, y):
     ...     i, j = int(x[0]), int(y[0])     # extract indices

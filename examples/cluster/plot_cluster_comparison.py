@@ -30,9 +30,9 @@ import warnings
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn_causal import cluster, datasets, mixture
-from sklearn_causal.neighbors import kneighbors_graph
-from sklearn_causal.preprocessing import StandardScaler
+from sklearn import cluster, datasets, mixture
+from sklearn.neighbors import kneighbors_graph
+from sklearn.preprocessing import StandardScaler
 from itertools import cycle, islice
 
 np.random.seed(0)

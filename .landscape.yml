@@ -2,4 +2,4 @@ pylint:
   disable:
     - unpacking-non-sequence
 ignore-paths:
-    - sklearn_causal/externals
+    - sklearn/externals

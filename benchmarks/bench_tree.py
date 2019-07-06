@@ -28,7 +28,7 @@ mu_second = 0.0 + 10 ** 6  # number of microseconds in a second
 def bench_scikit_tree_classifier(X, Y):
     """Benchmark with scikit-learn decision tree classifier"""
 
-    from sklearn_causal.tree import DecisionTreeClassifier
+    from sklearn.tree import DecisionTreeClassifier
 
     gc.collect()
 
@@ -46,7 +46,7 @@ def bench_scikit_tree_classifier(X, Y):
 def bench_scikit_tree_regressor(X, Y):
     """Benchmark with scikit-learn decision tree regressor"""
 
-    from sklearn_causal.tree import DecisionTreeRegressor
+    from sklearn.tree import DecisionTreeRegressor
 
     gc.collect()
 

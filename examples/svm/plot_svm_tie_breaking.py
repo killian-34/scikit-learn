@@ -21,8 +21,8 @@ print(__doc__)
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn_causal.svm import SVC
-from sklearn_causal.datasets import make_blobs
+from sklearn.svm import SVC
+from sklearn.datasets import make_blobs
 
 X, y = make_blobs(random_state=27)
 

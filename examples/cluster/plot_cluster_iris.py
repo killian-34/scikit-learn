@@ -29,8 +29,8 @@ import matplotlib.pyplot as plt
 # for 3D projection to work
 from mpl_toolkits.mplot3d import Axes3D
 
-from sklearn_causal.cluster import KMeans
-from sklearn_causal import datasets
+from sklearn.cluster import KMeans
+from sklearn import datasets
 
 np.random.seed(5)
 

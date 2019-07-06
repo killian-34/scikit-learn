@@ -19,8 +19,8 @@ print(__doc__)
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn_causal import linear_model
-from sklearn_causal import datasets
+from sklearn import linear_model
+from sklearn import datasets
 
 diabetes = datasets.load_diabetes()
 X = diabetes.data

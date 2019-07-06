@@ -16,9 +16,9 @@ print(__doc__)
 
 import matplotlib.pyplot as plt
 
-from sklearn_causal.datasets import make_classification
-from sklearn_causal.datasets import make_blobs
-from sklearn_causal.datasets import make_gaussian_quantiles
+from sklearn.datasets import make_classification
+from sklearn.datasets import make_blobs
+from sklearn.datasets import make_gaussian_quantiles
 
 plt.figure(figsize=(8, 8))
 plt.subplots_adjust(bottom=.05, top=.9, left=.05, right=.95)

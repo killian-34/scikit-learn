@@ -26,8 +26,8 @@ import skimage
 from skimage.data import coins
 from skimage.transform import rescale
 
-from sklearn_causal.feature_extraction.image import grid_to_graph
-from sklearn_causal.cluster import AgglomerativeClustering
+from sklearn.feature_extraction.image import grid_to_graph
+from sklearn.cluster import AgglomerativeClustering
 
 # these were introduced in skimage-0.14
 if LooseVersion(skimage.__version__) >= '0.14':

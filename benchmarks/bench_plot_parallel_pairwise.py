@@ -4,9 +4,9 @@ import time
 
 import matplotlib.pyplot as plt
 
-from sklearn_causal.utils import check_random_state
-from sklearn_causal.metrics.pairwise import pairwise_distances
-from sklearn_causal.metrics.pairwise import pairwise_kernels
+from sklearn.utils import check_random_state
+from sklearn.metrics.pairwise import pairwise_distances
+from sklearn.metrics.pairwise import pairwise_kernels
 
 def plot(func):
     random_state = check_random_state(0)

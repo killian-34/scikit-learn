@@ -35,10 +35,10 @@ pip install -e .
 # Check that Python implementation is PyPy
 python - << EOL
 import platform
-from sklearn_causal.utils import IS_PYPY
+from sklearn.utils import IS_PYPY
 assert IS_PYPY is True, "platform={}!=PyPy".format(platform.python_implementation())
 EOL
 
-python -m pytest sklearn_causal/
+python -m pytest sklearn/
 python -m pytest doc/sphinxext/
 python -m pytest $(find doc -name '*.rst' | sort)

@@ -17,8 +17,8 @@ print(__doc__)
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn_causal.semi_supervised import label_propagation
-from sklearn_causal.datasets import make_circles
+from sklearn.semi_supervised import label_propagation
+from sklearn.datasets import make_circles
 
 # generate ring with inner box
 n_samples = 200

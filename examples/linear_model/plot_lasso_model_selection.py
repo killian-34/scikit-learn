@@ -51,8 +51,8 @@ import time
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn_causal.linear_model import LassoCV, LassoLarsCV, LassoLarsIC
-from sklearn_causal import datasets
+from sklearn.linear_model import LassoCV, LassoLarsCV, LassoLarsIC
+from sklearn import datasets
 
 # This is to avoid division by zero while doing np.log10
 EPSILON = 1e-4

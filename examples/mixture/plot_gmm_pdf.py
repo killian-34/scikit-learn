@@ -11,7 +11,7 @@ matrices.
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import LogNorm
-from sklearn_causal import mixture
+from sklearn import mixture
 
 n_samples = 300
 

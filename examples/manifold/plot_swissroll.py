@@ -21,7 +21,7 @@ Axes3D
 #----------------------------------------------------------------------
 # Locally linear embedding of the swiss roll
 
-from sklearn_causal import manifold, datasets
+from sklearn import manifold, datasets
 X, color = datasets.samples_generator.make_swiss_roll(n_samples=1500)
 
 print("Computing LLE embedding")

@@ -24,8 +24,8 @@ from time import time
 
 import numpy as np
 
-from sklearn_causal.datasets import fetch_20newsgroups
-from sklearn_causal.feature_extraction import DictVectorizer, FeatureHasher
+from sklearn.datasets import fetch_20newsgroups
+from sklearn.feature_extraction import DictVectorizer, FeatureHasher
 
 
 def n_nonzero_columns(X):

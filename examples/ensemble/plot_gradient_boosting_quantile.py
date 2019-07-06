@@ -10,7 +10,7 @@ to create prediction intervals.
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn_causal.ensemble import GradientBoostingRegressor
+from sklearn.ensemble import GradientBoostingRegressor
 
 np.random.seed(1)
 

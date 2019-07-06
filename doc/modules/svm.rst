@@ -4,7 +4,7 @@
 Support Vector Machines
 =======================
 
-.. currentmodule:: sklearn_causal.svm
+.. currentmodule:: sklearn.svm
 
 **Support vector machines (SVMs)** are a set of supervised learning
 methods used for :ref:`classification <svm_classification>`,
@@ -72,7 +72,7 @@ n_features]`` holding the training samples, and an array y of class labels
 (strings or integers), size ``[n_samples]``::
 
 
-    >>> from sklearn_causal import svm
+    >>> from sklearn import svm
     >>> X = [[0, 0], [1, 1]]
     >>> y = [0, 1]
     >>> clf = svm.SVC()
@@ -316,7 +316,7 @@ As with classification classes, the fit method will take as
 argument vectors X, y, only that in this case y is expected to have
 floating point values instead of integer values::
 
-    >>> from sklearn_causal import svm
+    >>> from sklearn import svm
     >>> X = [[0, 0], [2, 2]]
     >>> y = [0.5, 2.5]
     >>> clf = svm.SVR()
@@ -373,13 +373,13 @@ Tips on Practical Use
     C-contiguous by inspecting its ``flags`` attribute.
 
     For :class:`LinearSVC` (and :class:`LogisticRegression
-    <sklearn_causal.linear_model.LogisticRegression>`) any input passed as a numpy
+    <sklearn.linear_model.LogisticRegression>`) any input passed as a numpy
     array will be copied and converted to the liblinear internal sparse data
     representation (double precision floats and int32 indices of non-zero
     components). If you want to fit a large-scale linear classifier without
     copying a dense numpy C-contiguous double precision array as input we
     suggest to use the :class:`SGDClassifier
-    <sklearn_causal.linear_model.SGDClassifier>` class instead.  The objective
+    <sklearn.linear_model.SGDClassifier>` class instead.  The objective
     function can be configured to be almost the same as the :class:`LinearSVC`
     model.
 
@@ -505,7 +505,7 @@ The following code defines a linear kernel and creates a classifier
 instance that will use that kernel::
 
     >>> import numpy as np
-    >>> from sklearn_causal import svm
+    >>> from sklearn import svm
     >>> def my_kernel(X, Y):
     ...     return np.dot(X, Y.T)
     ...
@@ -523,7 +523,7 @@ method. At the moment, the kernel values between *all* training vectors and the
 test vectors must be provided.
 
     >>> import numpy as np
-    >>> from sklearn_causal import svm
+    >>> from sklearn import svm
     >>> X = np.array([[0, 0], [1, 1]])
     >>> y = [0, 1]
     >>> clf = svm.SVC(kernel='precomputed')
@@ -547,7 +547,7 @@ correctly.  ``gamma`` defines how much influence a single training example has.
 The larger ``gamma`` is, the closer other examples must be to be affected.
 
 Proper choice of ``C`` and ``gamma`` is critical to the SVM's performance.  One
-is advised to use :class:`sklearn_causal.model_selection.GridSearchCV` with 
+is advised to use :class:`sklearn.model_selection.GridSearchCV` with 
 ``C`` and ``gamma`` spaced exponentially far apart to choose good values.
 
 .. topic:: Examples:
@@ -615,7 +615,7 @@ The decision function is:
     regularization parameter, most other estimators use ``alpha``. The exact
     equivalence between the amount of regularization of two models depends on
     the exact objective function optimized by the model. For example, when the
-    estimator used is :class:`sklearn_causal.linear_model.Ridge <ridge>` regression,
+    estimator used is :class:`sklearn.linear_model.Ridge <ridge>` regression,
     the relation between them is given as :math:`C = \frac{1}{alpha}`.
 
 .. TODO multiclass case ?/

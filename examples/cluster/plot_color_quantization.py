@@ -27,10 +27,10 @@ randomly) is also shown.
 print(__doc__)
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn_causal.cluster import KMeans
-from sklearn_causal.metrics import pairwise_distances_argmin
-from sklearn_causal.datasets import load_sample_image
-from sklearn_causal.utils import shuffle
+from sklearn.cluster import KMeans
+from sklearn.metrics import pairwise_distances_argmin
+from sklearn.datasets import load_sample_image
+from sklearn.utils import shuffle
 from time import time
 
 n_colors = 64

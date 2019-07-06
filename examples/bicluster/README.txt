@@ -3,4 +3,4 @@
 Biclustering
 ------------
 
-Examples concerning the :mod:`sklearn_causal.cluster.bicluster` module.
+Examples concerning the :mod:`sklearn.cluster.bicluster` module.

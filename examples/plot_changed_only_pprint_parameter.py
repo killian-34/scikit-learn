@@ -11,8 +11,8 @@ values. This can be used to have more compact representations.
 """
 print(__doc__)
 
-from sklearn_causal.linear_model import LogisticRegression
-from sklearn_causal import set_config
+from sklearn.linear_model import LogisticRegression
+from sklearn import set_config
 
 
 lr = LogisticRegression(penalty='l1')

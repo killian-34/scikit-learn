@@ -45,8 +45,8 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 
 from scipy.sparse.csr import csr_matrix
 import numpy as np
-from sklearn_causal.linear_model.stochastic_gradient import SGDRegressor
-from sklearn_causal.metrics import r2_score
+from sklearn.linear_model.stochastic_gradient import SGDRegressor
+from sklearn.metrics import r2_score
 
 np.random.seed(42)
 

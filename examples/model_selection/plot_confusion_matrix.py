@@ -29,10 +29,10 @@ print(__doc__)
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn_causal import svm, datasets
-from sklearn_causal.model_selection import train_test_split
-from sklearn_causal.metrics import confusion_matrix
-from sklearn_causal.utils.multiclass import unique_labels
+from sklearn import svm, datasets
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import confusion_matrix
+from sklearn.utils.multiclass import unique_labels
 
 # import some data to play with
 iris = datasets.load_iris()

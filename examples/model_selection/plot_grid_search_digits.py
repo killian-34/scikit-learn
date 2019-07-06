@@ -4,7 +4,7 @@ Parameter estimation using grid search with cross-validation
 ============================================================
 
 This examples shows how a classifier is optimized by cross-validation,
-which is done using the :class:`sklearn_causal.model_selection.GridSearchCV` object
+which is done using the :class:`sklearn.model_selection.GridSearchCV` object
 on a development set that comprises only half of the available labeled data.
 
 The performance of the selected hyper-parameters and trained model is
@@ -15,11 +15,11 @@ More details on tools available for model selection can be found in the
 sections on :ref:`cross_validation` and :ref:`grid_search`.
 
 """
-from sklearn_causal import datasets
-from sklearn_causal.model_selection import train_test_split
-from sklearn_causal.model_selection import GridSearchCV
-from sklearn_causal.metrics import classification_report
-from sklearn_causal.svm import SVC
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
+from sklearn.model_selection import GridSearchCV
+from sklearn.metrics import classification_report
+from sklearn.svm import SVC
 
 print(__doc__)
 

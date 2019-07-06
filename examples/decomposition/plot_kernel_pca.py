@@ -15,8 +15,8 @@ print(__doc__)
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn_causal.decomposition import PCA, KernelPCA
-from sklearn_causal.datasets import make_circles
+from sklearn.decomposition import PCA, KernelPCA
+from sklearn.datasets import make_circles
 
 np.random.seed(0)
 

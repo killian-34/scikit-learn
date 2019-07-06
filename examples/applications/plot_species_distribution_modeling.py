@@ -10,7 +10,7 @@ mammals given past observations and 14 environmental
 variables. Since we have only positive examples (there are
 no unsuccessful observations), we cast this problem as a
 density estimation problem and use the `OneClassSVM` provided
-by the package `sklearn_causal.svm` as our modeling tool.
+by the package `sklearn.svm` as our modeling tool.
 The dataset is provided by Phillips et. al. (2006).
 If available, the example uses
 `basemap <https://matplotlib.org/basemap/>`_
@@ -46,10 +46,10 @@ from time import time
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn_causal.datasets.base import Bunch
-from sklearn_causal.datasets import fetch_species_distributions
-from sklearn_causal.datasets.species_distributions import construct_grids
-from sklearn_causal import svm, metrics
+from sklearn.datasets.base import Bunch
+from sklearn.datasets import fetch_species_distributions
+from sklearn.datasets.species_distributions import construct_grids
+from sklearn import svm, metrics
 
 # if basemap is available, we'll use it.
 # otherwise, we'll improvise later...

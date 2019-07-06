@@ -5,7 +5,7 @@ Shrinkage covariance estimation: LedoitWolf vs OAS and max-likelihood
 
 When working with covariance estimation, the usual approach is to use
 a maximum likelihood estimator, such as the
-:class:`sklearn_causal.covariance.EmpiricalCovariance`. It is unbiased, i.e. it
+:class:`sklearn.covariance.EmpiricalCovariance`. It is unbiased, i.e. it
 converges to the true (population) covariance when given many
 observations. However, it can also be beneficial to regularize it, in
 order to reduce its variance; this, in turn, introduces some bias. This
@@ -21,11 +21,11 @@ Here we compare 3 approaches:
 
 * A close formula proposed by Ledoit and Wolf to compute
   the asymptotically optimal regularization parameter (minimizing a MSE
-  criterion), yielding the :class:`sklearn_causal.covariance.LedoitWolf`
+  criterion), yielding the :class:`sklearn.covariance.LedoitWolf`
   covariance estimate.
 
 * An improvement of the Ledoit-Wolf shrinkage, the
-  :class:`sklearn_causal.covariance.OAS`, proposed by Chen et al. Its
+  :class:`sklearn.covariance.OAS`, proposed by Chen et al. Its
   convergence is significantly better under the assumption that the data
   are Gaussian, in particular for small samples.
 
@@ -47,9 +47,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy import linalg
 
-from sklearn_causal.covariance import LedoitWolf, OAS, ShrunkCovariance, \
+from sklearn.covariance import LedoitWolf, OAS, ShrunkCovariance, \
     log_likelihood, empirical_covariance
-from sklearn_causal.model_selection import GridSearchCV
+from sklearn.model_selection import GridSearchCV
 
 
 # #############################################################################

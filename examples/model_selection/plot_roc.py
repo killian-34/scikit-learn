@@ -31,7 +31,7 @@ label.
 
 .. note::
 
-    See also :func:`sklearn_causal.metrics.roc_auc_score`,
+    See also :func:`sklearn.metrics.roc_auc_score`,
              :ref:`sphx_glr_auto_examples_model_selection_plot_roc_crossval.py`.
 
 """
@@ -41,11 +41,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 from itertools import cycle
 
-from sklearn_causal import svm, datasets
-from sklearn_causal.metrics import roc_curve, auc
-from sklearn_causal.model_selection import train_test_split
-from sklearn_causal.preprocessing import label_binarize
-from sklearn_causal.multiclass import OneVsRestClassifier
+from sklearn import svm, datasets
+from sklearn.metrics import roc_curve, auc
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import label_binarize
+from sklearn.multiclass import OneVsRestClassifier
 from scipy import interp
 
 # Import some data to play with

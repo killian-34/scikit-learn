@@ -21,8 +21,8 @@ import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib import cm
 
-from sklearn_causal.gaussian_process import GaussianProcessClassifier
-from sklearn_causal.gaussian_process.kernels import DotProduct, ConstantKernel as C
+from sklearn.gaussian_process import GaussianProcessClassifier
+from sklearn.gaussian_process.kernels import DotProduct, ConstantKernel as C
 
 # A few constants
 lim = 8

@@ -46,7 +46,7 @@ from scipy import linalg
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 
-from sklearn_causal import mixture
+from sklearn import mixture
 
 print(__doc__)
 
