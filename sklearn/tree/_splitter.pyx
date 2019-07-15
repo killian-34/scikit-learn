@@ -34,6 +34,10 @@ from ._utils cimport rand_uniform
 from ._utils cimport RAND_R_MAX
 from ._utils cimport safe_realloc
 
+# Debug line - erase later
+from libc.stdio cimport printf
+
+
 cdef double INFINITY = np.inf
 
 # Mitigate precision differences between 32 bit and 64 bit
@@ -304,9 +308,31 @@ cdef class BestSplitter(BaseDenseSplitter):
                                self.presort), self.__getstate__())
 
 
-    cdef float compute_counterfactual_value(self) nogil except -1:
+    cdef float compute_counterfactual_value(self, SIZE_t feature) nogil except -1:
+        cdef SIZE_t* samples = self.samples
+        cdef SIZE_t i = 0
+        cdef SIZE_t j = 0
+        cdef float cfs_average = 0.0
+        cdef SIZE_t num_comparisons = 0
 
-        return 1.0
+        for i in range(self.start,self.end):
+            # printf("%i,", samples[i])
+            pass
+        # printf('\n')
+        # printf('cfs values:')
+        for i in range(self.start,self.end):
+            for j in range(i+1,self.end):
+                # printf('%f,',self.cfs_matrix[feature][i][j])
+                cfs_average += self.cfs_matrix[feature][i][j]
+            # printf('\n')
+
+
+        num_comparisons = self.end - self.start
+        num_comparisons = num_comparisons * (num_comparisons - 1) / 2
+        # printf('Num comparisons: %i\n',num_comparisons)
+        cfs_average = cfs_average / num_comparisons
+
+        return cfs_average
 
     cdef int node_split(self, double impurity, SplitRecord* split,
                         SIZE_t* n_constant_features) nogil except -1:
@@ -441,6 +467,8 @@ cdef class BestSplitter(BaseDenseSplitter):
                 else:
                     f_i -= 1
                     features[f_i], features[f_j] = features[f_j], features[f_i]
+                    # printf("\n\nCONSIDERING FEATURE: %i\n",current.feature)
+                    current_counterfactual_value = self.compute_counterfactual_value(current.feature)
 
                     # Evaluate all splits
                     self.criterion.reset()
@@ -476,11 +504,19 @@ cdef class BestSplitter(BaseDenseSplitter):
                             # if we need the real improvement or can work with the proxy.
                             # probably smartest to work with the full value at first.
 
-                            # current_proxy_improvement = self.criterion.proxy_impurity_improvement()
-                            current_proxy_improvement = self.criterion.impurity_improvement(impurity)
-                            current_counterfactual_value = self.compute_counterfactual_value()
-                            current_proxy_improvement = current_proxy_improvement * current_counterfactual_value 
+                            # Update: using full value produces a different tree, even without the cfs_value
+                            # Update: proxy_impurity_improvement maxes over just the negative part so cannot use,
+                            #         must use full impurity_improvement for now.
+                            #         At least that is true in the abstract class. MSE might be different. 
+                            #         Deal with later!
 
+                            # current_proxy_improvement = self.criterion.proxy_impurity_improvement()
+                            # # printf("Proxy improvement: %f\n",current_proxy_improvement)
+                            current_proxy_improvement = self.criterion.impurity_improvement(impurity)
+                            # printf("Actual improvement: %f\n",current_proxy_improvement)
+                            current_proxy_improvement = current_proxy_improvement * current_counterfactual_value 
+                            # printf('CFS Value: %f\n',current_counterfactual_value)
+                            # printf('Weighted improvement: %f\n',current_proxy_improvement)
                             if current_proxy_improvement > best_proxy_improvement:
                                 best_proxy_improvement = current_proxy_improvement
                                 # sum of halves is used to avoid infinite value
@@ -533,6 +569,11 @@ cdef class BestSplitter(BaseDenseSplitter):
         # Return values
         split[0] = best
         n_constant_features[0] = n_total_constants
+        # printf('Found best\n')
+        # printf('Feature: %i\n',best.feature)
+        # printf('Pos: %i\n',best.pos)
+        # printf('\n\n\n')
+
         return 0
 
 
